@@ -1,0 +1,14 @@
+name: twoot on a schedule
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "6,26,46 * * * *"
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: search and twoot
+        run: |-
+          yarn build && yarn start
