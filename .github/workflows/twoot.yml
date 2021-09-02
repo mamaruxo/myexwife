@@ -8,7 +8,20 @@ on:
 jobs:
   scheduled:
     runs-on: ubuntu-latest
+    environment: twoot
     steps:
-      - name: search and twoot
-        run: |-
-          yarn build && yarn start
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16.8"
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - run: yarn start
+        env:
+          MASTODON_SERVER: ${{ secrets.MASTODON_SERVER }}
+          MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
+          TWITTER_ACCESS_KEY: ${{ secrets.TWITTER_ACCESS_KEY }}
+          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+          TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
