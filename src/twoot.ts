@@ -1,5 +1,5 @@
 import { createReadStream } from "fs";
-import { writeFile, unlink } from "fs/promises";
+import { readFile, writeFile, unlink } from "fs/promises";
 import { join } from "path";
 import { tmpdir } from "os";
 import { setTimeout } from "timers/promises";
@@ -132,10 +132,30 @@ export async function doTweet(statuses: Status[]): Promise<void> {
   let inReplyToId: string | undefined = undefined;
 
   let i = 0;
+  /* eslint-disable no-await-in-loop */
   for (const s of statuses) {
-    const status = typeof s === "string" ? s : s.status;
+    const { status } = typeof s === "string" ? { status: s } : s;
 
-    // eslint-disable-next-line no-await-in-loop
+    let mediaId: string | undefined = undefined;
+    if (typeof s === "object") {
+      if ("media" in s) {
+        // typings don't seem to let us append the buffer directly
+        const { media_id_string } = await twitterClient.media.mediaUpload({
+          media_data: s.media.toString("base64"),
+        });
+
+        mediaId = media_id_string;
+      } else {
+        const buf = await readFile(s.pathToMedia);
+
+        const { media_id_string } = await twitterClient.media.mediaUpload({
+          media_data: buf.toString("base64"),
+        });
+
+        mediaId = media_id_string;
+      }
+    }
+
     const publishedTweet = await retry(
       // eslint-disable-next-line @typescript-eslint/no-loop-func
       () =>
@@ -143,6 +163,7 @@ export async function doTweet(statuses: Status[]): Promise<void> {
           status,
           in_reply_to_status_id: inReplyToId,
           auto_populate_reply_metadata: true,
+          media_ids: mediaId,
         }),
       { retries: 5 }
     );
@@ -159,8 +180,8 @@ export async function doTweet(statuses: Status[]): Promise<void> {
 
     i++;
     if (i < statuses.length) {
-      // eslint-disable-next-line no-await-in-loop
       await setTimeout(3000);
     }
   }
+  /* eslint-enable no-await-in-loop */
 }
