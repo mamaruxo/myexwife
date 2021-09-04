@@ -1,4 +1,7 @@
 require("source-map-support").install();
+import { tmpdir } from "os";
+import { mkdirSync } from "fs";
+import { join } from "path";
 import { setTimeout } from "timers/promises";
 
 import fetch from "node-fetch";
@@ -46,26 +49,44 @@ async function prodMain() {
     PuppeteerBlocker.fromPrebuiltAdsAndTracking(fetch),
   ]);
 
+  const tmp = join(tmpdir(), `bot-${Date.now()}`);
+  mkdirSync(tmp);
+
   let i = 0;
   /* eslint-disable no-await-in-loop */
-  for (const { title, link } of items.slice(2, 4)) {
+  for (const { title, link } of items.slice(0, 16)) {
+    // haven't tested using incognito contexts instead of restarting the
+    // browser, but if they're like actual chrome incognito contexts certain
+    // sites might block them with a paywall. might be worth investigating
+    // eventually
     const browser = await puppeteer.launch({ defaultViewport: { width: 1000, height: 800 } });
     const page = await browser.newPage();
 
-    await blocker.enableBlockingInPage(page);
-    await page.goto(link);
+    try {
+      await blocker.enableBlockingInPage(page);
+      await page.goto(link);
+      await setTimeout(10);
 
-    await page.evaluate(kickoffReplaceAndWatch);
-    await setTimeout(10);
+      await page.evaluate(kickoffReplaceAndWatch);
+      await setTimeout(10);
 
-    // const screenshot = (await page.screenshot()) as Buffer;
-    // await doTwoot([{ status: replace(title), media: screenshot }]);
+      // const screenshot = (await page.screenshot()) as Buffer;
+      // await doTwoot([{ status: replace(title), media: screenshot }]);
 
-    await page.screenshot({ path: `${i}.png` });
-    console.log(`${title}\n(${replace(title)})\n${link}\nfile://${process.cwd()}/${i}.png\n`);
-    i++;
+      const path = join(tmp, `${i}.png`);
+      await page.screenshot({ path });
 
-    await browser.close();
+      console.log(`${title}\n(${replace(title)})\n${link}\nfile://${path}\n`);
+      i++;
+    } catch (e) {
+      if (e instanceof puppeteer.errors.TimeoutError) {
+        console.error(`Timeout exceeded for page ${link}:\n`, e);
+      } else {
+        throw e;
+      }
+    } finally {
+      await browser.close();
+    }
   }
   /* eslint-enable no-await-in-loop */
 }
