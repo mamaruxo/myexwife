@@ -32,7 +32,8 @@ async function main() {
     items.sort((a, b) => b.date.valueOf() - a.date.valueOf());
 
     for (const item of items) {
-      const title = item.title;
+      // no 'south my ex-wife morning post'
+      const title = item.title.replaceAll("South China Morning Post", "SCMP");
 
       // TODO: distinguish between start case and sentence case
       const isTitleCase = title
@@ -41,8 +42,6 @@ async function main() {
 
       let replaced: string;
 
-      // we always use `replace` rather than pushing an alternate term to handle
-      // cases like "China's" etc
       if (isTitleCase) {
         replaced = title
           .replaceAll("South China Sea", "Sea of my Ex-Wife")
