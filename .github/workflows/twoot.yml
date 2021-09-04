@@ -15,12 +15,10 @@ jobs:
         with:
           node-version: "16.8"
           cache: "yarn"
-      - run: PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=true yarn install --frozen-lockfile
-      - run: yarn playwright install-deps chromium
+      - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: yarn start
         env:
-          NODE_ENV: "production"
           MASTODON_SERVER: ${{ secrets.MASTODON_SERVER }}
           MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
           TWITTER_ACCESS_KEY: ${{ secrets.TWITTER_ACCESS_KEY }}

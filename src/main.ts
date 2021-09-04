@@ -1,11 +1,14 @@
 require("source-map-support").install();
+import { setTimeout } from "timers/promises";
 
 import fetch from "node-fetch";
 import Feedparser from "feedparser";
-import { chromium } from "playwright";
+import puppeteer from "puppeteer";
+import { PuppeteerBlocker } from "@cliqz/adblocker-puppeteer";
 
 import { doTwoot } from "./twoot";
 import { replace } from "./replace";
+import { kickoffReplaceAndWatch } from "./userscript";
 
 async function fetchAndParse() {
   const res = await fetch("https://news.google.com/rss/search?q=china");
@@ -38,16 +41,38 @@ async function localMain() {
 }
 
 async function prodMain() {
-  const items = await fetchAndParse();
+  const [items, blocker] = await Promise.all([
+    fetchAndParse(),
+    PuppeteerBlocker.fromPrebuiltAdsAndTracking(fetch),
+  ]);
 
-  const browser = await chromium.launch();
+  let i = 0;
   /* eslint-disable no-await-in-loop */
-  for (const { title, link } of items.slice(0, 2)) {
-    const context = await browser.newContext();
-    const page = await context.newPage();
+  for (const { title, link } of items.slice(2, 4)) {
+    const browser = await puppeteer.launch({ defaultViewport: { width: 1000, height: 800 } });
+    const page = await browser.newPage();
+
+    page.on("console", (msg) => {
+      const text = msg.text();
+      if (!text.startsWith("Failed to load resource: net::ERR_BLOCKED_BY_CLIENT")) {
+        console.log(msg.text());
+      }
+    });
+
+    await blocker.enableBlockingInPage(page);
     await page.goto(link);
-    const screenshot = await page.screenshot();
-    await doTwoot([{ status: replace(title), media: screenshot }]);
+
+    await page.evaluate(kickoffReplaceAndWatch);
+    await setTimeout(10);
+
+    // const screenshot = (await page.screenshot()) as Buffer;
+    // await doTwoot([{ status: replace(title), media: screenshot }]);
+
+    await page.screenshot({ path: `${i}.png` });
+    console.log(`${title}\n(${replace(title)})\n${link}\nfile://${process.cwd()}/${i}.png\n`);
+    i++;
+
+    await browser.close();
   }
   /* eslint-enable no-await-in-loop */
 }
@@ -56,7 +81,7 @@ const argv = process.argv.slice(2);
 
 if (argv.includes("local")) {
   console.log("Running locally!");
-  void localMain().then(() => {
+  void prodMain().then(() => {
     console.log("done.");
   });
 } else {

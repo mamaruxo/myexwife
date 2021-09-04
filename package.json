@@ -18,6 +18,7 @@
   "author": "mm <https://github.com/mamaruxo>",
   "license": "AGPL-3.0",
   "dependencies": {
+    "@cliqz/adblocker-puppeteer": "^1.22.5",
     "@sentry/integrations": "^6.12.0",
     "@sentry/node": "^6.12.0",
     "async-retry": "^1.3.3",
@@ -26,8 +27,8 @@
     "masto": "^4.1.11",
     "node-fetch": "2.6.1",
     "patch-package": "^6.4.7",
-    "playwright": "^1.14.1",
     "postinstall-postinstall": "^2.1.0",
+    "puppeteer": "^10.2.0",
     "source-map-support": "^0.5.19",
     "twitter-api-client": "^1.3.8",
     "uuid": "^8.3.2"
