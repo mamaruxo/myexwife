@@ -119,7 +119,16 @@ if (argv.includes("local")) {
     async ({ page, title }) => {
       const screenshot = (await page.screenshot()) as Buffer;
       const status = replace(title);
-      await doTwoot([{ status, media: screenshot, focus: "0,1" }]);
+
+      await doTwoot([
+        {
+          status,
+          media: screenshot,
+          focus: "0,1",
+          caption: "screenshot of a news item about my ex-wife",
+        },
+      ]);
+
       i++;
     }
   ).then(() => {
