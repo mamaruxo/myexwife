@@ -1,3 +1,7 @@
+import { createReadStream } from "fs";
+import { writeFile, unlink } from "fs/promises";
+import { join } from "path";
+import { tmpdir } from "os";
 import { setTimeout } from "timers/promises";
 
 import { login } from "masto";
@@ -18,7 +22,11 @@ type Status =
   | string
   | {
       status: string;
-      media?: Buffer;
+      pathToMedia: string;
+    }
+  | {
+      status: string;
+      media: Buffer;
     };
 
 export async function doTwoot(statuses: Status[]) {
@@ -47,18 +55,31 @@ export async function doToot(statuses: Status[]): Promise<void> {
   let i = 0;
   /* eslint-disable no-await-in-loop */
   for (const s of statuses) {
-    const { status, media = null } = typeof s === "string" ? { status: s } : s;
+    const { status } = typeof s === "string" ? { status: s } : s;
 
     let mediaId: string | null = null;
-    if (media) {
-      const { id } = await masto.mediaAttachments.create({
-        file: media,
-        description: status,
-      });
+    if (typeof s === "object") {
+      if ("media" in s) {
+        // kludge: buffer uploads don't seem to work, so write them to a temp file first.
+        const path = join(tmpdir(), `masto-upload-${Date.now()}.png`);
+        await writeFile(path, s.media);
 
-      await masto.mediaAttachments.waitFor(id);
+        const { id } = await masto.mediaAttachments.create({
+          file: createReadStream(path),
+          description: status,
+        });
 
-      mediaId = id;
+        await unlink(path);
+
+        mediaId = id;
+      } else {
+        const { id } = await masto.mediaAttachments.create({
+          file: createReadStream(s.pathToMedia),
+          description: status,
+        });
+
+        mediaId = id;
+      }
     }
 
     const idempotencyKey = uuid();
