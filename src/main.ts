@@ -49,24 +49,18 @@ async function prodMain() {
     PuppeteerBlocker.fromPrebuiltAdsAndTracking(fetch),
   ]);
 
+  const browser = await puppeteer.launch({ defaultViewport: { width: 1000, height: 800 } });
   const tmp = join(tmpdir(), `bot-${Date.now()}`);
   mkdirSync(tmp);
 
   let i = 0;
   /* eslint-disable no-await-in-loop */
   for (const { title, link } of items.slice(0, 16)) {
-    // haven't tested using incognito contexts instead of restarting the
-    // browser, but if they're like actual chrome incognito contexts certain
-    // sites might block them with a paywall. might be worth investigating
-    // eventually
-    const browser = await puppeteer.launch({ defaultViewport: { width: 1000, height: 800 } });
-    const page = await browser.newPage();
-
+    const context = await browser.createIncognitoBrowserContext();
     try {
+      const page = await context.newPage();
       await blocker.enableBlockingInPage(page);
       await page.goto(link);
-      await setTimeout(10);
-
       await page.evaluate(kickoffReplaceAndWatch);
       await setTimeout(10);
 
@@ -80,15 +74,17 @@ async function prodMain() {
       i++;
     } catch (e) {
       if (e instanceof puppeteer.errors.TimeoutError) {
-        console.error(`Timeout exceeded for page ${link}:\n`, e);
+        console.error(`Timeout exceeded for page ${link} :\n`, e, "\n");
       } else {
         throw e;
       }
     } finally {
-      await browser.close();
+      await context.close();
     }
   }
   /* eslint-enable no-await-in-loop */
+
+  await browser.close();
 }
 
 const argv = process.argv.slice(2);
