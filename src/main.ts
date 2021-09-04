@@ -52,13 +52,6 @@ async function prodMain() {
     const browser = await puppeteer.launch({ defaultViewport: { width: 1000, height: 800 } });
     const page = await browser.newPage();
 
-    page.on("console", (msg) => {
-      const text = msg.text();
-      if (!text.startsWith("Failed to load resource: net::ERR_BLOCKED_BY_CLIENT")) {
-        console.log(msg.text());
-      }
-    });
-
     await blocker.enableBlockingInPage(page);
     await page.goto(link);
 
