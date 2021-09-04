@@ -14,15 +14,27 @@ import {
   TWITTER_CONSUMER_SECRET,
 } from "./env";
 
-export async function doTwoot(statuses: string[]): Promise<{ twitter: boolean; masto: boolean }> {
-  const results = await Promise.allSettled([doToot(statuses), doTweet(statuses)]);
+type Status =
+  | string
+  | {
+      status: string;
+      media?: Buffer;
+    };
 
-  const [masto, twitter] = results.map((res) => res.status === "fulfilled");
+export async function doTwoot(statuses: Status[]) {
+  const [masto, twitter] = await Promise.allSettled([doToot(statuses), doTweet(statuses)]);
+
+  if (masto.status === "rejected") {
+    console.error("Error posting to Mastodon:\n", masto.reason);
+  }
+  if (twitter.status === "rejected") {
+    console.error("Error posting to Twitter:\n", twitter.reason);
+  }
 
   return { masto, twitter };
 }
 
-export async function doToot(statuses: string[]): Promise<void> {
+export async function doToot(statuses: Status[]): Promise<void> {
   const masto = await retry(() =>
     login({
       url: MASTODON_SERVER,
@@ -33,18 +45,33 @@ export async function doToot(statuses: string[]): Promise<void> {
   let inReplyToId: string | null | undefined = null;
 
   let i = 0;
-  for (const status of statuses) {
+  /* eslint-disable no-await-in-loop */
+  for (const s of statuses) {
+    const { status, media = null } = typeof s === "string" ? { status: s } : s;
+
+    let mediaId: string | null = null;
+    if (media) {
+      const { id } = await masto.mediaAttachments.create({
+        file: media,
+        description: status,
+      });
+
+      await masto.mediaAttachments.waitFor(id);
+
+      mediaId = id;
+    }
+
     const idempotencyKey = uuid();
 
-    // eslint-disable-next-line no-await-in-loop
     const publishedToot = await retry(
       // eslint-disable-next-line @typescript-eslint/no-loop-func
       () =>
         masto.statuses.create(
           {
-            status,
+            status: status,
             visibility: "public",
             inReplyToId,
+            mediaIds: mediaId ? [mediaId] : undefined,
           },
           idempotencyKey
         ),
@@ -58,13 +85,13 @@ export async function doToot(statuses: string[]): Promise<void> {
 
     i++;
     if (i < statuses.length) {
-      // eslint-disable-next-line no-await-in-loop
       await setTimeout(3000);
     }
   }
+  /* eslint-enable no-await-in-loop */
 }
 
-export async function doTweet(statuses: string[]): Promise<void> {
+export async function doTweet(statuses: Status[]): Promise<void> {
   const twitterClient = new TwitterClient({
     apiKey: TWITTER_CONSUMER_KEY,
     apiSecret: TWITTER_CONSUMER_SECRET,
@@ -75,7 +102,9 @@ export async function doTweet(statuses: string[]): Promise<void> {
   let inReplyToId: string | undefined = undefined;
 
   let i = 0;
-  for (const status of statuses) {
+  for (const s of statuses) {
+    const status = typeof s === "string" ? s : s.status;
+
     // eslint-disable-next-line no-await-in-loop
     const publishedTweet = await retry(
       // eslint-disable-next-line @typescript-eslint/no-loop-func

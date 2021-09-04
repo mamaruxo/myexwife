@@ -26,6 +26,7 @@
     "masto": "^4.1.11",
     "node-fetch": "2.6.1",
     "patch-package": "^6.4.7",
+    "playwright": "^1.14.1",
     "postinstall-postinstall": "^2.1.0",
     "source-map-support": "^0.5.19",
     "twitter-api-client": "^1.3.8",

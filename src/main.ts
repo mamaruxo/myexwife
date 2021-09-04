@@ -2,6 +2,7 @@ require("source-map-support").install();
 
 import fetch from "node-fetch";
 import Feedparser from "feedparser";
+import { chromium } from "playwright";
 
 import { doTwoot } from "./twoot";
 import { replace } from "./replace";
@@ -27,7 +28,7 @@ async function fetchAndParse() {
   return items;
 }
 
-async function main() {
+async function localMain() {
   const items = await fetchAndParse();
 
   for (const { title, link, date } of items) {
@@ -36,16 +37,31 @@ async function main() {
   }
 }
 
+async function prodMain() {
+  const items = await fetchAndParse();
+
+  const browser = await chromium.launch();
+  /* eslint-disable no-await-in-loop */
+  for (const { title, link } of items.slice(0, 2)) {
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    await page.goto(link);
+    const screenshot = await page.screenshot();
+    await doTwoot([{ status: replace(title), media: screenshot }]);
+  }
+  /* eslint-enable no-await-in-loop */
+}
+
 const argv = process.argv.slice(2);
 
 if (argv.includes("local")) {
   console.log("Running locally!");
-  void main().then(() => {
+  void localMain().then(() => {
     console.log("done.");
   });
 } else {
   console.log("Running in production!");
-  void doTwoot([`test ${Math.floor(Math.random() * 100)}`]).then(() => {
+  void prodMain().then(() => {
     console.log("success.");
     process.exit(0);
   });
