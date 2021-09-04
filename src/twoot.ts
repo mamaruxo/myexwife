@@ -23,10 +23,12 @@ type Status =
   | {
       status: string;
       pathToMedia: string;
+      caption?: string;
     }
   | {
       status: string;
       media: Buffer;
+      caption?: string;
     };
 
 export async function doTwoot(statuses: Status[]) {
@@ -39,7 +41,10 @@ export async function doTwoot(statuses: Status[]) {
     console.error("Error posting to Twitter:\n", twitter.reason);
   }
 
-  return { masto, twitter };
+  return [
+    { type: "masto", result: masto },
+    { type: "twitter", result: twitter },
+  ];
 }
 
 export async function doToot(statuses: Status[]): Promise<void> {
@@ -66,7 +71,7 @@ export async function doToot(statuses: Status[]): Promise<void> {
 
         const { id } = await masto.mediaAttachments.create({
           file: createReadStream(path),
-          description: status,
+          description: s.caption,
         });
 
         await unlink(path);
@@ -75,7 +80,7 @@ export async function doToot(statuses: Status[]): Promise<void> {
       } else {
         const { id } = await masto.mediaAttachments.create({
           file: createReadStream(s.pathToMedia),
-          description: status,
+          description: s.caption,
         });
 
         mediaId = id;

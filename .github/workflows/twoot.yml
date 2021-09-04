@@ -3,7 +3,7 @@ name: twoot on a schedule
 on:
   workflow_dispatch:
   schedule:
-    - cron: "6,26,46 * * * *"
+    - cron: "2,22,42 * * * *"
 
 jobs:
   scheduled:
@@ -25,3 +25,11 @@ jobs:
           TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
           TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
           TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+      - name: Commit and push if changed
+        run: |-
+          git config user.name "Automated"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A data
+          timestamp=$(date -u)
+          git commit -m "Latest data: ${timestamp}" || exit 0
+          git push
