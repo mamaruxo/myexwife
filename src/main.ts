@@ -48,7 +48,7 @@ async function fetchAndParse() {
 
 async function main(
   transformItems: (items: NewsItem[]) => NewsItem[],
-  onPageReady: (params: { page: Page; title: string; link: string }) => Promise<void>
+  onPageReady: (params: { page: Page; title: string; link: string; date: Date }) => Promise<void>
 ) {
   puppeteer.use(StealthPlugin());
 
@@ -62,7 +62,7 @@ async function main(
   const items = transformItems(rawItems);
 
   /* eslint-disable no-await-in-loop */
-  for (const { title, link } of items) {
+  for (const { title, link, date } of items) {
     const context = await browser.createIncognitoBrowserContext();
     try {
       const page = await context.newPage();
@@ -70,7 +70,7 @@ async function main(
       await page.goto(link);
       await page.evaluate(kickoffReplaceAndWatch);
       await setTimeout(10);
-      await onPageReady({ page, title, link });
+      await onPageReady({ page, title, link, date });
     } catch (e) {
       if (e instanceof puppeteerOrig.errors.TimeoutError) {
         console.error(`Timeout exceeded for page ${link} :\n`, e, "\n");
@@ -97,10 +97,10 @@ if (argv.includes("local")) {
 
   void main(
     (items) => items.slice(0, 5),
-    async ({ page, title, link }) => {
+    async ({ page, title, link, date }) => {
       const path = join(tmp, `${i}.png`);
       await page.screenshot({ path });
-      console.log(`${title}\n(${replace(title)})\n${link}\nfile://${path}\n`);
+      console.log(`${title}\n(${replace(title)})\n${date}\n${link}\nfile://${path}\n`);
       i++;
     }
   ).then(() => {
