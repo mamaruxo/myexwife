@@ -9,6 +9,7 @@ const prepositionsAndArticles = new Set([
 export function replace(original: string) {
   // no 'south my ex-wife morning post'
   const title = original
+    .trim()
     .replaceAll("South China Morning Post", "My Ex-Wife News Service")
     .replaceAll("SCMP", "MENS");
 
