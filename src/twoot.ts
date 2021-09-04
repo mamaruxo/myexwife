@@ -24,11 +24,13 @@ type Status =
       status: string;
       pathToMedia: string;
       caption?: string;
+      focus?: string;
     }
   | {
       status: string;
       media: Buffer;
       caption?: string;
+      focus?: string;
     };
 
 export async function doTwoot(statuses: Status[]) {
@@ -72,6 +74,7 @@ export async function doToot(statuses: Status[]): Promise<void> {
         const { id } = await masto.mediaAttachments.create({
           file: createReadStream(path),
           description: s.caption,
+          focus: s.focus,
         });
 
         await unlink(path);
@@ -81,6 +84,7 @@ export async function doToot(statuses: Status[]): Promise<void> {
         const { id } = await masto.mediaAttachments.create({
           file: createReadStream(s.pathToMedia),
           description: s.caption,
+          focus: s.focus,
         });
 
         mediaId = id;
