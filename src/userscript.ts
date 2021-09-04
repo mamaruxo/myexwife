@@ -72,15 +72,10 @@ export function kickoffReplaceAndWatch() {
 
   function replaceNode(node: Node) {
     if (matcher.test(node.textContent!)) {
-      const walker = document.createTreeWalker(
-        node,
-        NodeFilter.SHOW_TEXT,
-        {
-          acceptNode: (n) =>
-            matcher.test(n.textContent!) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT,
-        },
-        false
-      );
+      const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, {
+        acceptNode: (n) =>
+          matcher.test(n.textContent!) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT,
+      });
 
       let childNode;
       while ((childNode = walker.nextNode())) {
