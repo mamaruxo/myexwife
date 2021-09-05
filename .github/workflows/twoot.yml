@@ -19,7 +19,6 @@ jobs:
       - run: yarn build
       - run: yarn start
         env:
-          MASTODON_SERVER: ${{ secrets.MASTODON_SERVER }}
           MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
           TWITTER_ACCESS_KEY: ${{ secrets.TWITTER_ACCESS_KEY }}
           TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
