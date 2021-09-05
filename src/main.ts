@@ -52,16 +52,18 @@ async function main(
 ) {
   puppeteer.use(StealthPlugin());
 
-  const [browser, rawItems, blocker] = await Promise.all([
-    // not sure how puppeteer-extra duplicated the typings but messed them up
-    puppeteer.launch({ defaultViewport: { width: 1000, height: 800 } } as any),
-    fetchAndParse(),
-    PuppeteerBlocker.fromLists(fetch, fullLists, { enableCompression: true }),
-  ]);
-
+  const rawItems = await fetchAndParse();
   const items = transformItems(rawItems);
 
   console.log(`item count: ${rawItems.length}, filtered: ${items.length}`);
+
+  if (items.length === 0) return;
+
+  const [browser, blocker] = await Promise.all([
+    // not sure how puppeteer-extra duplicated the typings but messed them up
+    puppeteer.launch({ defaultViewport: { width: 1000, height: 800 } } as any),
+    PuppeteerBlocker.fromLists(fetch, fullLists, { enableCompression: true }),
+  ]);
 
   /* eslint-disable no-await-in-loop */
   for (const { title, link, date } of items) {
