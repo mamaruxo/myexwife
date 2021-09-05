@@ -61,8 +61,12 @@ async function main(
 
   const items = transformItems(rawItems);
 
+  console.log(`item count: ${rawItems.length}, filtered: ${items.length}`);
+
   /* eslint-disable no-await-in-loop */
   for (const { title, link, date } of items) {
+    console.log("visiting", link);
+
     const context = await browser.createIncognitoBrowserContext();
     try {
       const page = await context.newPage();
@@ -88,7 +92,18 @@ async function main(
 
 const argv = process.argv.slice(2);
 
-if (argv.includes("local")) {
+if (argv.includes("list")) {
+  console.log("Running locally! (list-only mode)");
+
+  void fetchAndParse().then((items) => {
+    for (const { title, date, link } of items) {
+      console.log(`${title}\n(${replace(title)})\n${date}\n${link}\n`);
+    }
+
+    console.log("done.");
+    process.exit(0);
+  });
+} else if (argv.includes("local")) {
   console.log("Running locally!");
 
   const tmp = join(tmpdir(), `bot-${Date.now()}`);

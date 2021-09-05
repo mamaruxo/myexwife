@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node dist/main.js",
     "dev": "NODE_ENV=development ts-node --transpile-only src/main.ts -- local",
+    "dev-list": "NODE_ENV=development ts-node --transpile-only src/main.ts -- list",
     "build": "rm -rf dist/ && tsc",
     "test": "run-s -l test:*",
     "test:ts": "tsc --noEmit",
