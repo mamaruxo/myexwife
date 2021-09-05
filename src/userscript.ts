@@ -29,6 +29,8 @@ export function kickoffReplaceAndWatch() {
       replaced = title
         .replaceAll("South China Sea", "Sea of my Ex-Wife")
         .replaceAll(/(?:President\s+)?Xi Jinping/gi, "President of my Ex-Wife")
+        .replaceAll(/in\s+(?:China|Beijing)/g, "at my Ex-Wife's Place")
+        .replaceAll(/In\s+(?:China|Beijing)/g, "At my Ex-Wife's Place")
         .replaceAll(/China|Beijing/gi, "My Ex-Wife")
         .replaceAll(/chinese/gi, "My Ex-Wife's");
     } else {
