@@ -2,6 +2,7 @@ require("source-map-support").install();
 import { tmpdir } from "os";
 import { mkdirSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
+import { strict as assert } from "assert";
 import { setTimeout } from "timers/promises";
 
 import fetch from "node-fetch";
@@ -18,6 +19,12 @@ import { kickoffReplaceAndWatch } from "./userscript";
 
 import type { Page } from "puppeteer";
 
+const TWO_WEEKS = 1000 * 60 * 60 * 24 * 14;
+const defaultOldestAllowableDate = Date.now() - TWO_WEEKS;
+
+const sortOldestToNewest = (items: NewsItem[]) =>
+  items.sort((a, b) => a.date.valueOf() - b.date.valueOf());
+
 interface NewsItem {
   title: string;
   link: string;
@@ -25,7 +32,13 @@ interface NewsItem {
   guid: string;
 }
 
-async function fetchAndParse() {
+async function fetchAndParse({
+  filterItem,
+  transformItems = sortOldestToNewest,
+}: {
+  filterItem?: (item: NewsItem) => boolean;
+  transformItems?: (items: NewsItem[]) => NewsItem[];
+} = {}) {
   const res = await fetch("https://news.google.com/rss/search?q=china");
 
   if (!res.ok) {
@@ -37,25 +50,27 @@ async function fetchAndParse() {
 
   const items: NewsItem[] = [];
 
+  let i = 0;
   for await (const { title, link, date, guid } of parser) {
-    items.push({ title, link, date, guid });
+    i++;
+    const item = { title, link, date, guid };
+    if (filterItem?.(item)) {
+      items.push(item);
+    }
   }
 
-  items.sort((a, b) => b.date.valueOf() - a.date.valueOf());
+  console.log(`fetched ${i} items. after filtering: ${items.length}`);
 
-  return items;
+  return transformItems(items);
 }
 
 async function main(
-  transformItems: (items: NewsItem[]) => NewsItem[],
+  filterItem: (item: NewsItem) => boolean,
   onPageReady: (params: { page: Page; title: string; link: string; date: Date }) => Promise<void>
 ) {
   puppeteer.use(StealthPlugin());
 
-  const rawItems = await fetchAndParse();
-  const items = transformItems(rawItems);
-
-  console.log(`item count: ${rawItems.length}, filtered: ${items.length}`);
+  const items = await fetchAndParse({ filterItem });
 
   if (items.length === 0) return;
 
@@ -95,7 +110,7 @@ async function main(
 const argv = process.argv.slice(2);
 
 if (argv.includes("list")) {
-  console.log("Running locally! (list-only mode)");
+  console.log("[running local list-only mode]");
 
   void fetchAndParse().then((items) => {
     for (const { title, date, link } of items) {
@@ -105,54 +120,75 @@ if (argv.includes("list")) {
     console.log("done.");
     process.exit(0);
   });
-} else if (argv.includes("local")) {
-  console.log("Running locally!");
-
-  const tmp = join(tmpdir(), `bot-${Date.now()}`);
-  mkdirSync(tmp);
-  let i = 0;
-
-  void main(
-    (items) => items.slice(0, 5),
-    async ({ page, title, link, date }) => {
-      const path = join(tmp, `${i}.png`);
-      await page.screenshot({ path });
-      console.log(`${title}\n(${replace(title)})\n${date}\n${link}\nfile://${path}\n`);
-      i++;
-    }
-  ).then(() => {
-    console.log("done.");
-    process.exit(0);
-  });
 } else {
-  console.log("Running in production!");
+  const localPath = argv.includes("local") ? join(tmpdir(), `bot-${Date.now()}`) : null;
+  if (localPath) {
+    mkdirSync(localPath);
+    console.log("[running in local screenshot mode]");
+  } else {
+    console.log("[running in production mode]");
+  }
+
+  const done: [date: number, url: string][] = JSON.parse(readFileSync("data/done.json", "utf8"));
+  assert(Array.isArray(done), "expected done.json to be an array");
+  const doneSet = new Set<string>();
+  for (const [date, url] of done) {
+    assert(
+      typeof date === "number" && typeof url === "string",
+      `expected done.json to contain [date: number, url: string] tuples, received [${date}, ${url}]`
+    );
+    doneSet.add(url);
+  }
+
+  const manualDateLimit = JSON.parse(readFileSync("data/no-older-than", "utf8"));
+  assert(
+    typeof manualDateLimit === "number" && !Number.isNaN(manualDateLimit),
+    "expected no-older-than file to be a number"
+  );
+
+  const oldestAllowableDate = Math.max(manualDateLimit, defaultOldestAllowableDate);
+
   let i = 0;
 
+  const onPageReady: Parameters<typeof main>[1] = localPath
+    ? async ({ page, title, link, date }) => {
+        const path = join(localPath, `${i}.png`);
+        await page.screenshot({ path });
+        console.log(`${title}\n(${replace(title)})\n${date}\n${link}\nfile://${path}\n`);
+
+        done.push([date.valueOf(), link]);
+        i++;
+      }
+    : async ({ page, title, date, link }) => {
+        const screenshot = (await page.screenshot()) as Buffer;
+        const status = replace(title);
+
+        await doTwoot([
+          {
+            status,
+            media: screenshot,
+            focus: "0,1",
+            caption: "screenshot of a news item about my ex-wife",
+          },
+        ]);
+
+        done.push([date.valueOf(), link]);
+        i++;
+      };
+
   void main(
-    (items) => {
-      const latest = new Date(JSON.parse(readFileSync("data/latest", "utf8")));
-      return items.filter((item) => item.date > latest);
-    },
-    async ({ page, title }) => {
-      const screenshot = (await page.screenshot()) as Buffer;
-      const status = replace(title);
-
-      await doTwoot([
-        {
-          status,
-          media: screenshot,
-          focus: "0,1",
-          caption: "screenshot of a news item about my ex-wife",
-        },
-      ]);
-
-      i++;
-    }
+    (item) => item.date.valueOf() > oldestAllowableDate && !doneSet.has(item.link),
+    onPageReady
   ).then(() => {
     console.log(`processed ${i} item${i === 1 ? "" : "s"}.`);
-    const now = new Date();
-    writeFileSync("data/latest", JSON.stringify(now));
-    console.log(`wrote date: ${now}`);
+
+    done.sort((a, b) => a[0] - b[0]);
+    while (done.length > 0 && done[0][0] < oldestAllowableDate) {
+      done.shift();
+    }
+
+    writeFileSync("data/done.json", JSON.stringify(done, undefined, 2));
+
     console.log("done.");
     process.exit(0);
   });
