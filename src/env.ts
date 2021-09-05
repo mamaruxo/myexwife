@@ -15,7 +15,7 @@ export const {
 } = envalid.cleanEnv(
   process.env,
   {
-    MASTODON_SERVER: envalid.url({ default: "https://mastodon.social" }),
+    MASTODON_SERVER: envalid.url({ default: "https://botsin.space" }),
     MASTODON_TOKEN: envalid.str(),
     TWITTER_CONSUMER_KEY: envalid.str(),
     TWITTER_CONSUMER_SECRET: envalid.str(),
