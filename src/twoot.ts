@@ -54,6 +54,7 @@ export async function doToot(statuses: Status[]): Promise<void> {
     login({
       url: MASTODON_SERVER,
       accessToken: MASTODON_TOKEN,
+      timeout: 30_000,
     })
   );
 
