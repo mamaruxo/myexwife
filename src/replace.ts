@@ -7,13 +7,15 @@ const prepositionsAndArticles = new Set([
 ]);
 
 export function replace(original: string) {
-  // no 'south my ex-wife morning post'
   const title = original
     .trim()
+    // no 'south my ex-wife morning post'
     .replaceAll("South China Morning Post", "My Ex-Wife News Service")
-    .replaceAll("SCMP", "MENS");
+    .replaceAll("SCMP", "MENS")
+    .replaceAll("South China Sea", "Sea of my Ex-Wife")
+    .replaceAll("Xi Jinping Thought", "Ex-Wife Thought");
 
-  // TODO: distinguish between start case and sentence case
+  // TODO: distinguish between start case and sentence case?
   const isTitleCase = title
     .split(/\s+/)
     .every((w) => prepositionsAndArticles.has(w) || w[0] === w[0].toUpperCase());
@@ -22,19 +24,28 @@ export function replace(original: string) {
 
   if (isTitleCase) {
     replaced = title
-      .replaceAll("South China Sea", "Sea of my Ex-Wife")
-      .replaceAll(/(?:President\s+)?Xi Jinping/gi, "President of my Ex-Wife")
       .replaceAll(/in\s+(?:China|Beijing)/g, "at my Ex-Wife's Place")
       .replaceAll(/In\s+(?:China|Beijing)/g, "At my Ex-Wife's Place")
-      .replaceAll(/China|Beijing/gi, "My Ex-Wife")
-      .replaceAll(/chinese/gi, "My Ex-Wife's");
+      .replaceAll(/(?:President\s+)?Xi(?:\s+Jinping)?/gi, "My Ex-Wife")
+      .replaceAll(/the Chinese/g, "my Ex-Wife's")
+      .replaceAll(/The Chinese/g, "My Ex-Wife's")
+      .replaceAll(/chinese/gi, "My Ex-Wife's")
+      .replaceAll(/China|Beijing/gi, "My Ex-Wife");
   } else {
     replaced = title
-      .replaceAll("South China Sea", "Sea of my Ex-Wife")
-      .replaceAll(/(?:President\s+)?Xi Jinping/gi, "President of my ex-wife");
+      .replaceAll(/in\s+(?:China|Beijing)/g, "at my ex-wife's place")
+      .replaceAll(/In\s+(?:China|Beijing)/g, "At my ex-wife's place")
+      // needs more context to capitalize properly when it's not title case
+      // but maybe better than nothing
+      .replaceAll(/(?:President\s+)?Xi(?:\s+Jinping)?/gi, "Ex-wife")
+      .replaceAll(/the Chinese/g, "my ex-wife's")
+      .replaceAll(/The Chinese/g, "My ex-wife's");
 
     const split = replaced.split(/\s+/);
     const parts: string[] = [];
+
+    // we could probably use lookbehind to test for capitalization instead of
+    // doing this iteratively.
 
     // first one is always capitalized
     parts.push(
