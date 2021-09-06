@@ -176,10 +176,13 @@ if (argv.includes("list")) {
         i++;
       };
 
-  void main(
-    (item) => item.date.valueOf() > oldestAllowableDate && !doneSet.has(item.link),
-    onPageReady
-  ).then(() => {
+  const itemFilter = (item: NewsItem): boolean =>
+    // is a relevant term actually in the title of the article?
+    /china|chinese|xi|beijing/gi.test(item.title) &&
+    item.date.valueOf() > oldestAllowableDate &&
+    !doneSet.has(item.link);
+
+  void main(itemFilter, onPageReady).then(() => {
     console.log(`processed ${i} item${i === 1 ? "" : "s"}.`);
 
     done.sort((a, b) => a[0] - b[0]);
