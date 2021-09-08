@@ -26,7 +26,7 @@ export function replace(original: string) {
     replaced = title
       .replaceAll(/in\s+(?:China|Beijing)/g, "at my Ex-Wife's Place")
       .replaceAll(/In\s+(?:China|Beijing)/g, "At my Ex-Wife's Place")
-      .replaceAll(/(?:President\s+)?Xi(?:\s+Jinping)?/gi, "My Ex-Wife")
+      .replaceAll(/(?:President\s+)?\bXi\b(?:\s+Jinping)?/gi, "My Ex-Wife")
       .replaceAll(/the Chinese/g, "my Ex-Wife's")
       .replaceAll(/The Chinese/g, "My Ex-Wife's")
       .replaceAll(/chinese/gi, "My Ex-Wife's")
@@ -37,7 +37,7 @@ export function replace(original: string) {
       .replaceAll(/In\s+(?:China|Beijing)/g, "At my ex-wife's place")
       // needs more context to capitalize properly when it's not title case
       // but maybe better than nothing
-      .replaceAll(/(?:President\s+)?Xi(?:\s+Jinping)?/gi, "Ex-wife")
+      .replaceAll(/(?:President\s+)?\bXi\b(?:\s+Jinping)?/gi, "Ex-wife")
       .replaceAll(/the Chinese/g, "my ex-wife's")
       .replaceAll(/The Chinese/g, "My ex-wife's");
 
