@@ -28,15 +28,15 @@ export function replace(original: string) {
   if (isTitleCase) {
     replaced = title
       .replaceAll(
-        /in\s+(?:(?:(?:Chinese\s+)?President\s+)?\bXi\b(?:\s+Jinping)?(?:'s\s+))?(?:China|Beijing)/g,
+        /in\s+(?:(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi\b(?:\s+Jinping)?(?:['’]s\s+))?(?:China|Beijing)/g,
         "at my Ex-Wife's Place"
       )
       .replaceAll(
-        /In\s+(?:(?:(?:Chinese\s+)?President\s+)?\bXi\b(?:\s+Jinping)?(?:'s\s+))?(?:China|Beijing)/g,
+        /In\s+(?:(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi\b(?:\s+Jinping)?(?:['’]s\s+))?(?:China|Beijing)/g,
         "At my Ex-Wife's Place"
       )
       .replaceAll(
-        /(?:(?:Chinese\s+)?President\s+)?\bXi\b(?:\s+Jinping)?(?:'s China)?/gi,
+        /(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi\b(?:\s+Jinping)?(?:['’]s China)?/gi,
         "My Ex-Wife"
       )
       .replaceAll(/the Chinese/g, "my Ex-Wife's")
@@ -46,16 +46,23 @@ export function replace(original: string) {
   } else {
     replaced = title
       .replaceAll(
-        /in\s+(?:(?:(?:Chinese\s+)?President\s+)?\bXi\b(?:\s+Jinping)?(?:'s\s+))?(?:China|Beijing)/g,
+        /in\s+(?:(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi\b(?:\s+Jinping)?(?:['’]s\s+))?(?:China|Beijing)/g,
         "at my ex-wife's place"
       )
       .replaceAll(
-        /In\s+(?:(?:(?:Chinese\s+)?President\s+)?\bXi\b(?:\s+Jinping)?(?:'s\s+))?(?:China|Beijing)/g,
+        /In\s+(?:(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi\b(?:\s+Jinping)?(?:['’]s\s+))?(?:China|Beijing)/g,
         "At my ex-wife's place"
       )
-      // needs more context to capitalize properly when it's not title case
-      // but maybe better than nothing
-      .replaceAll(/(?:(?:Chinese\s+)?President\s+)?\bXi\b(?:\s+Jinping)?(?:'s China)?/gi, "Ex-wife")
+      .replaceAll(
+        /^(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi\b(?:\s+Jinping)?(?:['’]s China)?/gi,
+        "My ex-wife"
+      )
+      // needs more context to capitalize properly when it's not title case and
+      // not at the start of the string but maybe better than nothing
+      .replaceAll(
+        /(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi\b(?:\s+Jinping)?(?:['’]s China)?/gi,
+        "my ex-wife"
+      )
       .replaceAll(/the Chinese/g, "my ex-wife's")
       .replaceAll(/The Chinese/g, "My ex-wife's");
 
