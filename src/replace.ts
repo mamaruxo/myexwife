@@ -3,7 +3,10 @@ const prepositionsAndArticles = new Set([
   "as", "at", "by", "for", "from", "in",
   "of", "off", "on", "onto", "per", "to",
   "up", "upon", "via", "with", "the", "a",
-  "an"
+  "an",
+  // some outlets allow longer prepositions to be lowercase in their
+  // title-cased headlines
+  "among", "about"
 ]);
 
 export function replace(original: string) {
@@ -24,20 +27,35 @@ export function replace(original: string) {
 
   if (isTitleCase) {
     replaced = title
-      .replaceAll(/in\s+(?:China|Beijing)/g, "at my Ex-Wife's Place")
-      .replaceAll(/In\s+(?:China|Beijing)/g, "At my Ex-Wife's Place")
-      .replaceAll(/(?:President\s+)?\bXi\b(?:\s+Jinping)?/gi, "My Ex-Wife")
+      .replaceAll(
+        /in\s+(?:(?:(?:Chinese\s+)?President\s+)?\bXi\b(?:\s+Jinping)?(?:'s\s+))?(?:China|Beijing)/g,
+        "at my Ex-Wife's Place"
+      )
+      .replaceAll(
+        /In\s+(?:(?:(?:Chinese\s+)?President\s+)?\bXi\b(?:\s+Jinping)?(?:'s\s+))?(?:China|Beijing)/g,
+        "At my Ex-Wife's Place"
+      )
+      .replaceAll(
+        /(?:(?:Chinese\s+)?President\s+)?\bXi\b(?:\s+Jinping)?(?:'s China)?/gi,
+        "My Ex-Wife"
+      )
       .replaceAll(/the Chinese/g, "my Ex-Wife's")
       .replaceAll(/The Chinese/g, "My Ex-Wife's")
       .replaceAll(/chinese/gi, "My Ex-Wife's")
       .replaceAll(/China|Beijing/gi, "My Ex-Wife");
   } else {
     replaced = title
-      .replaceAll(/in\s+(?:China|Beijing)/g, "at my ex-wife's place")
-      .replaceAll(/In\s+(?:China|Beijing)/g, "At my ex-wife's place")
+      .replaceAll(
+        /in\s+(?:(?:(?:Chinese\s+)?President\s+)?\bXi\b(?:\s+Jinping)?(?:'s\s+))?(?:China|Beijing)/g,
+        "at my ex-wife's place"
+      )
+      .replaceAll(
+        /In\s+(?:(?:(?:Chinese\s+)?President\s+)?\bXi\b(?:\s+Jinping)?(?:'s\s+))?(?:China|Beijing)/g,
+        "At my ex-wife's place"
+      )
       // needs more context to capitalize properly when it's not title case
       // but maybe better than nothing
-      .replaceAll(/(?:President\s+)?\bXi\b(?:\s+Jinping)?/gi, "Ex-wife")
+      .replaceAll(/(?:(?:Chinese\s+)?President\s+)?\bXi\b(?:\s+Jinping)?(?:'s China)?/gi, "Ex-wife")
       .replaceAll(/the Chinese/g, "my ex-wife's")
       .replaceAll(/The Chinese/g, "My ex-wife's");
 
