@@ -7,6 +7,7 @@ import { setTimeout } from "timers/promises";
 
 import fetch from "node-fetch";
 import Feedparser from "feedparser";
+import { close as flushSentry } from "@sentry/node";
 
 import puppeteerOrig from "puppeteer";
 import puppeteer from "puppeteer-extra";
@@ -16,6 +17,8 @@ import { PuppeteerBlocker, fullLists } from "@cliqz/adblocker-puppeteer";
 import { doTwoot } from "./twoot";
 import { replace } from "./replace";
 import { kickoffReplaceAndWatch } from "./userscript";
+
+import { DATA_DIR } from "./env";
 
 import type { Page } from "puppeteer";
 
@@ -129,7 +132,9 @@ if (argv.includes("list")) {
     console.log("[running in production mode]");
   }
 
-  const done: [date: number, url: string][] = JSON.parse(readFileSync("data/done.json", "utf8"));
+  const done: [date: number, url: string][] = JSON.parse(
+    readFileSync(join(DATA_DIR, "done.json"), "utf8")
+  );
   assert(Array.isArray(done), "expected done.json to be an array");
   const doneSet = new Set<string>();
   for (const [date, url] of done) {
@@ -182,17 +187,20 @@ if (argv.includes("list")) {
     item.date.valueOf() > oldestAllowableDate &&
     !doneSet.has(item.link);
 
-  void main(itemFilter, onPageReady).then(() => {
-    console.log(`processed ${i} item${i === 1 ? "" : "s"}.`);
+  void main(itemFilter, onPageReady)
+    .then(() => {
+      console.log(`processed ${i} item${i === 1 ? "" : "s"}.`);
 
-    done.sort((a, b) => a[0] - b[0]);
-    while (done.length > 0 && done[0][0] < oldestAllowableDate) {
-      done.shift();
-    }
+      done.sort((a, b) => a[0] - b[0]);
+      while (done.length > 0 && done[0][0] < oldestAllowableDate) {
+        done.shift();
+      }
 
-    writeFileSync("data/done.json", JSON.stringify(done, undefined, 2));
-
-    console.log("done.");
-    process.exit(0);
-  });
+      writeFileSync(join(DATA_DIR, "done.json"), JSON.stringify(done, undefined, 2));
+    })
+    .then(() => flushSentry(2000))
+    .then(() => {
+      console.log("done.");
+      process.exit(0);
+    });
 }

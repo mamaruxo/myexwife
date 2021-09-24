@@ -21,7 +21,7 @@ export const {
     TWITTER_CONSUMER_SECRET: envalid.str(),
     TWITTER_ACCESS_KEY: envalid.str(),
     TWITTER_ACCESS_SECRET: envalid.str(),
-    DATA_DIR: envalid.str({ default: "persist" }),
+    DATA_DIR: envalid.str({ devDefault: "persist" }),
     SENTRY_DSN: envalid.str({ default: "" }),
   },
   { strict: true }

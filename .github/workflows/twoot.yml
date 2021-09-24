@@ -11,21 +11,29 @@ jobs:
     environment: twoot
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          # disjoint branch with "unused concept" data
+          ref: "persist"
+          path: "persist"
       - uses: actions/setup-node@v2
         with:
-          node-version: "16.8"
+          node-version: "16.9.1"
           cache: "yarn"
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: yarn start
         env:
+          DATA_DIR: "persist"
           MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
           TWITTER_ACCESS_KEY: ${{ secrets.TWITTER_ACCESS_KEY }}
           TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
           TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
           TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+          SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
       - name: Commit and push if changed
         run: |-
+          cd persist
           git config user.name "Automated"
           git config user.email "actions@users.noreply.github.com"
           git add -A data
