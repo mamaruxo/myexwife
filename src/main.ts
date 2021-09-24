@@ -33,7 +33,7 @@ interface NewsItem {
 }
 
 async function fetchAndParse({
-  filterItem,
+  filterItem = () => true,
   transformItems = sortOldestToNewest,
 }: {
   filterItem?: (item: NewsItem) => boolean;
@@ -54,7 +54,7 @@ async function fetchAndParse({
   for await (const { title, link, date, guid } of parser) {
     i++;
     const item = { title, link, date, guid };
-    if (filterItem?.(item)) {
+    if (filterItem(item)) {
       items.push(item);
     }
   }
