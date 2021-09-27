@@ -1,9 +1,5 @@
 [
   [
-    1631550000000,
-    "https://www.reuters.com/business/autos-transportation/ouster-supply-digital-lidar-sensors-chinas-juzhen-2021-09-13/"
-  ],
-  [
     1631555781000,
     "https://foreignpolicy.com/2021/09/13/china-russia-shared-playbook-afghanistan/"
   ],
@@ -3808,6 +3804,10 @@
     "https://www.reuters.com/world/africa/exclusive-congo-talks-with-chinas-huayou-end-dispute-over-cobalt-mine-2021-09-27/"
   ],
   [
+    1632728018000,
+    "https://www.bloomberg.com/news/articles/2021-09-27/nickel-falls-with-most-metals-as-china-power-crunch-spreads"
+  ],
+  [
     1632728160000,
     "https://www.reuters.com/business/finance/china-encourages-mainland-insurers-sell-catastrophe-bonds-hong-kong-2021-09-27/"
   ],
@@ -3892,7 +3892,23 @@
     "https://www.reuters.com/world/americas/us-plans-projects-latin-america-countering-chinas-belt-road-2021-09-27/"
   ],
   [
+    1632741840000,
+    "https://www.reuters.com/business/china-evergrandes-construction-guangzhou-soccer-stadium-proceeding-planned-2021-09-27/"
+  ],
+  [
     1632746302000,
     "https://www.nytimes.com/2021/09/27/world/asia/china-abortion-limits.html"
+  ],
+  [
+    1632750300000,
+    "https://www.globaltimes.cn/page/202109/1235255.shtml"
+  ],
+  [
+    1632752605000,
+    "https://www.nytimes.com/2021/09/27/business/economy/china-electricity.html"
+  ],
+  [
+    1632753000000,
+    "https://www.wsj.com/articles/evergrande-worries-help-fuel-selloff-at-another-chinese-developer-11632744765"
   ]
 ]
