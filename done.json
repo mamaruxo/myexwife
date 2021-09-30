@@ -1,13 +1,5 @@
 [
   [
-    1631818380000,
-    "https://www.reuters.com/business/investors-brace-great-fall-china-2021-09-16/"
-  ],
-  [
-    1631818800000,
-    "https://www.abc.net.au/news/2021-09-17/submarine-deal-is-australia-usa-ready-for-showdown-with-china/100466446"
-  ],
-  [
     1631820151000,
     "https://www.axios.com/china-australia-submarines-blinken-austin-945533ef-9ed9-40a3-a0ff-6db5bf5e6833.html"
   ],
@@ -3520,6 +3512,10 @@
     "https://www.reuters.com/breakingviews/chancellor-evergrande-is-all-chinas-woes-one-2021-09-30/"
   ],
   [
+    1632964320000,
+    "https://www.bloomberg.com/news/articles/2021-09-30/china-s-factories-contract-for-first-time-since-pandemic-began"
+  ],
+  [
     1632965400000,
     "https://www.marketwatch.com/story/china-manufacturing-gauge-shows-first-contraction-since-early-2020-271632965453"
   ],
@@ -3718,5 +3714,9 @@
   [
     1633024976000,
     "https://www.economist.com/finance-and-economics/2021/10/02/the-latest-shock-to-chinas-economy-power-shortages"
+  ],
+  [
+    1633027261000,
+    "https://www.economist.com/china/2021/10/02/xi-jinpings-clampdowns-herald-a-tense-political-year-in-china"
   ]
 ]
