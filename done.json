@@ -1,9 +1,5 @@
 [
   [
-    1631761647000,
-    "https://www.ft.com/content/d5725cb3-169c-442f-953e-077bb926f4c0"
-  ],
-  [
     1631763720000,
     "https://www.marketwatch.com/story/asian-markets-dip-lower-on-lackluster-data-from-china-japan-01631763759"
   ],
@@ -74,6 +70,10 @@
   [
     1631775600000,
     "https://spectrum.ieee.org/china-mars-helicopter-rover-exploration"
+  ],
+  [
+    1631775600000,
+    "https://www.cnn.com/2021/09/15/asia/japan-defense-minister-kishi-china-interview-intl-hnk-ml/index.html"
   ],
   [
     1631775915000,
@@ -3742,5 +3742,9 @@
   [
     1632961632000,
     "https://www.nytimes.com/2021/09/29/sports/olympics/winter-olympics-beijing-restrictions.html"
+  ],
+  [
+    1632967620000,
+    "https://www.reuters.com/world/us-chinese-military-officials-hold-frank-in-depth-talks-pentagon-2021-09-30/"
   ]
 ]
