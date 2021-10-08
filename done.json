@@ -1,9 +1,5 @@
 [
   [
-    1632474000000,
-    "https://www.barrons.com/articles/8-stocks-on-the-right-side-of-chinas-regulatory-crackdown-51632474002"
-  ],
-  [
     1632475440000,
     "https://www.reuters.com/article/crypto-currency-china/china-central-bank-vows-crackdown-on-cryptocurrency-trading-idUSB9N2Q200C"
   ],
@@ -4652,6 +4648,10 @@
     "https://www.reuters.com/business/finance/chinas-sept-services-activity-returns-growth-caixin-pmi-2021-10-08/"
   ],
   [
+    1633664607000,
+    "https://finance.yahoo.com/news/china-shares-rise-reopen-holiday-032109167.html"
+  ],
+  [
     1633664760000,
     "https://www.bloomberg.com/news/articles/2021-10-08/hong-kong-gym-chain-pure-is-said-to-seek-funds-for-china-growth"
   ],
@@ -4714,5 +4714,13 @@
   [
     1633679160000,
     "https://www.reuters.com/world/china/chinas-soft-golden-week-data-bode-ill-retail-sales-2021-10-07/"
+  ],
+  [
+    1633683460000,
+    "https://www.economist.com/china/2021/10/09/china-is-ratcheting-up-military-pressure-on-taiwan"
+  ],
+  [
+    1633683780000,
+    "https://www.reuters.com/business/congos-6-bln-china-mining-deal-unconscionable-says-draft-report-2021-10-08/"
   ]
 ]
