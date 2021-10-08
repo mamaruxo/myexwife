@@ -1,9 +1,5 @@
 [
   [
-    1632462120000,
-    "https://www.cnn.com/2021/09/24/asia/taiwan-china-warplane-flights-intl-hnk-ml/index.html"
-  ],
-  [
     1632463020000,
     "https://www.reuters.com/world/china/chinese-gaming-firms-vow-self-regulation-amid-crackdown-teen-addiction-2021-09-24/"
   ],
@@ -22,6 +18,10 @@
   [
     1632466800000,
     "https://www.cnn.com/2021/09/23/asia/us-china-india-australia-japan-quad-intl-hnk/index.html"
+  ],
+  [
+    1632466800000,
+    "https://www.reuters.com/world/china/china-seeking-resolve-issues-caused-by-power-curbs-higher-raw-materials-prices-2021-09-24/"
   ],
   [
     1632466806000,
@@ -4668,6 +4668,10 @@
     "https://www.reuters.com/world/asia-pacific/chinas-top-coal-region-tells-mines-boost-output-immediately-sources-2021-10-08/"
   ],
   [
+    1633666619000,
+    "https://www.aljazeera.com/news/2021/10/8/do-the-us-and-china-have-a-taiwan-agreement"
+  ],
+  [
     1633666641000,
     "https://www.scmp.com/economy/china-economy/article/3151600/china-power-crisis-forces-serious-beijing-order-top-coal"
   ],
@@ -4682,5 +4686,9 @@
   [
     1633667430000,
     "https://www.cnbc.com/2021/10/08/china-golden-week-consumers-are-spending-millions-on-luxury-goods-in-hainan.html"
+  ],
+  [
+    1633669620000,
+    "https://www.cnn.com/2021/10/08/china/hong-kong-china-covid-border-mic-intl-hnk/index.html"
   ]
 ]
