@@ -1,9 +1,5 @@
 [
   [
-    1632458188000,
-    "https://www.bbc.com/news/world-asia-china-58674186"
-  ],
-  [
     1632459939000,
     "https://finance.yahoo.com/news/crackdown-hit-alibaba-divest-5-050539507.html"
   ],
@@ -4596,6 +4592,10 @@
     "https://www.cnn.com/2021/10/07/politics/us-submarine-collision-south-china-sea/index.html"
   ],
   [
+    1633638617000,
+    "https://www.scmp.com/economy/china-economy/article/3151549/chinas-bid-weaponise-trade-crumbles-it-turns-australia-cotton"
+  ],
+  [
     1633638960000,
     "https://www.jpost.com/israel-news/biden-administration-ups-pressure-on-israel-to-crack-down-on-china-681379"
   ],
@@ -4678,5 +4678,13 @@
   [
     1633666680000,
     "https://www.reuters.com/business/sustainable-business/china-protest-sets-stage-un-plane-emissions-debate-2021-10-08/"
+  ],
+  [
+    1633666800000,
+    "https://www.theguardian.com/world/2021/oct/08/chinas-noisy-dancing-grannies-silenced-by-device-that-disables-speakers"
+  ],
+  [
+    1633667430000,
+    "https://www.cnbc.com/2021/10/08/china-golden-week-consumers-are-spending-millions-on-luxury-goods-in-hainan.html"
   ]
 ]
