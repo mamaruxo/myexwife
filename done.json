@@ -1,9 +1,5 @@
 [
   [
-    1633328400000,
-    "https://www.reuters.com/business/energy/chinas-zhejiang-province-imports-first-thermal-coal-kazakhstan-state-media-2021-10-04/"
-  ],
-  [
     1633329180000,
     "https://www.bloomberg.com/news/articles/2021-10-04/china-tech-stock-benchmark-tests-lows-on-regulatory-pressure"
   ],
@@ -562,6 +558,10 @@
   [
     1633417200000,
     "https://www.nytimes.com/2021/09/25/world/asia/meng-wanzhou-china.html"
+  ],
+  [
+    1633417200000,
+    "https://www.nytimes.com/2021/10/03/business/china-evergrande-trading-halt.html"
   ],
   [
     1633417278000,
@@ -5216,7 +5216,23 @@
     "https://www.bloomberg.com/opinion/articles/2021-10-18/bitcoin-s-record-testing-rebound-may-have-been-made-in-china"
   ],
   [
+    1634529600000,
+    "https://www.bloomberg.com/news/articles/2021-10-18/india-china-talks-deadlocked-over-troops-near-himalayan-border-pass"
+  ],
+  [
     1634529613000,
     "https://www.ft.com/content/0202ed6e-62d1-44b6-a61c-8b1278fcf31b"
+  ],
+  [
+    1634530620000,
+    "https://www.reuters.com/world/china/china-coking-coal-coke-futures-surge-record-highs-supply-woes-2021-10-18/"
+  ],
+  [
+    1634531040000,
+    "https://www.bloomberg.com/opinion/articles/2021-10-18/china-s-gdp-slowdown-is-a-win-for-believers-in-transitory-inflation"
+  ],
+  [
+    1634535000000,
+    "https://www.bloomberg.com/news/articles/2021-10-18/china-growth-hit-boe-rate-hike-bets-eu-s-new-tool-eco-day"
   ]
 ]
