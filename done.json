@@ -1,9 +1,5 @@
 [
   [
-    1633512600000,
-    "https://www.barrons.com/articles/chinas-coal-habit-will-be-hard-to-kick-51633462019"
-  ],
-  [
     1633514422000,
     "https://www.scmp.com/news/people-culture/social-welfare/article/3151114/chinas-fake-socialite-student-who-lived-high"
   ],
@@ -1274,6 +1270,10 @@
   [
     1633849200000,
     "https://www.washingtonpost.com/world/asia_pacific/china-floods-climate-coal-power/2021/10/11/c20a7d2e-2a6a-11ec-b17d-985c186de338_story.html"
+  ],
+  [
+    1633849200000,
+    "https://www.nytimes.com/2021/10/06/business/china-business-wall-street.html"
   ],
   [
     1633849884000,
@@ -5252,6 +5252,10 @@
     "https://www.reuters.com/article/china-yuan-midpoint/yuan-strengthens-after-china-sets-firmest-mid-point-in-4-months-idUSAZN0F3800"
   ],
   [
+    1634698500000,
+    "https://www.bloomberg.com/news/articles/2021-10-20/china-s-rrr-cut-expectations-have-eased-pboc-s-house-paper-says"
+  ],
+  [
     1634699760000,
     "https://www.reuters.com/lifestyle/sports/china-lights-olympic-flame-beijing-2021-10-20/"
   ],
@@ -5342,5 +5346,9 @@
   [
     1634719020000,
     "https://www.reuters.com/world/china/chinas-covid-19-outbreak-grows-cities-race-trace-infections-2021-10-20/"
+  ],
+  [
+    1634719440000,
+    "https://www.reuters.com/article/taiwan-economy-orders/update-1-taiwan-sept-export-orders-beat-forecast-warns-on-china-curbs-idUSL4N2R5018"
   ]
 ]
