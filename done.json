@@ -1,9 +1,5 @@
 [
   [
-    1633508769000,
-    "https://finance.yahoo.com/news/china-tech-stock-gauge-falls-052629700.html"
-  ],
-  [
     1633510823000,
     "https://www.nytimes.com/2021/10/06/business/china-business-wall-street.html"
   ],
@@ -5292,6 +5288,10 @@
     "https://www.reuters.com/world/china/china-updates-official-news-sources-list-tightening-information-oversight-2021-10-20/"
   ],
   [
+    1634704223000,
+    "https://www.scmp.com/news/china/science/article/3152917/china-working-way-extract-oxygen-moons-surface"
+  ],
+  [
     1634704364000,
     "https://www.aljazeera.com/news/2021/10/20/china-lights-olympic-flame-ahead-of-2022-beijing-games"
   ],
@@ -5342,5 +5342,9 @@
   [
     1634714040000,
     "https://www.wsj.com/articles/jack-ma-leaves-china-for-the-first-time-since-regulatory-woes-began-11634714073"
+  ],
+  [
+    1634719020000,
+    "https://www.reuters.com/world/china/chinas-covid-19-outbreak-grows-cities-race-trace-infections-2021-10-20/"
   ]
 ]
