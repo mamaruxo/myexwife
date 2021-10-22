@@ -1,17 +1,5 @@
 [
   [
-    1633688700000,
-    "https://www.reuters.com/article/china-icbc-forex/update-1-chinas-icbc-to-restrict-some-forex-and-commodities-trading-idUSL1N2R40GY"
-  ],
-  [
-    1633688770000,
-    "https://www.nytimes.com/2021/10/08/technology/china-meituan-antitrust-fine.html"
-  ],
-  [
-    1633689360000,
-    "https://www.reuters.com/article/us-taiwan-france/call-taiwan-a-country-french-senator-says-angering-china-idUSKBN2GY121"
-  ],
-  [
     1633690200000,
     "https://www.cnn.com/2021/10/08/business/china-coal-power-shortage-climate-intl-hnk/index.html"
   ],
@@ -218,6 +206,10 @@
   [
     1633762800000,
     "https://www.nytimes.com/2021/10/04/business/economy/us-china-trade.html"
+  ],
+  [
+    1633762800000,
+    "https://www.nbcnews.com/news/china/chinas-president-xi-jinping-vows-reunification-taiwan-rising-tensions-rcna2802"
   ],
   [
     1633764817000,
@@ -5450,5 +5442,9 @@
   [
     1634894520000,
     "https://www.reuters.com/world/china/parts-china-toughen-covid-curbs-fight-new-outbreak-2021-10-22/"
+  ],
+  [
+    1634898000000,
+    "https://www.reuters.com/business/energy/chinas-cnooc-makes-rare-diesel-imports-trading-sources-say-2021-10-22/"
   ]
 ]
