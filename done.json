@@ -1,17 +1,5 @@
 [
   [
-    1633656600000,
-    "https://www.bloomberg.com/news/articles/2021-10-08/china-reduces-liquidity-support-as-trading-resumes-after-holiday"
-  ],
-  [
-    1633658100000,
-    "https://www.reuters.com/article/china-economy-pmi-services/chinas-sept-services-activity-returns-to-growth-caixin-pmi-idUSZRN002YHU"
-  ],
-  [
-    1633658520000,
-    "https://www.afr.com/politics/federal/china-bully-has-itself-to-blame-for-regional-alienation-abbott-20211008-p58yao"
-  ],
-  [
     1633660260000,
     "https://www.reuters.com/world/asia-pacific/chinas-top-coal-region-tells-mines-boost-output-immediately-sources-2021-10-08/"
   ],
@@ -4556,6 +4544,10 @@
     "https://www.nextgov.com/emerging-tech/2021/10/bidens-defense-nominees-push-countering-cyber-threats-and-chinas-tech-progress/186219/"
   ],
   [
+    1634679015000,
+    "https://www.scmp.com/economy/global-economy/article/3152903/chinas-canton-fair-wraps-exporters-lament-lack-foreign"
+  ],
+  [
     1634679238000,
     "https://www.bloomberg.com/news/articles/2021-10-19/byd-beats-china-benchmark-as-strong-ev-sales-offset-chip-worries"
   ],
@@ -5416,6 +5408,10 @@
     "https://www.bloomberg.com/news/articles/2021-10-21/criticism-of-china-s-actions-in-xinjiang-grows-at-united-nations"
   ],
   [
+    1634845922000,
+    "https://appleinsider.com/articles/21/10/21/apple-could-be-the-next-target-of-chinas-push-to-get-more-data-stored-locally"
+  ],
+  [
     1634846128000,
     "https://www.newsweek.com/isis-put-china-notice-ethnic-minority-attacks-afghanistan-1640973"
   ],
@@ -5448,8 +5444,16 @@
     "https://www.reuters.com/world/china/with-xi-biden-meeting-us-aims-show-responsible-handling-china-ties-2021-10-21/"
   ],
   [
+    1634856060000,
+    "https://www.usnews.com/news/world/articles/2021-10-21/with-xi-biden-meeting-us-aims-to-show-responsible-handling-of-china-ties"
+  ],
+  [
     1634858100000,
     "https://www.prnewswire.com/news-releases/xinhua-silk-road-smart-china-expo-2021-kaizhou-forum-held-in-sw-chinas-chongqing-301406300.html"
+  ],
+  [
+    1634862480000,
+    "https://www.theguardian.com/world/2021/oct/22/smuggling-australian-rock-lobsters-into-china-a-national-security-threat-hong-kong-customs-chief-says"
   ],
   [
     1634863200000,
@@ -5462,5 +5466,13 @@
   [
     1634864325000,
     "https://www.nytimes.com/2021/10/21/arts/music/li-yundi-china-prostitution.html"
+  ],
+  [
+    1634866320000,
+    "https://www.reuters.com/article/china-evergrande-debt/china-evergrande-sends-funds-to-trustee-for-bond-coupon-due-sept-23-source-idUSB9N2QB00P"
+  ],
+  [
+    1634867220000,
+    "https://www.foxnews.com/politics/biden-pledges-to-protect-taiwan-if-china-attacks"
   ]
 ]
