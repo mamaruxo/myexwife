@@ -1,9 +1,5 @@
 [
   [
-    1634461620000,
-    "https://www.globaltimes.cn/page/202110/1236504.shtml"
-  ],
-  [
     1634463000000,
     "https://www.wsj.com/articles/alibaba-faces-new-threat-an-evolving-chinese-shopper-11634463001"
   ],
@@ -6272,6 +6268,10 @@
     "https://www.indiatoday.in/news-analysis/story/what-has-china-been-up-to-across-the-globe-china-s-top-excesses-1871555-2021-10-31"
   ],
   [
+    1635648120000,
+    "https://www.bloomberg.com/news/articles/2021-10-31/china-will-release-diesel-gasoline-reserves-to-ease-shortage"
+  ],
+  [
     1635651360000,
     "https://www.wsj.com/articles/chinas-manufacturing-activity-contracts-for-second-straight-month-11635645642"
   ],
@@ -6310,5 +6310,13 @@
   [
     1635666360000,
     "https://www.theguardian.com/world/2021/oct/31/china-rejects-us-intelligence-report-on-covid-origins-as-political-and-false"
+  ],
+  [
+    1635670684000,
+    "https://www.theguardian.com/world/live/2021/oct/31/covid-live-news-coronavirus-origins-china-us-intelligence-report"
+  ],
+  [
+    1635670815000,
+    "https://www.nytimes.com/2021/10/31/business/electric-cars-china-europe.html"
   ]
 ]
