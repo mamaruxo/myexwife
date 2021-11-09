@@ -1,9 +1,5 @@
 [
   [
-    1635239640000,
-    "https://www.reuters.com/business/retail-consumer/china-targets-online-retail-sales-266-trln-by-2025-2021-10-26/"
-  ],
-  [
     1635241086000,
     "https://foreignpolicy.com/2021/10/26/chinese-censorship-enes-kanter-celtics-browder-is-going-global/"
   ],
@@ -4112,6 +4108,10 @@
     "https://www.npr.org/2021/11/03/1051941754/climate-reporters-across-the-globe-share-challenges-why-yahoo-is-leaving-china"
   ],
   [
+    1635960627000,
+    "https://thehill.com/policy/defense/579869-milley-us-absolutely-could-defend-taiwan-from-china"
+  ],
+  [
     1635960720000,
     "https://www.theguardian.com/world/2021/nov/03/china-increasing-nuclear-arsenal-much-faster-than-was-thought-pentagon-says"
   ],
@@ -6620,6 +6620,10 @@
     "https://www.hindustantimes.com/world-news/eye-on-india-china-builds-delivers-biggest-stealth-warship-to-pakistan-101636432684895.html"
   ],
   [
+    1636433460000,
+    "https://www.bloomberg.com/news/articles/2021-11-09/china-property-stress-triggers-fed-warning-as-bond-losses-spread"
+  ],
+  [
     1636433880000,
     "https://www.cnbc.com/2021/11/09/fed-says-chinas-real-estate-troubles-could-spill-over-to-the-us.html"
   ],
@@ -6652,6 +6656,10 @@
     "https://www.reuters.com/world/china/chinas-oct-new-bank-loans-likely-halve-prior-month-2021-11-09/"
   ],
   [
+    1636437000000,
+    "https://www.reuters.com/article/hsbc-wealth-asia/exclusive-hsbc-exceeds-china-wealth-hiring-targets-explores-india-private-banking-re-entry-idUSL4N2RZ09X"
+  ],
+  [
     1636437360000,
     "https://www.reuters.com/business/exclusive-hsbc-exceeds-china-wealth-hiring-targets-explores-india-private-2021-11-09/"
   ],
@@ -6662,5 +6670,13 @@
   [
     1636441963000,
     "https://www.cnbc.com/2021/11/09/chinas-property-market-debt-an-issue-for-the-economy-george-magnus.html"
+  ],
+  [
+    1636444380000,
+    "https://www.reuters.com/world/china/swiss-pursue-special-path-with-big-trade-partner-china-minister-2021-11-09/"
+  ],
+  [
+    1636447159000,
+    "https://www.rte.ie/news/world/2021/1109/1258744-china-cop26/"
   ]
 ]
