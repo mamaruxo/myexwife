@@ -1,9 +1,5 @@
 [
   [
-    1635735637000,
-    "https://www.scmp.com/news/china/politics/article/3154246/china-wants-its-factory-workers-rival-germans-will-lying-flat"
-  ],
-  [
     1635737340000,
     "https://www.bloomberg.com/news/articles/2021-11-01/china-eases-tight-diesel-market-as-producers-boost-output-cctv"
   ],
@@ -126,6 +122,10 @@
   [
     1635750000000,
     "https://www.reuters.com/world/china/china-says-us-covid-origins-report-is-without-credibility-2021-11-01/"
+  ],
+  [
+    1635750000000,
+    "https://www.cnn.com/2021/10/31/asia/china-japan-south-korea-covid-intl-dst-hnk/index.html"
   ],
   [
     1635751035000,
@@ -6048,6 +6048,10 @@
     "https://www.abc.net.au/news/2021-11-15/how-china-hard-landing-will-hit-australia-one-trick-export-pony/100620020"
   ],
   [
+    1636912982000,
+    "https://www.abc.net.au/news/2021-11-15/lachlan-river-flooding-at-forbes-evacuation-order-possible/100620178"
+  ],
+  [
     1636915500000,
     "https://www.wsj.com/articles/xi-jinping-china-economy-growth-poverty-tech-beijing-11636915358"
   ],
@@ -6140,11 +6144,27 @@
     "https://www.reuters.com/business/media-telecom/china-bill-including-much-needed-chips-funding-stalled-us-congress-2021-11-15/"
   ],
   [
+    1636939980000,
+    "https://www.bloomberg.com/news/articles/2021-11-15/china-rolls-over-policy-loans-ahead-of-economic-data-dump"
+  ],
+  [
+    1636941480000,
+    "https://www.reuters.com/lifestyle/sports/wta-calls-investigation-into-peng-sexual-assault-allegations-2021-11-14/"
+  ],
+  [
     1636941660000,
     "https://www.cnbc.com/2021/11/15/chinas-retail-sales-beat-expectations-in-october.html"
   ],
   [
     1636943700000,
     "https://www.reuters.com/world/china/chinas-new-home-prices-oct-fell-by-most-since-february-2015-2021-11-15/"
+  ],
+  [
+    1636944960000,
+    "https://www.reuters.com/world/china/chinas-oct-coal-output-rises-highest-since-march-2015-2021-11-15/"
+  ],
+  [
+    1636945878000,
+    "https://www.ft.com/content/629686f4-b0db-4b23-853c-26a6fa42c22e"
   ]
 ]
