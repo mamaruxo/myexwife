@@ -1,13 +1,5 @@
 [
   [
-    1635917739000,
-    "https://www.nytimes.com/2021/11/03/world/asia/china-metoo-peng-shuai-zhang-gaoli.html"
-  ],
-  [
-    1635918480000,
-    "https://www.reuters.com/business/cop/china-opposes-us-revocation-china-telecom-license-2021-11-03/"
-  ],
-  [
     1635919341000,
     "https://www.washingtonpost.com/world/asia_pacific/china-climate-coal-emissions-cop26/2021/11/03/f32c1c9e-3642-11ec-9662-399cfa75efee_story.html"
   ],
@@ -6012,8 +6004,16 @@
     "https://www.thehindu.com/news/international/china-engaged-in-border-war-with-india-says-us-senator-john-cornyn/article37532524.ece"
   ],
   [
+    1637114862000,
+    "https://www.militarytimes.com/military-honor/salute-veterans/2021/11/16/world-war-ii-us-veterans-recall-flying-aid-to-china/"
+  ],
+  [
     1637115540000,
     "https://www.reuters.com/business/environment/china-establishes-space-weather-centre-with-russia-national-weather-service-2021-11-17/"
+  ],
+  [
+    1637118922000,
+    "https://www.scmp.com/economy/china-economy/article/3156246/china-population-tumbling-regional-births-underline-crisis"
   ],
   [
     1637121480000,
@@ -6022,5 +6022,9 @@
   [
     1637122740000,
     "https://www.reuters.com/world/china/china-evergrande-dissolves-some-units-online-marketplace-media-2021-11-17/"
+  ],
+  [
+    1637124610000,
+    "https://techcrunch.com/2021/11/16/temasek-china-regulatory-crackdown/"
   ]
 ]
