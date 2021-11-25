@@ -1,21 +1,5 @@
 [
   [
-    1636596840000,
-    "https://www.reuters.com/business/energy/china-coals-last-hurrah-comes-too-late-old-mining-towns-2021-11-11/"
-  ],
-  [
-    1636598040000,
-    "https://www.usnews.com/news/world/articles/2021-11-10/japans-new-foreign-minister-says-important-to-build-constructive-ties-with-china"
-  ],
-  [
-    1636598460000,
-    "https://www.abcactionnews.com/u-s-lagging-behind-china-on-hypersonic-weapons"
-  ],
-  [
-    1636598460000,
-    "https://www.krtv.com/u-s-lagging-behind-china-on-hypersonic-weapons"
-  ],
-  [
     1636599900000,
     "https://www.reuters.com/world/asia-pacific/chinas-xi-says-asia-pacific-must-not-return-cold-war-tensions-2021-11-10/"
   ],
@@ -4940,6 +4924,10 @@
     "https://www.cnbc.com/2021/11/23/investor-predicts-chinas-regulatory-crackdown-on-tech-could-last-decades.html"
   ],
   [
+    1637650887000,
+    "https://www.nytimes.com/2021/11/23/business/china-peng-shuai-metoo.html"
+  ],
+  [
     1637653500000,
     "https://www.reuters.com/markets/commodities/china-iron-ore-futures-hit-upper-limit-hopes-resuming-steel-production-2021-11-23/"
   ],
@@ -5102,6 +5090,10 @@
   [
     1637681400000,
     "https://collider.com/the-matrix-resurrections-china-release/"
+  ],
+  [
+    1637681496000,
+    "https://www.foxnews.com/world/china-protests-us-navy-destroyers-taiwan-strait"
   ],
   [
     1637681520000,
@@ -5680,7 +5672,27 @@
     "https://www.bbc.com/news/world-us-canada-59356176"
   ],
   [
+    1637803302000,
+    "https://www.aljazeera.com/economy/2021/11/25/jpmorgan-ceo-walks-back-joke-about-chinas-communist-party"
+  ],
+  [
+    1637804100000,
+    "https://www.reuters.com/world/china/chinas-kaisa-offers-bondholders-option-exchange-existing-bonds-with-new-bonds-2021-11-25/"
+  ],
+  [
     1637804687000,
     "https://www.nytimes.com/2021/11/24/sports/olympics/china-sports-peng-shuai.html"
+  ],
+  [
+    1637805840000,
+    "https://www.bloomberg.com/news/articles/2021-11-25/china-urges-local-governments-to-spend-more-to-counter-slump"
+  ],
+  [
+    1637806320000,
+    "https://www.cnbc.com/2021/11/25/china-tech-5-big-issues-from-regulation-and-evs-to-semiconductors.html"
+  ],
+  [
+    1637807220000,
+    "https://www.reuters.com/markets/funds/china-launches-probe-into-insurance-fund-use-curb-risk-report-2021-11-25/"
   ]
 ]
