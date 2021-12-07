@@ -1,9 +1,5 @@
 [
   [
-    1637633940000,
-    "https://www.cnn.com/2021/11/22/world/meanwhile-in-america-november-23-intl/index.html"
-  ],
-  [
     1637635934000,
     "https://www.nasaspaceflight.com/2021/11/gaofen-3-02/"
   ],
@@ -5688,6 +5684,10 @@
     "https://news.virginia.edu/content/three-hoos-join-schwarzman-scholars-study-china"
   ],
   [
+    1638807600000,
+    "https://nypost.com/2021/12/06/china-may-be-eyeing-its-first-military-base-on-the-atlantic-ocean-report/"
+  ],
+  [
     1638807683000,
     "https://farmpolicynews.illinois.edu/2021/12/u-s-soy-exports-to-china-face-headwinds/"
   ],
@@ -5726,6 +5726,10 @@
   [
     1638814320000,
     "https://www.dtnpf.com/agriculture/web/ag/news/business-inputs/article/2021/12/06/former-ambassador-china-plugs-ag"
+  ],
+  [
+    1638817020000,
+    "https://news.usni.org/2021/12/06/cyber-presence-operations-key-to-pentagons-gray-zone-conflict-with-china"
   ],
   [
     1638817148000,
@@ -5806,5 +5810,13 @@
   [
     1638837164000,
     "https://www.ft.com/content/c57028b4-573e-4ca4-8266-4d7c0ab72492"
+  ],
+  [
+    1638841200000,
+    "https://www.reuters.com/world/china/developer-china-evergrandes-shares-set-rise-66-restructuring-looms-2021-12-07/"
+  ],
+  [
+    1638841860000,
+    "https://nypost.com/2021/12/06/china-sends-lunar-rover-to-investigate-hut-on-far-side-of-moon/"
   ]
 ]
