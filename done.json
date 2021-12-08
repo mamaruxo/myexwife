@@ -1,9 +1,5 @@
 [
   [
-    1637738460000,
-    "https://www.fitchratings.com/research/corporate-finance/fitch-affirms-china-metallurgical-group-at-bbb-outlook-stable-24-11-2021"
-  ],
-  [
     1637740508000,
     "https://finance.yahoo.com/news/bytedance-seeking-capital-build-china-054505674.html"
   ],
@@ -3560,6 +3556,10 @@
     "https://www.reuters.com/markets/commodities/china-state-planner-guarantee-energy-supply-fertiliser-makers-2021-12-02/"
   ],
   [
+    1638434580000,
+    "https://www.cnn.com/2021/11/24/business/china-shipping-data-mic-intl-hnk/index.html"
+  ],
+  [
     1638434820000,
     "https://www.reuters.com/business/healthcare-pharmaceuticals/hong-kong-launch-mobile-health-code-app-ahead-china-border-opening-2021-12-02/"
   ],
@@ -5804,7 +5804,19 @@
     "https://www.spglobal.com/platts/en/market-insights/latest-news/energy-transition/120821-chinas-steel-demand-supply-may-get-policy-boost-in-2022-sources"
   ],
   [
+    1638945444000,
+    "https://www.bbc.com/news/world-asia-china-59544226"
+  ],
+  [
     1638946080000,
     "https://www.theguardian.com/world/2021/dec/08/journalists-in-china-face-nightmare-worthy-of-mao-era-press-freedom-group-says"
+  ],
+  [
+    1638946080000,
+    "https://www.fitchratings.com/research/structured-finance/china-structured-finance-performance-may-deteriorate-in-2022-08-12-2021"
+  ],
+  [
+    1638946580000,
+    "https://www.cnbc.com/2021/12/08/china-to-make-it-harder-for-tech-start-ups-to-raise-foreign-funding-ft-reports.html"
   ]
 ]
