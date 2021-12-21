@@ -1,9 +1,5 @@
 [
   [
-    1638855960000,
-    "https://www.spglobal.com/platts/en/market-insights/latest-news/oil/120721-china-data-independents-feedstock-imports-hit-six-month-high-on-margins-new-quotas"
-  ],
-  [
     1638857308000,
     "https://euobserver.com/world/153737"
   ],
@@ -5512,6 +5508,10 @@
     "https://www.dailymail.co.uk/news/article-10330541/China-attacks-UK-democracy-Hong-Kong.html"
   ],
   [
+    1640041200000,
+    "https://www.nasdaq.com/articles/china-expected-to-extend-regulatory-crackdowns-into-2022"
+  ],
+  [
     1640041221000,
     "https://www.scmp.com/tech/tech-trends/article/3160457/chinas-big-tech-crackdown-number-apps-falls-40-cent-over-three"
   ],
@@ -5590,5 +5590,13 @@
   [
     1640061060000,
     "https://www.theguardian.com/australia-news/2021/dec/21/china-accuses-australia-of-violent-interference-in-five-eyes-response-to-hong-kong-election"
+  ],
+  [
+    1640062260000,
+    "https://www.wsj.com/articles/china-mobile-plans-to-raise-7-64-billion-through-shanghai-listing-11640045153"
+  ],
+  [
+    1640062500000,
+    "https://www.reuters.com/markets/europe/china-hk-stocks-rise-property-rebound-livestreaming-platforms-drop-2021-12-21/"
   ]
 ]
