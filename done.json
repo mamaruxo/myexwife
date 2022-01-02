@@ -1,9 +1,5 @@
 [
   [
-    1639890030000,
-    "https://www.ft.com/content/0ca26918-0f67-4908-a539-e683521c7b12"
-  ],
-  [
     1639891200000,
     "https://www.bloomberg.com/news/articles/2021-12-19/china-finds-imported-omicron-cases-in-new-city-as-outbreak-grows"
   ],
@@ -5440,6 +5436,10 @@
     "https://www.bloomberg.com/news/articles/2022-01-02/china-developers-confront-a-197-billion-challenge-in-january"
   ],
   [
+    1641083774000,
+    "https://globalnews.ca/news/8483726/kenney-apology-covid-china-comments/"
+  ],
+  [
     1641084520000,
     "http://www.xinhuanet.com/english/20220102/7fef1745197949c48714914bf4f1f366/c.html"
   ],
@@ -5456,7 +5456,15 @@
     "https://www.scmp.com/news/china/diplomacy/article/3161810/vietnam-complains-chinas-border-controls-stop-coronavirus"
   ],
   [
+    1641089880000,
+    "https://www.bloomberg.com/news/articles/2022-01-02/vietnam-asks-china-to-reopen-its-border-gates-vnexpress-reports"
+  ],
+  [
     1641093139000,
     "https://finance.yahoo.com/news/china-developers-confront-197-billion-000000114.html"
+  ],
+  [
+    1641096017000,
+    "https://www.scmp.com/business/china-business/article/3161732/china-remain-renewable-energy-leader-strong-capacity-growth"
   ]
 ]
