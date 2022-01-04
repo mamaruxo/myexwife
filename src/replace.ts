@@ -9,6 +9,11 @@ const prepositionsAndArticles = new Set([
   "among", "about"
 ]);
 
+function isTitleCaseWord(w: string): unknown {
+  // eslint-disable-next-line @typescript-eslint/prefer-string-starts-ends-with
+  return w[0] === w[0].toUpperCase();
+}
+
 export function replace(original: string) {
   const title = original
     .trim()
@@ -21,7 +26,7 @@ export function replace(original: string) {
   // TODO: distinguish between start case and sentence case?
   const isTitleCase = title
     .split(/\s+/)
-    .every((w) => prepositionsAndArticles.has(w) || w[0] === w[0].toUpperCase());
+    .every((w) => prepositionsAndArticles.has(w) || isTitleCaseWord(w));
 
   let replaced: string;
 

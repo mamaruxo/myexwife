@@ -61,7 +61,6 @@ export async function doToot(statuses: Status[]): Promise<void> {
   let inReplyToId: string | null | undefined = null;
 
   let i = 0;
-  /* eslint-disable no-await-in-loop */
   for (const s of statuses) {
     const { status } = typeof s === "string" ? { status: s } : s;
 
@@ -99,7 +98,7 @@ export async function doToot(statuses: Status[]): Promise<void> {
       () =>
         masto.statuses.create(
           {
-            status: status,
+            status,
             visibility: "public",
             inReplyToId,
             mediaIds: mediaId ? [mediaId] : undefined,
@@ -119,7 +118,6 @@ export async function doToot(statuses: Status[]): Promise<void> {
       await setTimeout(3000);
     }
   }
-  /* eslint-enable no-await-in-loop */
 }
 
 export async function doTweet(statuses: Status[]): Promise<void> {
@@ -133,7 +131,6 @@ export async function doTweet(statuses: Status[]): Promise<void> {
   let inReplyToId: string | undefined = undefined;
 
   let i = 0;
-  /* eslint-disable no-await-in-loop */
   for (const s of statuses) {
     const { status } = typeof s === "string" ? { status: s } : s;
 
@@ -184,5 +181,4 @@ export async function doTweet(statuses: Status[]): Promise<void> {
       await setTimeout(3000);
     }
   }
-  /* eslint-enable no-await-in-loop */
 }

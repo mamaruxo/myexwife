@@ -1,4 +1,4 @@
-require("source-map-support").install();
+require("source-map-support").install(); // eslint-disable-line import/no-commonjs
 import { tmpdir } from "os";
 import { mkdirSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
@@ -83,7 +83,6 @@ async function main(
     PuppeteerBlocker.fromLists(fetch, fullLists, { enableCompression: true }),
   ]);
 
-  /* eslint-disable no-await-in-loop */
   for (const { title, link, date } of items) {
     console.log("visiting", link);
 
@@ -105,7 +104,6 @@ async function main(
       await context.close();
     }
   }
-  /* eslint-enable no-await-in-loop */
 
   await browser.close();
 }
