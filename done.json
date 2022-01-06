@@ -1,9 +1,5 @@
 [
   [
-    1640235384000,
-    "https://www.theguardian.com/world/2021/dec/23/china-locks-down-13-million-people-in-xian-after-detecting-127-covid-cases"
-  ],
-  [
     1640235720000,
     "https://www.usnews.com/news/world/articles/2021-12-23/s-korea-holds-talks-with-china-amid-spat-with-taiwan-over-diplomats-visit"
   ],
@@ -5092,6 +5088,10 @@
     "https://www.dw.com/en/us-china-covid-recovery-dwarfs-all-others/a-60334211"
   ],
   [
+    1641408372000,
+    "https://www.foxbusiness.com/markets/china-mobile-flat-opening-shanghai-market"
+  ],
+  [
     1641408420000,
     "https://www.barrons.com/articles/how-chinas-strict-covid-policies-could-create-risks-for-global-economy-51641408422"
   ],
@@ -5172,12 +5172,20 @@
     "https://www.bbc.co.uk/news/59585507"
   ],
   [
+    1641432946000,
+    "https://finance.yahoo.com/news/china-secures-foothold-strategic-middle-000000987.html"
+  ],
+  [
     1641434400000,
     "https://www.reuters.com/markets/europe/growth-chinas-dec-services-accelerates-caixin-pmi-2022-01-06/"
   ],
   [
     1641434940000,
     "https://www.usnews.com/news/world/articles/2022-01-05/chinas-xian-airport-suspended-international-passenger-flights-from-jan-5"
+  ],
+  [
+    1641435180000,
+    "https://www.reuters.com/world/china/chinas-xian-airport-suspended-international-passenger-flights-jan-5-2022-01-06/"
   ],
   [
     1641436080000,
@@ -5196,7 +5204,19 @@
     "https://www.reuters.com/technology/tencents-wechat-mini-program-daily-users-china-grew-13-450-mln-last-year-2022-01-06/"
   ],
   [
+    1641439560000,
+    "https://www.bloomberg.com/news/articles/2022-01-06/china-fires-hospital-staff-over-woman-s-miscarriage-in-lockdown"
+  ],
+  [
+    1641439821000,
+    "https://www.scmp.com/economy/china-economy/article/3162221/why-are-chinas-gen-z-women-rejecting-marriage-kids-more-their"
+  ],
+  [
     1641441426000,
     "https://finance.yahoo.com/news/china-property-tax-trial-likely-033000369.html"
+  ],
+  [
+    1641442620000,
+    "https://www.bloomberg.com/news/articles/2022-01-06/china-says-stable-economy-is-crucial-political-issue-in-2022"
   ]
 ]
