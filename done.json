@@ -1,13 +1,5 @@
 [
   [
-    1640859793000,
-    "https://www.npr.org/2021/12/30/1069033446/officials-promise-groceries-for-xian-china-city-of-13-million-under-lockdown"
-  ],
-  [
-    1640860500000,
-    "https://www.reuters.com/business/finance/hsbc-gets-approval-buy-out-china-life-insurance-joint-venture-2021-12-30/"
-  ],
-  [
     1640860813000,
     "https://www.bbc.com/news/world-asia-china-59827047"
   ],
@@ -5260,6 +5252,10 @@
     "https://www.cbsnews.com/news/beijing-winter-olympics-china-covid-omicron-lockdown/"
   ],
   [
+    1641997541000,
+    "https://www.bbc.com/news/world-asia-china-59900139"
+  ],
+  [
     1641998467000,
     "https://www.military.com/daily-news/2022/01/12/frontline-against-china-us-coast-guard-taking-missions-us-navy-cant-do.html"
   ],
@@ -5532,6 +5528,10 @@
     "https://www.reuters.com/markets/europe/china-iron-ore-futures-range-bound-falling-shipments-demand-uncertainty-2022-01-13/"
   ],
   [
+    1642059900000,
+    "https://www.bloomberg.com/news/articles/2022-01-13/china-stocks-slide-to-two-month-low-on-property-rout-virus-woes"
+  ],
+  [
     1642059960000,
     "https://www.reuters.com/markets/stocks/developer-sunac-china-plans-580-mln-share-sale-repay-loans-2022-01-13/"
   ],
@@ -5554,5 +5554,17 @@
   [
     1642065720000,
     "https://www.usnews.com/news/world/articles/2022-01-13/denmark-accuses-china-russia-and-iran-of-espionage-threat"
+  ],
+  [
+    1642065720000,
+    "https://www.reuters.com/world/europe/denmark-accuses-china-russia-iran-espionage-threat-2022-01-13/"
+  ],
+  [
+    1642066217000,
+    "https://www.scmp.com/tech/tech-war/article/3163246/us-china-tech-war-beijing-unveils-grand-plan-grow-digital-economy-us"
+  ],
+  [
+    1642066680000,
+    "https://www.reuters.com/markets/stocks/chinese-developer-yuzhou-group-offers-bond-swap-avert-default-2022-01-13/"
   ]
 ]
