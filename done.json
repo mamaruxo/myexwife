@@ -1,13 +1,5 @@
 [
   [
-    1641289093000,
-    "https://finance.yahoo.com/news/subtle-word-choice-china-ipo-093813860.html"
-  ],
-  [
-    1641289332000,
-    "https://www.ft.com/content/d247a909-a923-47e3-84aa-24a26d8c1203"
-  ],
-  [
     1641289800000,
     "https://www.cbsnews.com/news/china-nuclear-weapons-missiles-denies-rapid-expansion-arsenal-us-claim/"
   ],
@@ -6120,6 +6112,10 @@
     "https://www.scmp.com/economy/china-economy/article/3163781/china-west-tensions-raise-questions-about-limits-beijings"
   ],
   [
+    1642482000000,
+    "https://www.ft.com/content/5b386dfa-6ec6-4260-910e-53e63cc43595"
+  ],
+  [
     1642482531000,
     "https://www.foxnews.com/media/laura-ingraham-beijing-olympics-boycott"
   ],
@@ -6174,5 +6170,9 @@
   [
     1642496100000,
     "https://www.reuters.com/business/healthcare-pharmaceuticals/china-suspects-covid-19-might-arrive-overseas-mail-2022-01-18/"
+  ],
+  [
+    1642498620000,
+    "https://www.reuters.com/business/aerospace-defense/china-aviation-regulator-suspends-eight-more-incoming-us-flights-2022-01-18/"
   ]
 ]
