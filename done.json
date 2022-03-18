@@ -1,17 +1,5 @@
 [
   [
-    1646369940000,
-    "https://www.reuters.com/markets/europe/china-stocks-fall-amid-geopolitical-tensions-parliamentary-meet-focus-2022-03-04/"
-  ],
-  [
-    1646370027000,
-    "https://fortune.com/2022/03/04/russia-china-ukraine-sanctions-swift-alternative/"
-  ],
-  [
-    1646370060000,
-    "https://www.bloomberg.com/news/articles/2022-03-04/ukraine-war-putin-s-financial-isolation-is-a-warning-sign-for-xi-jinping"
-  ],
-  [
     1646371328000,
     "https://abcnews.go.com/US/wireStory/us-navy-crashed-35c-plane-raised-south-china-83246331"
   ],
@@ -46,6 +34,10 @@
   [
     1646380800000,
     "https://www.thecrimson.com/article/2022/3/4/china-russia-relations-talk/"
+  ],
+  [
+    1646380800000,
+    "https://www.cnn.com/2022/03/03/economy/china-cant-help-russia-sanctions-fallout-intl-hnk/index.html"
   ],
   [
     1646382056000,
@@ -6604,6 +6596,10 @@
     "https://www.afr.com/politics/sydney-s-sinoburbia-will-test-morrison-s-china-warnings-20220315-p5a4tw"
   ],
   [
+    1647557556000,
+    "https://www.rubio.senate.gov/public/index.cfm/press-releases?id=B590BC13-D6AE-4C43-99CE-ACE1996E013C"
+  ],
+  [
     1647557770000,
     "https://www.scmp.com/news/china/article/3170907/us-sanctions-china-aiding-russia-could-be-counterproductive-advisory"
   ],
@@ -6670,5 +6666,9 @@
   [
     1647575760000,
     "https://www.reuters.com/world/china/goldman-says-china-high-yield-developers-default-rate-understates-stresses-2022-03-18/"
+  ],
+  [
+    1647579249000,
+    "https://www.cnn.com/2022/03/18/politics/us-china-call-ukraine-war-analysis/index.html"
   ]
 ]
