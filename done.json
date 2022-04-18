@@ -1,13 +1,5 @@
 [
   [
-    1649048944000,
-    "https://www.scmp.com/business/markets/article/3172960/hong-kong-stocks-jump-alibaba-jdcom-advance-after-china-proposes"
-  ],
-  [
-    1649049402000,
-    "https://www.hindustantimes.com/world-news/pakistan-and-sri-lanka-face-political-turmoil-fueled-by-chinese-debt-101649048420692.html"
-  ],
-  [
     1649049540000,
     "https://www.bloomberg.com/news/newsletters/2022-04-04/stock-markets-today-russia-sanctions-europe-asia-elections-covid-in-china"
   ],
@@ -5804,6 +5796,10 @@
     "https://theprint.in/world/chinas-shanghai-reports-first-covid-deaths-since-start-of-lockdown/920308/"
   ],
   [
+    1650246022000,
+    "https://www.japantimes.co.jp/news/2022/04/18/business/financial-markets/global-investors-flee-china/"
+  ],
+  [
     1650247260000,
     "https://www.business-standard.com/article/international/china-s-shanghai-reports-first-covid-deaths-since-start-of-lockdown-122041800084_1.html"
   ],
@@ -5828,6 +5824,10 @@
     "https://www.bloomberg.com/news/articles/2022-04-18/china-raises-coal-and-gas-output-to-records-after-prices-surge"
   ],
   [
+    1650251820000,
+    "https://www.reuters.com/world/asia-pacific/china-march-crude-steel-output-drops-64-yy-amid-covid-outbreak-2022-04-18/"
+  ],
+  [
     1650252666000,
     "https://www.seattletimes.com/business/asian-shares-sink-as-china-says-1q-growth-at-4-8/"
   ],
@@ -5846,5 +5846,13 @@
   [
     1650254433000,
     "https://www.bnnbloomberg.ca/china-drugmaker-plunges-after-wanda-scion-doubts-covid-medicine-efficacy-1.1753249"
+  ],
+  [
+    1650255244000,
+    "https://www.ft.com/content/46095822-70ec-450b-9b50-6d3e52293247"
+  ],
+  [
+    1650256744000,
+    "https://www.channelnewsasia.com/business/chinas-vice-premier-urges-stabilisation-supply-chains-2631421"
   ]
 ]
