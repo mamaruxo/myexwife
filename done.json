@@ -1,9 +1,5 @@
 [
   [
-    1652302800000,
-    "https://www.bloomberg.com/news/articles/2022-05-11/china-bond-bulls-revived-by-lowest-borrowing-cost-since-2020"
-  ],
-  [
     1652304000000,
     "https://english.alarabiya.net/News/world/2022/05/12/US-calls-out-Russia-China-opposition-to-UN-action-on-North-Korea"
   ],
@@ -6096,6 +6092,10 @@
     "https://www.wsj.com/articles/foreign-business-is-falling-out-of-love-with-china-11653483635?mod=business_major_pos11"
   ],
   [
+    1653483600000,
+    "https://www.wsj.com/articles/foreign-business-is-falling-out-of-love-with-china-11653483635?mod=hp_minor_pos20"
+  ],
+  [
     1653483900000,
     "https://www.reuters.com/business/autos-transportation/global-light-vehicle-sales-fall-further-china-lockdown-data-2022-05-25/"
   ],
@@ -6138,5 +6138,17 @@
   [
     1653501779000,
     "https://www.nytimes.com/2022/05/25/technology/us-china-internet.html"
+  ],
+  [
+    1653505112000,
+    "https://www.cnet.com/science/space/chinas-mars-rover-goes-dormant-in-intense-dust-storm/"
+  ],
+  [
+    1653511140000,
+    "https://www.marketwatch.com/story/nvidia-stock-drops-as-china-covid-shutdowns-weaken-outlook-11653511159"
+  ],
+  [
+    1653511428000,
+    "https://www.politico.eu/article/china-economy-fragility-doom-davos/"
   ]
 ]
