@@ -1,13 +1,5 @@
 [
   [
-    1657083225000,
-    "https://www.nasdaq.com/articles/chinas-yuan-off-two-week-low-as-investors-await-u.s.-tariff-news"
-  ],
-  [
-    1657084200000,
-    "https://www.eastmojo.com/news/2022/07/06/should-chinas-dominance-in-the-indian-ocean-region-concern-india/"
-  ],
-  [
     1657085363000,
     "https://www.aljazeera.com/news/2022/7/5/blinken-to-meet-chinas-foreign-minister-at-g20-this-week"
   ],
@@ -2354,6 +2346,10 @@
   [
     1657522694000,
     "https://www.scmp.com/news/china/science/article/3184851/cholera-infection-puts-chinas-wuhan-university-high-alert"
+  ],
+  [
+    1657522800000,
+    "https://www.bbc.com/news/business-62118301"
   ],
   [
     1657522813000,
@@ -6372,6 +6368,10 @@
     "https://www.theguardian.com/world/2022/jul/20/china-covid-officials-break-into-homes-hunt-for-covid-contacts-guangzhou-apology-"
   ],
   [
+    1658276760000,
+    "https://asia.nikkei.com/Spotlight/Caixin/China-close-to-setting-up-iron-ore-trading-giant"
+  ],
+  [
     1658276940000,
     "https://www.bloomberg.com/news/articles/2022-07-20/china-will-focus-on-employment-and-targeted-covid-curbs-li-says"
   ],
@@ -6420,12 +6420,24 @@
     "https://www.bloomberg.com/news/articles/2022-07-20/china-s-tsinghua-university-punishes-students-for-lgbtq-flags"
   ],
   [
+    1658287800000,
+    "https://www.bloomberg.com/news/articles/2022-07-20/china-tech-stocks-gain-on-renewed-bets-of-crackdown-ending"
+  ],
+  [
     1658288340000,
     "https://www.bloomberg.com/news/articles/2022-07-20/china-deepens-its-dependence-on-coal-by-speeding-up-approvals"
   ],
   [
+    1658288698000,
+    "https://techcrunch.com/2022/07/19/china-fine-didi-1-billion/"
+  ],
+  [
     1658289653000,
     "https://www.ft.com/content/c384aa39-4766-4eea-a528-84f268ede01b"
+  ],
+  [
+    1658289656000,
+    "https://www.ft.com/content/1d288c2f-215a-4661-aa1a-273671b945cd"
   ],
   [
     1658289828000,
@@ -6434,5 +6446,13 @@
   [
     1658290320000,
     "https://www.theguardian.com/world/2022/jul/20/run-philosophy-the-chinese-citizens-seeking-to-leave-amid-covid-uncertainty"
+  ],
+  [
+    1658291663000,
+    "https://www.cnbc.com/2022/07/20/china-keeps-benchmark-lending-rates-unchanged-hopes-for-economic-rebound.html"
+  ],
+  [
+    1658292830000,
+    "https://apnews.com/article/explosions-china-beijing-tianjin-4db55a7585bc1765f80aa46f69084646"
   ]
 ]
