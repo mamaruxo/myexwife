@@ -1,9 +1,5 @@
 [
   [
-    1657790760000,
-    "https://www.reuters.com/world/china-hopes-australia-can-take-actions-promote-trade-relations-commerce-ministry-2022-07-14/"
-  ],
-  [
     1657792140000,
     "https://www.reuters.com/world/china/china-property-protests-threaten-dent-220-bln-banks-mortgage-loans-2022-07-14/"
   ],
@@ -454,6 +450,10 @@
   [
     1657868400000,
     "https://www.cnn.com/2022/07/14/economy/china-q2-gdp-2022-intl-hnk/index.html"
+  ],
+  [
+    1657868400000,
+    "https://www.nytimes.com/2022/07/14/business/china-data-privacy.html"
   ],
   [
     1657868640000,
@@ -5910,5 +5910,9 @@
   [
     1658998800000,
     "https://www.reuters.com/world/china/china-industry-minister-xiao-yaqing-under-investigation-state-media-2022-07-28/"
+  ],
+  [
+    1658999233000,
+    "https://www.bloomberg.com/news/articles/2022-07-28/china-s-leaders-call-for-stabilizing-property-at-key-meeting"
   ]
 ]
