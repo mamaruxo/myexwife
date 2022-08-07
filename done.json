@@ -1,13 +1,5 @@
 [
   [
-    1658636548000,
-    "https://www.ft.com/content/470e2518-410b-4e78-9106-cf881dd43028"
-  ],
-  [
-    1658637751000,
-    "https://www.voanews.com/a/killed-in-mountainside-collapse-at-chinese-coal-mine-site-/6671496.html"
-  ],
-  [
     1658638800000,
     "https://www.bloomberg.com/news/articles/2022-07-24/china-on-alert-for-evergrande-restructuring-plan-after-shakeup"
   ],
@@ -474,6 +466,10 @@
   [
     1658732400000,
     "https://www.cnn.com/2022/07/23/politics/fbi-investigation-huawei-china-defense-department-communications-nuclear/index.html"
+  ],
+  [
+    1658732400000,
+    "https://www.nytimes.com/2022/07/24/science/china-space-rocket-long-march.html"
   ],
   [
     1658732425000,
@@ -4012,6 +4008,10 @@
     "https://www.ft.com/content/0b997942-93bd-4a67-9784-928af2641738"
   ],
   [
+    1659487380000,
+    "https://www.bloomberg.com/news/videos/2022-08-03/us-china-relations-has-moved-to-much-more-contentious-period-csis"
+  ],
+  [
     1659491700000,
     "https://www.reuters.com/markets/europe/china-july-services-activity-expands-quickest-pace-15-months-caixin-pmi-2022-08-03/"
   ],
@@ -5004,6 +5004,10 @@
     "https://www.foxbusiness.com/media/former-twitter-ceo-jack-dorsey-responds-chinas-draconian-covid-policies-end-ccp"
   ],
   [
+    1659825016000,
+    "https://www3.nhk.or.jp/nhkworld/en/news/20220807_05/"
+  ],
+  [
     1659825252000,
     "https://indianexpress.com/article/world/lanka-defers-arrival-of-china-ship-go-ahead-given-hours-before-gota-fled-8075515/"
   ],
@@ -5042,5 +5046,13 @@
   [
     1659843660000,
     "https://www.bloomberg.com/news/articles/2022-08-07/china-s-export-growth-beats-expectations-offering-support"
+  ],
+  [
+    1659846360000,
+    "https://www.theguardian.com/world/live/2022/aug/07/china-taiwan-news-white-house-calls-chinese-drills-provocative-and-irresponsible-live"
+  ],
+  [
+    1659846420000,
+    "https://www.cnn.com/2022/08/06/china/sanya-covid-19-outbreak-stranded-tourists-intl-hnk/index.html"
   ]
 ]
