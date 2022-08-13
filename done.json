@@ -1,9 +1,5 @@
 [
   [
-    1659189060000,
-    "https://www.barrons.com/articles/china-stocks-investing-51659122607"
-  ],
-  [
     1659192306000,
     "https://www.npr.org/2022/07/30/1114706145/china-taiwan-military-excercises-pelosi"
   ],
@@ -1646,6 +1642,10 @@
   [
     1659596152000,
     "https://apnews.com/article/russia-ukraine-taiwan-china-beijing-asia-8867e7381c4608920901b177c383db58"
+  ],
+  [
+    1659596400000,
+    "https://www.nejm.org/doi/full/10.1056/NEJMc2202705"
   ],
   [
     1659596441000,
@@ -4852,6 +4852,10 @@
     "https://www.startribune.com/china-sending-fighter-jets-to-thailand-for-joint-exercises/600198020/"
   ],
   [
+    1660364700000,
+    "https://www.globaltimes.cn/page/202208/1272873.shtml"
+  ],
+  [
     1660365307000,
     "https://abcnews.go.com/International/wireStory/china-sending-fighter-jets-thailand-joint-exercises-88329911"
   ],
@@ -4906,5 +4910,9 @@
   [
     1660394100000,
     "https://www.ndtv.com/world-news/chinese-spy-ship-cleared-to-dock-at-sri-lanka-port-report-3251703"
+  ],
+  [
+    1660397520000,
+    "https://www.ndtv.com/world-news/chinese-spy-ship-cleared-to-dock-at-sri-lanka-port-amid-concerns-in-india-3251869"
   ]
 ]
