@@ -1,13 +1,5 @@
 [
   [
-    1661509800000,
-    "https://finance.yahoo.com/news/chinese-defense-firm-taken-over-041537769.html"
-  ],
-  [
-    1661510436000,
-    "https://www.themoscowtimes.com/2022/08/26/russian-gold-rerouted-to-china-amid-western-ban-a78660"
-  ],
-  [
     1661511442000,
     "https://www.bloomberg.com/news/articles/2022-08-26/china-regulator-urges-credit-suisse-to-fix-joint-venture-issues"
   ],
@@ -5300,6 +5292,10 @@
     "https://www.bloomberg.com/news/articles/2022-09-09/china-s-inflation-slows-more-than-expected-with-covid-flare-ups"
   ],
   [
+    1662687840000,
+    "https://www.chinadaily.com.cn/a/202209/09/WS631a9a78a310fd2b29e76d1a.html"
+  ],
+  [
     1662688980000,
     "https://www.reuters.com/world/china/chinas-consumer-producer-inflation-slows-august-2022-09-09/"
   ],
@@ -5402,5 +5398,9 @@
   [
     1662714840000,
     "https://www.reuters.com/markets/commodities/china-oil-demand-may-shrink-first-time-since-2002-covid-curbs-bite-2022-09-09/"
+  ],
+  [
+    1662715116000,
+    "https://www.nytimes.com/2022/09/09/business/china-covid-zero-xi-jinping.html"
   ]
 ]
