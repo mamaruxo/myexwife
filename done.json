@@ -1,21 +1,5 @@
 [
   [
-    1663192860000,
-    "https://www.bloomberg.com/news/articles/2022-09-14/most-european-investments-in-china-from-a-few-firms-study-says"
-  ],
-  [
-    1663193318000,
-    "https://www.washingtonpost.com/business/chinas-payment-duopolymay-struggle-to-survive/2022/09/14/643647fe-3479-11ed-a0d6-415299bfebd5_story.html"
-  ],
-  [
-    1663193564000,
-    "https://www.marketplace.org/2022/09/14/many-chinese-homebuyers-are-paying-mortgages-on-homes-they-may-never-live-in/"
-  ],
-  [
-    1663193714000,
-    "https://www.scmp.com/economy/china-economy/article/3192481/chinas-fiscal-woes-highlighted-local-authorities-turn-fines"
-  ],
-  [
     1663194601000,
     "https://www.foxnews.com/politics/senate-advances-aid-taiwan-china-threat-intensifies"
   ],
@@ -5264,6 +5248,10 @@
     "https://www.scmp.com/economy/china-economy/article/3193858/chinas-booming-second-hand-market-perfect-penny-pinching"
   ],
   [
+    1664244225000,
+    "https://www.scientificamerican.com/article/chinas-mars-rover-finds-hints-of-catastrophic-floods/"
+  ],
+  [
     1664244854000,
     "https://www.nature.com/articles/d41586-022-03056-1"
   ],
@@ -5872,12 +5860,20 @@
     "https://www.reuters.com/world/asia-pacific/china-repeats-call-stability-korean-peninsula-2022-09-28/"
   ],
   [
+    1664351577000,
+    "https://asiatimes.com/2022/09/why-china-wont-dominate-the-green-hydrogen-future/"
+  ],
+  [
     1664352540000,
     "https://www.asahi.com/ajw/articles/14729509"
   ],
   [
     1664354677000,
     "https://www.livemint.com/news/world/17-dead-3-injured-in-china-restaurant-fire-authorities-11664354257219.html"
+  ],
+  [
+    1664354820000,
+    "https://asia.nikkei.com/Business/Markets/Commodities/China-s-appetite-for-lumber-squeezes-Europe-s-wood-buyers"
   ],
   [
     1664355147000,
@@ -5900,6 +5896,10 @@
     "https://www.scmp.com/news/china/military/article/3194104/chinas-stealth-fighter-jets-now-seeing-duty-all-five-theatre"
   ],
   [
+    1664357709000,
+    "https://www.greenbiz.com/article/government-policy-spurs-investment-chinese-climate-tech"
+  ],
+  [
     1664358000000,
     "https://www.reuters.com/markets/europe/china-property-shares-bonds-slump-cifi-default-report-adds-sector-woes-2022-09-28/"
   ],
@@ -5920,6 +5920,10 @@
     "https://finance.yahoo.com/news/1-china-says-stabilising-fx-104204034.html"
   ],
   [
+    1664361840000,
+    "https://www.theguardian.com/technology/2022/sep/28/india-is-producing-new-iphone-models-for-the-first-time-how-come"
+  ],
+  [
     1664361960000,
     "https://www.cnn.com/2022/09/28/politics/kamala-harris-china-taiwan/index.html"
   ],
@@ -5934,5 +5938,73 @@
   [
     1664364960000,
     "https://www.fmprc.gov.cn/mfa_eng/xwfw_665399/s2510_665401/202209/t20220928_10773476.html"
+  ],
+  [
+    1664367000000,
+    "https://www.technologyreview.com/2022/09/28/1060329/download-china-non-coup-building-better-batteries/"
+  ],
+  [
+    1664368126000,
+    "https://www.washingtontimes.com/news/2022/sep/28/china-used-double-crossing-companies-steal-us-nati/"
+  ],
+  [
+    1664373600000,
+    "https://www.washingtonpost.com/opinions/2022/09/28/biden-administration-uyghur-vote-un-china/"
+  ],
+  [
+    1664373635000,
+    "https://cepa.org/article/west-must-awake-to-russia-china-alliance-eu-warns/"
+  ],
+  [
+    1664380159000,
+    "https://www.usnews.com/news/offbeat/articles/2022-09-28/fish-fossil-catch-from-china-includes-oldest-teeth-ever"
+  ],
+  [
+    1664380951000,
+    "https://www.pewresearch.org/fact-tank/2022/09/28/some-americans-views-of-china-turned-more-negative-after-2020-but-others-became-more-positive/"
+  ],
+  [
+    1664384160000,
+    "https://www.reuters.com/world/china/chinas-covid-worries-take-shine-off-golden-week-holiday-2022-09-28/"
+  ],
+  [
+    1664384982000,
+    "https://www.economist.com/graphic-detail/2022/09/28/covid-19-inspired-people-to-circumvent-censorship-in-china"
+  ],
+  [
+    1664385000000,
+    "https://fortune.com/2022/09/28/meta-shuts-down-influence-operations-from-russia-and-china-that-sought-to-influence-western-public-opinion-on-u-s-politicians-and-war-in-ukraine/"
+  ],
+  [
+    1664385009000,
+    "https://www.rollcall.com/2022/09/28/taiwans-military-needs-overhaul-amid-china-threat-critics-say/"
+  ],
+  [
+    1664385549000,
+    "https://www.cnbc.com/2022/09/28/investors-cant-ignore-china-even-with-rising-geopolitical-risk-pension-fund-managers-say.html"
+  ],
+  [
+    1664386981000,
+    "https://thediplomat.com/2022/09/former-top-graft-buster-at-chinas-intelligence-ministry-indicted-on-bribery-charges/"
+  ],
+  [
+    1664395025000,
+    "https://www.bloomberg.com/news/articles/2022-09-28/merck-in-deal-with-sinopharm-to-bring-covid-antiviral-to-china"
+  ],
+  [
+    1664395212000,
+    "https://www.bloomberg.com/news/articles/2022-09-28/research-monkey-shortage-boosts-china-s-vaccine-development"
+  ],
+  [
+    1664398800000,
+    "https://www.bloomberg.com/news/articles/2022-09-28/china-japan-divisions-hardening-50-years-after-establishing-ties"
+  ],
+  [
+    1664399309000,
+    "https://www.axios.com/2022/09/28/house-small-business-programs-exploited-china-russia"
+  ],
+  [
+    1664400419000,
+    "https://foreignpolicy.com/2022/09/28/china-false-coup-rumor-viral-politics/"
   ]
 ]
