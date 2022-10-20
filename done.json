@@ -1,9 +1,5 @@
 [
   [
-    1665072013000,
-    "https://www.bloomberg.com/news/articles/2022-10-06/china-s-economic-bubble-is-losing-air-but-won-t-burst"
-  ],
-  [
     1665075611000,
     "https://www.scmp.com/comment/opinion/article/3194817/why-china-hesitates-invest-afghanistan-or-recognise-taliban"
   ],
@@ -1376,6 +1372,10 @@
     "https://news.google.com/__i/rss/rd/articles/CBMiZmh0dHBzOi8vd3d3LmNubi5jb20vMjAyMi8xMC8xMC9lY29ub215L2NoaW5hLWdvbGRlbi13ZWVrLXNwZW5kaW5nLXBsdW5nZS1jb3ZpZC1pbnRsLWhuay1taWMvaW5kZXguaHRtbNIBAA?oc=5"
   ],
   [
+    1665385200000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiSGh0dHBzOi8vd3d3Lm55dGltZXMuY29tLzIwMjIvMTAvMTAvdXMvcG9saXRpY3MvdWstZ2NocS1jaGluYS1ydXNzaWEuaHRtbNIBAA?oc=5"
+  ],
+  [
     1665386340000,
     "https://www.wsj.com/articles/chinas-covid-lockdowns-deal-another-blow-to-consumer-spending-11665386341"
   ],
@@ -2354,6 +2354,10 @@
   [
     1665558000000,
     "https://news.google.com/__i/rss/rd/articles/CBMic2h0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9hcnRpY2xlcy8yMDIyLTEwLTEyL2NoaW5hLXMtYmlsbGlvbnMtaW4tc3RpbXVsdXMtZmFpbGluZy10by1zcGFyay1kZW1hbmQtZm9yLWhvdXNpbmfSAQA?oc=5"
+  ],
+  [
+    1665558000000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiTGh0dHBzOi8vd3d3Lm55dGltZXMuY29tLzIwMjIvMTAvMTIvb3Bpbmlvbi9jaGluYS1zZW1pY29uZHVjdG9ycy1leHBvcnRzLmh0bWzSAQA?oc=5"
   ],
   [
     1665559073000,
@@ -4288,6 +4292,10 @@
     "https://www.bloomberg.com/news/articles/2022-10-17/china-halts-lng-sales-to-foreign-buyers-to-ensure-own-supply"
   ],
   [
+    1665986820000,
+    "https://news.google.com/__i/rss/rd/articles/CBMib2h0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9hcnRpY2xlcy8yMDIyLTEwLTE3L2NoaW5hLWhhbHRzLWxuZy1zYWxlcy10by1mb3JlaWduLWJ1eWVycy10by1lbnN1cmUtb3duLXN1cHBsedIBAA?oc=5"
+  ],
+  [
     1665988555000,
     "https://www.bbc.co.uk/news/av/uk-63282230"
   ],
@@ -5220,6 +5228,10 @@
     "https://www.npr.org/2022/10/19/1129778278/china-xi-jinping-community-party-congress"
   ],
   [
+    1666170048000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiU2h0dHBzOi8vd3d3Lm5wci5vcmcvMjAyMi8xMC8xOS8xMTI5Nzc4Mjc4L2NoaW5hLXhpLWppbnBpbmctY29tbXVuaXR5LXBhcnR5LWNvbmdyZXNz0gEA?oc=5"
+  ],
+  [
     1666171500000,
     "https://www.reuters.com/technology/taiwan-china-us-china-tensions-serious-challenge-chip-industry-tsmc-says-2022-10-19/"
   ],
@@ -5254,6 +5266,10 @@
   [
     1666180785000,
     "https://www.ft.com/content/398f0d4e-906e-479b-a9a7-e4023c298f39"
+  ],
+  [
+    1666180785000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiP2h0dHBzOi8vd3d3LmZ0LmNvbS9jb250ZW50LzM5OGYwZDRlLTkwNmUtNDc5Yi1hOWE3LWU0MDIzYzI5OGYzOdIBAA?oc=5"
   ],
   [
     1666183224000,
@@ -5660,6 +5676,10 @@
     "https://news.google.com/__i/rss/rd/articles/CBMicGh0dHBzOi8vd3d3LnJldXRlcnMuY29tL3dvcmxkL2NoaW5hL2NoaW5hLWNvbnNpZGVycy1jdXR0aW5nLWNvdmlkLXF1YXJhbnRpbmUtdmlzaXRvcnMtYmxvb21iZXJnLW5ld3MtMjAyMi0xMC0yMC_SAQA?oc=5"
   ],
   [
+    1666253040000,
+    "https://news.google.com/__i/rss/rd/articles/CBMivQFodHRwczovL2Vjb25vbWljdGltZXMuaW5kaWF0aW1lcy5jb20vbmV3cy9pbnRlcm5hdGlvbmFsL3dvcmxkLW5ld3MvY2hpbmEtaGludHMtYXQteGlzLXBhcnRpY2lwYXRpb24taW4tZzIwLXN1bW1pdC1hZnRlci1jcGMtY29uZ3Jlc3MtZW5kb3JzZW1lbnQtZm9yLXJlY29yZC0zcmQtdGVybS9hcnRpY2xlc2hvdy85NDk4Mzc3OC5jbXPSAQA?oc=5"
+  ],
+  [
     1666253160000,
     "https://www.newswire.ca/news-releases/cgtn-20th-cpc-national-congress-china-s-rule-of-law-underpins-justice-for-the-people-877219205.html"
   ],
@@ -5816,6 +5836,10 @@
     "https://www.bbc.com/news/world-asia-china-63324655"
   ],
   [
+    1666267538000,
+    "https://news.google.com/__i/rss/rd/articles/CBMibmh0dHBzOi8vdmFuY291dmVyc3VuLmNvbS9vcGluaW9uL2NvbHVtbmlzdHMvZG91Z2xhcy10b2RkLWNoaW5lc2UtdHJhdmVsbGVycy10by1jYW5hZGEtcGx1bmdlLXdoYXQtZG9lcy1pdC1tZWFu0gEA?oc=5"
+  ],
+  [
     1666269000000,
     "https://www.politico.com/newsletters/politico-china-watcher/2022/10/20/xi-jinpings-20th-party-congress-victory-lap-bodes-ill-for-u-s-china-relations-00062578"
   ],
@@ -5854,5 +5878,13 @@
   [
     1666274748000,
     "https://news.google.com/__i/rss/rd/articles/CBMiYGh0dHBzOi8vd3d3LnJldXRlcnMuY29tL2JyZWFraW5ndmlld3Mvem9vbWluZy1jYXItc2FsZXMtd2lsbC1oaXQtY2hpbmFzLWdyb3d0aC1saW1pdC0yMDIyLTEwLTIwL9IBAA?oc=5"
+  ],
+  [
+    1666280880000,
+    "https://news.google.com/__i/rss/rd/articles/CBMifWh0dHBzOi8vd3d3LnJldXRlcnMuY29tL3dvcmxkL2FzaWEtcGFjaWZpYy91cy1kaXBsb21hdC1zaGVybWFuLWRpc2N1c3MtbmtvcmVhLW1pc3NpbGUtbGF1bmNoZXMtd2l0aC1qYXBhbi1za29yZWFuLTIwMjItMTAtMjAv0gEA?oc=5"
+  ],
+  [
+    1666282260000,
+    "https://news.google.com/__i/rss/rd/articles/CBMidGh0dHBzOi8vd3d3LnJldXRlcnMuY29tL2J1c2luZXNzL3JldGFpbC1jb25zdW1lci9sb3JlYWwtcG9zdHMtYnJpc2stc2FsZXMtcmlzZS1kZXNwaXRlLWRpc3J1cHRpb25zLWNoaW5hLTIwMjItMTAtMjAv0gEA?oc=5"
   ]
 ]
