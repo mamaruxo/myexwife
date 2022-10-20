@@ -1,25 +1,5 @@
 [
   [
-    1665081698000,
-    "https://us-cert.cisa.gov/ncas/current-activity/2022/10/06/top-cves-actively-exploited-peoples-republic-china-state-sponsored"
-  ],
-  [
-    1665081698000,
-    "https://us-cert.cisa.gov/ncas/alerts/aa22-279a"
-  ],
-  [
-    1665081900000,
-    "https://www.thehindu.com/opinion/op-ed/in-china-fire-without-smoke/article65975716.ece"
-  ],
-  [
-    1665082786000,
-    "https://www.rfa.org/english/news/laos/mine-10062022144328.html"
-  ],
-  [
-    1665083544000,
-    "https://www.thomsonreuters.com/en-us/posts/news-and-media/china-esg-reporting/"
-  ],
-  [
     1665083820000,
     "https://www.usnews.com/news/business/articles/2022-10-06/biden-to-mark-ibm-investment-with-democrats-in-tough-races"
   ],
@@ -202,6 +182,10 @@
   [
     1665126000000,
     "https://news.google.com/__i/rss/rd/articles/CBMiQGh0dHBzOi8vd3d3LmZvcmVpZ25hZmZhaXJzLmNvbS9jaGluYS9jYW4teGktamlucGluZy1yZW9wZW4tY2hpbmHSAQA?oc=5"
+  ],
+  [
+    1665126000000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiXWh0dHBzOi8vd3d3LnJldXRlcnMuY29tL2J1c2luZXNzL3VzLWFkZHMtZG96ZW5zLWNoaW5lc2UtZmlybXMtZXhwb3J0LWNvbnRyb2wtbGlzdC0yMDIyLTEwLTA3L9IBAA?oc=5"
   ],
   [
     1665126563000,
@@ -5368,8 +5352,16 @@
     "https://news.usni.org/2022/10/19/chinas-accelerated-timeline-to-take-taiwan-pushing-navy-in-the-pacific-says-cno-gilday"
   ],
   [
+    1666208783000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiX2h0dHBzOi8vd3d3LjFuZXdzLmNvLm56LzIwMjIvMTAvMjAvdXMtZmVhcnMtY2hpbmEtc3BlZWRpbmctdXAtcmUtdW5pZmljYXRpb24tcGxhbnMtd2l0aC10YWl3YW4v0gEA?oc=5"
+  ],
+  [
     1666209900000,
     "https://news.google.com/__i/rss/rd/articles/CBMiVGh0dHBzOi8vd3d3Lndhc2hpbmd0b25wb3N0LmNvbS93b3JsZC8yMDIyLzEwLzE5L2NoaW5hLWNvbW11bmlzdC1wYXJ0eS1jb25ncmVzcy1wb21wL9IBAA?oc=5"
+  ],
+  [
+    1666210940000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiVmh0dHBzOi8vZm9yZWlnbnBvbGljeS5jb20vMjAyMi8xMC8xOS9hZmdoYW4tbWlsaXRhbnRzLWNoaW5hLWltcGVyaWFsaXNtLWlzbGFtaWMtc3RhdGUv0gEA?oc=5"
   ],
   [
     1666211218000,
@@ -5644,6 +5636,10 @@
     "https://www.reuters.com/technology/china-holds-emergency-talks-with-chip-firms-after-us-curbs-bloomberg-news-2022-10-20/"
   ],
   [
+    1666248600000,
+    "https://news.google.com/__i/rss/rd/articles/CBMieGh0dHBzOi8vd3d3LnJldXRlcnMuY29tL3RlY2hub2xvZ3kvY2hpbmEtaG9sZHMtZW1lcmdlbmN5LXRhbGtzLXdpdGgtY2hpcC1maXJtcy1hZnRlci11cy1jdXJicy1ibG9vbWJlcmctbmV3cy0yMDIyLTEwLTIwL9IBAA?oc=5"
+  ],
+  [
     1666249200000,
     "https://www.swissinfo.ch/eng/politics/human-rights-council-vote-on-china-reflects-shift-in-power/47988666"
   ],
@@ -5840,6 +5836,10 @@
     "https://news.google.com/__i/rss/rd/articles/CBMinQFodHRwczovL3d3dy5wb2xpdGljby5jb20vbmV3c2xldHRlcnMvcG9saXRpY28tY2hpbmEtd2F0Y2hlci8yMDIyLzEwLzIwL3hpLWppbnBpbmdzLTIwdGgtcGFydHktY29uZ3Jlc3MtdmljdG9yeS1sYXAtYm9kZXMtaWxsLWZvci11LXMtY2hpbmEtcmVsYXRpb25zLTAwMDYyNTc40gEA?oc=5"
   ],
   [
+    1666269854000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiYGh0dHBzOi8vd3d3Lmp3bmVuZXJneS5jb20vYXJ0aWNsZS8yMDIyLzEwLzIwL29pbC1leHRlbmRzLWdhaW5zLWFzLWNoaW5hLWRlYmF0ZXMtcXVhcmFudGluZS1jdXRzL9IBAA?oc=5"
+  ],
+  [
     1666270356000,
     "https://www.cnbc.com/2022/10/20/china-factory-of-the-world-is-losing-its-manufacturing-dominance.html"
   ],
@@ -5864,6 +5864,10 @@
     "https://news.google.com/__i/rss/rd/articles/CBMic2h0dHBzOi8vd3d3LnRoZWd1YXJkaWFuLmNvbS93b3JsZC8yMDIyL29jdC8yMC9jaGluYS11c2luZy1pbmZsdWVuY2Vycy10by13aGl0ZXdhc2gtaHVtYW4tcmlnaHRzLWFidXNlcy1yZXBvcnQtZmluZHPSAQA?oc=5"
   ],
   [
+    1666274508000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiiQFodHRwczovL3d3dy5mb3JiZXMuY29tL3NpdGVzL2JyZW5kYW5haGVybi8yMDIyLzEwLzIwL2N1cnJlbmN5Y2hpbmEtYWRyLXdlYWtuZXNzLWFzLWhvbmcta29uZy1zZWVzLW1hc3NpdmUtYnV5aW5nLWZyb20tbWFpbmxhbmQtaW52ZXN0b3JzL9IBAA?oc=5"
+  ],
+  [
     1666274640000,
     "https://www.wsj.com/articles/china-military-us-taiwan-xi-11666268994"
   ],
@@ -5874,6 +5878,10 @@
   [
     1666274748000,
     "https://news.google.com/__i/rss/rd/articles/CBMiYGh0dHBzOi8vd3d3LnJldXRlcnMuY29tL2JyZWFraW5ndmlld3Mvem9vbWluZy1jYXItc2FsZXMtd2lsbC1oaXQtY2hpbmFzLWdyb3d0aC1saW1pdC0yMDIyLTEwLTIwL9IBAA?oc=5"
+  ],
+  [
+    1666278395000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiUmh0dHBzOi8vd3d3LnBoaWxseW1hZy5jb20vbmV3cy8yMDIyLzEwLzIwL3BoaWxhZGVscGhpYS1vcmNoZXN0cmEtY2hpbmEtdG91ci1jb3ZpZC_SAQA?oc=5"
   ],
   [
     1666279800000,
@@ -5910,5 +5918,9 @@
   [
     1666288080000,
     "https://news.google.com/__i/rss/rd/articles/CBMiemh0dHBzOi8vd3d3Lm5wci5vcmcvMjAyMi8xMC8yMC8xMTI1Mjc1NDYyL3R3by1uZXctYm9va3MtY2hhbGxlbmdlLXRoZS1zZW5zZS1vZi1pbmV2aXRhYmxlLXBlcm1hbmVuY2Utb2YtdGhlLWNoaW5lc2UtcGFydHkt0gEA?oc=5"
+  ],
+  [
+    1666288080000,
+    "https://news.google.com/__i/rss/rd/articles/CBMieWh0dHBzOi8vd3d3Lm5wci5vcmcvMjAyMi8xMC8yMC8xMTI1Mjc1NDYyL3R3by1uZXctYm9va3MtY2hhbGxlbmdlLXRoZS1zZW5zZS1vZi1pbmV2aXRhYmxlLXBlcm1hbmVuY2Utb2YtdGhlLWNoaW5lc2UtcGFydHnSAQA?oc=5"
   ]
 ]
