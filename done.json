@@ -1,13 +1,5 @@
 [
   [
-    1665186084000,
-    "https://news.yahoo.com/mandatory-love-education-course-college-234124448.html"
-  ],
-  [
-    1665186967000,
-    "https://www.npr.org/2022/10/07/1127595393/taiwan-miracle-semiconductor-silicon-shield-china"
-  ],
-  [
     1665189000000,
     "https://www.reuters.com/world/asia-pacific/after-russia-ukraine-plan-musk-offers-proposal-resolve-china-taiwan-tensions-2022-10-08/"
   ],
@@ -5824,6 +5816,10 @@
     "https://news.google.com/__i/rss/rd/articles/CBMiLWh0dHBzOi8vZW5nbGlzaC5raGFiYXJodWIuY29tLzIwMjIvMjEvMjc3MzY0L9IBAA?oc=5"
   ],
   [
+    1666342140000,
+    "https://news.google.com/__i/rss/rd/articles/CBMidmh0dHBzOi8vYXNpYS5uaWtrZWkuY29tL1BvbGl0aWNzL0NoaW5hLXMtcGFydHktY29uZ3Jlc3MvQ2hpbmEtcy1uYXRpb25hbC1yZWp1dmVuYXRpb24tcmluZ3MtaG9sbG93LWZvci1uZXh0LWdlbmVyYXRpb27SAQA?oc=5"
+  ],
+  [
     1666342965000,
     "https://news.google.com/__i/rss/rd/articles/CBMicGh0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9hcnRpY2xlcy8yMDIyLTEwLTIxL2NoaW5hLXMtaG9zdGlsZS1iZWhhdmlvci1wcm9tcHRzLWV1LXRvLWV4cGxvcmUtc3RyYXRlZ3ktc2hpZnTSAQA?oc=5"
   ],
@@ -5882,6 +5878,10 @@
   [
     1666352249000,
     "https://news.google.com/__i/rss/rd/articles/CBMiYmh0dHBzOi8vd3d3LmNuYmMuY29tLzIwMjIvMTAvMjEvdGlrdG9rLWRlbmllcy1pdC11c2VzLWxvY2F0aW9uLWluZm9ybWF0aW9uLXRvLXRyYWNrLXVzLXVzZXJzLS5odG1s0gEA?oc=5"
+  ],
+  [
+    1666352280000,
+    "https://news.google.com/__i/rss/rd/articles/CBMijAFodHRwczovL3d3dy5idXNpbmVzcy1zdGFuZGFyZC5jb20vYXJ0aWNsZS9pbnRlcm5hdGlvbmFsL2FzLWNoaW5hLWhvbGRzLWNvbmdyZXNzLXBlb3BsZS1ob3BlLWZvci1lbmQtdG8temVyby1jb3ZpZC1saW1pdHMtMTIyMTAyMTAwODMwXzEuaHRtbNIBkAFodHRwczovL3dhcC5idXNpbmVzcy1zdGFuZGFyZC5jb20vYXJ0aWNsZS1hbXAvaW50ZXJuYXRpb25hbC9hcy1jaGluYS1ob2xkcy1jb25ncmVzcy1wZW9wbGUtaG9wZS1mb3ItZW5kLXRvLXplcm8tY292aWQtbGltaXRzLTEyMjEwMjEwMDgzMF8xLmh0bWw?oc=5"
   ],
   [
     1666352340000,
@@ -5992,7 +5992,15 @@
     "https://news.google.com/__i/rss/rd/articles/CBMimQFodHRwczovL3d3dy5zY21wLmNvbS9lY29ub215L2dsb2JhbC1lY29ub215L2FydGljbGUvMzE5Njc3NS9hdXN0cmFsaWEtdXJnZWQtZW50cmVuY2gtcm9sZS1jaGluYXMtaW5kaXNwZW5zYWJsZS1jb21tb2RpdGllcy1zdXBwbGllci1hZnRlci10cmFkZS1iYW5zLWZhaWzSAZkBaHR0cHM6Ly9hbXAuc2NtcC5jb20vZWNvbm9teS9nbG9iYWwtZWNvbm9teS9hcnRpY2xlLzMxOTY3NzUvYXVzdHJhbGlhLXVyZ2VkLWVudHJlbmNoLXJvbGUtY2hpbmFzLWluZGlzcGVuc2FibGUtY29tbW9kaXRpZXMtc3VwcGxpZXItYWZ0ZXItdHJhZGUtYmFucy1mYWls?oc=5"
   ],
   [
+    1666386012000,
+    "https://news.google.com/__i/rss/rd/articles/CBMimQFodHRwczovL3d3dy5zY21wLmNvbS9lY29ub215L2dsb2JhbC1lY29ub215L2FydGljbGUvMzE5Njc3NS9hdXN0cmFsaWEtdXJnZWQtZW50cmVuY2gtcm9sZS1jaGluYXMtaW5kaXNwZW5zYWJsZS1jb21tb2RpdGllcy1zdXBwbGllci1hZnRlci10cmFkZS1iYW5zLWZhaWzSAQA?oc=5"
+  ],
+  [
     1666393832000,
     "https://news.google.com/__i/rss/rd/articles/CBMiMmh0dHBzOi8vd3d3LmJiYy5jb20vbmV3cy93b3JsZC1hc2lhLWNoaW5hLTYzMzM5ODE20gE2aHR0cHM6Ly93d3cuYmJjLmNvbS9uZXdzL3dvcmxkLWFzaWEtY2hpbmEtNjMzMzk4MTYuYW1w?oc=5"
+  ],
+  [
+    1666395206000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiaGh0dHBzOi8vd3d3LmFsamF6ZWVyYS5jb20vbmV3cy8yMDIyLzEwLzIxL3hpLXNldC10by1yZXZlYWwtY2hpbmFzLW5ldy1zZW5pb3ItbGVhZGVyc2hpcC1hcy1jb25ncmVzcy1lbmRz0gFsaHR0cHM6Ly93d3cuYWxqYXplZXJhLmNvbS9hbXAvbmV3cy8yMDIyLzEwLzIxL3hpLXNldC10by1yZXZlYWwtY2hpbmFzLW5ldy1zZW5pb3ItbGVhZGVyc2hpcC1hcy1jb25ncmVzcy1lbmRz?oc=5"
   ]
 ]
