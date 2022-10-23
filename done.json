@@ -1,21 +1,5 @@
 [
   [
-    1665290135000,
-    "https://www.ft.com/content/d9c2b333-0ce1-4444-9f21-54bb48193191"
-  ],
-  [
-    1665291960000,
-    "https://www.reuters.com/markets/europe/china-include-eligible-dual-listed-shares-stock-connect-scheme-2022-10-09/"
-  ],
-  [
-    1665291998000,
-    "https://www.channelnewsasia.com/business/china-include-eligible-dual-listed-shares-stock-connect-scheme-2997796"
-  ],
-  [
-    1665292934000,
-    "https://news.cgtn.com/news/2022-10-09/China-built-largest-pumped-storage-power-plant-in-Israel-in-full-swing-1dZ5cnTAATK/index.html"
-  ],
-  [
     1665294540000,
     "https://www.afr.com/world/asia/china-green-energy-revitalise-australian-interest-in-japan-20221009-p5bobv"
   ],
@@ -6144,11 +6128,47 @@
     "https://news.google.com/__i/rss/rd/articles/CBMidWh0dHBzOi8vd3d3LnRoZWd1YXJkaWFuLmNvbS93b3JsZC8yMDIyL29jdC8yMy9odS1qaW50YW8tbm90LWZlZWxpbmctd2VsbC13aGVuLWhlLWxlZnQtY2hpbmEtY29uZ3Jlc3Mtc2F5cy1zdGF0ZS1tZWRpYdIBAA?oc=5"
   ],
   [
+    1666493979000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiWGh0dHBzOi8vd3d3LnZvYW5ld3MuY29tL2Evd2lsbC1jaGluYS10cnktdG8tdGFrZS10YWl3YW4taW4teGktcy10aGlyZC10ZXJtLS82ODAxNTgwLmh0bWzSAQA?oc=5"
+  ],
+  [
     1666495200000,
     "https://news.google.com/__i/rss/rd/articles/CBMiZ2h0dHBzOi8vd3d3LmNubi5jb20vMjAyMi8xMC8yMi9jaGluYS9jaGluYS1wYXJ0eS1jb25ncmVzcy1vdmVyc2Vhcy1zdHVkZW50cy1wcm90ZXN0LWludGwtaG5rL2luZGV4Lmh0bWzSAWtodHRwczovL2FtcC5jbm4uY29tL2Nubi8yMDIyLzEwLzIyL2NoaW5hL2NoaW5hLXBhcnR5LWNvbmdyZXNzLW92ZXJzZWFzLXN0dWRlbnRzLXByb3Rlc3QtaW50bC1obmsvaW5kZXguaHRtbA?oc=5"
   ],
   [
+    1666495260000,
+    "https://news.google.com/__i/rss/rd/articles/CBMikQFodHRwczovL3d3dy5idXNpbmVzcy1zdGFuZGFyZC5jb20vYXJ0aWNsZS9pbnRlcm5hdGlvbmFsL3Bha2lzdGFuLWNoaW5hLXRvLWxhdW5jaC10aHJlZS1uZXctY3BlYy1saWtlLWNvcnJpZG9yLXByb2plY3RzLXJlcG9ydC0xMjIxMDIzMDAxMDBfMS5odG1s0gEA?oc=5"
+  ],
+  [
+    1666498016000,
+    "https://news.google.com/__i/rss/rd/articles/CBMihQFodHRwczovL3d3dy5zY21wLmNvbS9uZXdzL2NoaW5hL3BvbGl0aWNzL2FydGljbGUvMzE5NjkzNS9jaGluZXNlLXByZXNpZGVudC14aS1qaW5waW5nLXVudmVpbHMtbmV3LXRlYW0taGlzLXJlY29yZC1icmVha2luZy10aGlyZC10ZXJt0gEA?oc=5"
+  ],
+  [
+    1666498300000,
+    "https://news.google.com/__i/rss/rd/articles/CBMioAFodHRwczovL3d3dy53c2ouY29tL2xpdmVjb3ZlcmFnZS9jaGluYS14aS1qaW5waW5nLWNvbW11bmlzdC1wYXJ0eS1jb25ncmVzcy9jYXJkL2NoaW5hLXMtbmV3LXRvcC1sZWFkZXJzaGlwLXRvLWJlLXJldmVhbGVkLXNvb24taG93LXRvLXdhdGNoLXE5ekZ1Rlk2ZlNTb01tM0cyMlZo0gEA?oc=5"
+  ],
+  [
     1666498320000,
     "https://news.google.com/__i/rss/rd/articles/CBMiVGh0dHBzOi8vd3d3LmNubi5jb20vYXNpYS9saXZlLW5ld3MvY2hpbmEtcGFydHktY29uZ3Jlc3MtMTAtMjMtMjItaW50bC1obmsvaW5kZXguaHRtbNIBWGh0dHBzOi8vYW1wLmNubi5jb20vY25uL2FzaWEvbGl2ZS1uZXdzL2NoaW5hLXBhcnR5LWNvbmdyZXNzLTEwLTIzLTIyLWludGwtaG5rL2luZGV4Lmh0bWw?oc=5"
+  ],
+  [
+    1666499030000,
+    "https://news.google.com/__i/rss/rd/articles/CBMicmh0dHBzOi8vZW5nbGlzaC5reW9kb25ld3MubmV0L25ld3MvMjAyMi8xMC9lZDAzNDBlZmJhZDYtY2hpbmFzLXhpLXRvLWxhdW5jaC1uZXctbGVhZGVyc2hpcC1maWxsZWQtd2l0aC1hbGxpZXMuaHRtbNIBAA?oc=5"
+  ],
+  [
+    1666500120000,
+    "https://news.google.com/__i/rss/rd/articles/CBMicWh0dHBzOi8vd3d3LmFmci5jb20vd29ybGQvYXNpYS9jaGluYS1zLXhpLWppbnBpbmctY29uZmlybWVkLWFzLWxlYWRlci1mb3ItbGlmZS1lbGV2YXRlcy1sb3lhbGlzdHMtMjAyMjEwMjMtcDViczUz0gEA?oc=5"
+  ],
+  [
+    1666500480000,
+    "https://news.google.com/__i/rss/rd/articles/CBMib2h0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9hcnRpY2xlcy8yMDIyLTEwLTIzL2F1c3RyYWxpYS13aWxsLWJhbmstd2luZGZhbGwtYXMtY2hpbmEtd29iYmxlcy10cmVhc3VyZXItc2F5c9IBAA?oc=5"
+  ],
+  [
+    1666501443000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiaWh0dHBzOi8vd3d3LnJldXRlcnMuY29tL3dvcmxkL2NoaW5hL3hpLXNheXMtY2hpbmFzLWVjb25vbXktaGFzLWhpZ2gtcmVzaWxpZW5jZS1yb29tLW1hbm9ldXZyZS0yMDIyLTEwLTIzL9IBAA?oc=5"
+  ],
+  [
+    1666502288000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiR2h0dHBzOi8vd3d3Lm55dGltZXMuY29tL2xpdmUvMjAyMi8xMC8yMi93b3JsZC9jaGluYS14aS1qaW5waW5nLWNvbmdyZXNz0gFQaHR0cHM6Ly93d3cubnl0aW1lcy5jb20vbGl2ZS8yMDIyLzEwLzIyL3dvcmxkL2NoaW5hLXhpLWppbnBpbmctY29uZ3Jlc3MuYW1wLmh0bWw?oc=5"
   ]
 ]
