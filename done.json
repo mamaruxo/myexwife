@@ -1,73 +1,5 @@
 [
   [
-    1665360954000,
-    "https://www.ft.com/content/e67086ad-81dc-4dd2-940c-1b0a5ae02f8c"
-  ],
-  [
-    1665361800000,
-    "https://www.nasdaq.com/articles/lower-open-anticipated-for-china-stock-market"
-  ],
-  [
-    1665363160000,
-    "https://www.aljazeera.com/economy/2022/10/10/musk-praised-by-chinese-diplomat-over-controversial-taiwan-plan"
-  ],
-  [
-    1665363612000,
-    "https://www.scmp.com/news/china/diplomacy/article/3194979/what-does-brazilian-presidential-run-hold-ties-top-trading"
-  ],
-  [
-    1665364740000,
-    "https://www.theguardian.com/technology/2022/oct/10/taiwan-elon-musk-china-special-admin-region-comments-ill-informed-and-belittling"
-  ],
-  [
-    1665365760000,
-    "https://www.reuters.com/world/china/how-chinas-xi-accumulated-power-why-it-matters-third-term-2022-10-10/"
-  ],
-  [
-    1665366075000,
-    "https://finance.yahoo.com/news/asian-stocks-set-decline-rate-221755700.html"
-  ],
-  [
-    1665366189000,
-    "https://www.saltwire.com/atlantic-canada/news/analysis-how-chinas-xi-accumulated-power-and-why-it-matters-in-a-third-term-100781709/"
-  ],
-  [
-    1665366300000,
-    "https://www.cnbc.com/2022/10/10/china-party-congress-names-to-watch-as-xi-prepares-for-leadership-change.html"
-  ],
-  [
-    1665366660000,
-    "https://www.cnbc.com/2022/10/10/asia-markets-stocks-currencies-oil-economic-data.html"
-  ],
-  [
-    1665366690000,
-    "https://www.hrw.org/news/2022/10/10/china-third-term-xi-threatens-rights"
-  ],
-  [
-    1665367500000,
-    "https://www.bloomberg.com/news/articles/2022-10-10/china-stocks-slide-as-traders-return-from-golden-week-holiday"
-  ],
-  [
-    1665367686000,
-    "https://www.cnbc.com/video/2022/10/10/why-china-was-quiet-quitting-well-before-the-rest-of-the-world-caught-on.html"
-  ],
-  [
-    1665368436000,
-    "https://eurasiantimes.com/china-has-deployed-cutting-edge-fighters-to-guard-its-own-adiz/"
-  ],
-  [
-    1665368460000,
-    "https://guardian.ng/news/china-harps-on-digital-economy-to-eradicate-poverty-in-africa/"
-  ],
-  [
-    1665368700000,
-    "https://www.bloomberg.com/news/articles/2022-10-10/first-boeing-737-max-flight-flies-into-in-china-after-almost-four-years"
-  ],
-  [
-    1665368760000,
-    "https://www.business-standard.com/article/international/china-continues-repression-campaign-against-tibetan-community-us-diplomat-122101000018_1.html"
-  ],
-  [
     1665369748000,
     "https://www.channelnewsasia.com/business/china-hog-futures-jump-record-tight-supplies-2998961"
   ],
@@ -198,6 +130,10 @@
   [
     1665385200000,
     "https://news.google.com/__i/rss/rd/articles/CBMiKmh0dHBzOi8vd3d3LmJiYy5jb20vbmV3cy9idXNpbmVzcy02MjgyNTgzMNIBLmh0dHBzOi8vd3d3LmJiYy5jb20vbmV3cy9idXNpbmVzcy02MjgyNTgzMC5hbXA?oc=5"
+  ],
+  [
+    1665385200000,
+    "https://news.google.com/__i/rss/rd/articles/CBMicGh0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9hcnRpY2xlcy8yMDIyLTEwLTEwLy1uby1wb3NzaWJpbGl0eS1vZi1yZWNvbmNpbGlhdGlvbi1hcy11cy1jaGlwLXJ1bGVzLXNsYW0tY2hpbmHSAQA?oc=5"
   ],
   [
     1665386340000,
@@ -6064,6 +6000,10 @@
     "https://news.google.com/__i/rss/rd/articles/CBMifmh0dHBzOi8vd3d3LnNjbXAuY29tL25ld3MvY2hpbmEvbWlsaXRhcnkvYXJ0aWNsZS8zMTk2OTYyL2NoaW5hcy1yZXNodWZmbGVkLW1pbGl0YXJ5LWxlYWRlcnNoaXAtc2VuZHMtY2xlYXItc2lnbmFsLXRhaXdhbi1mb2N1c9IBAA?oc=5"
   ],
   [
+    1666528157000,
+    "https://news.google.com/__i/rss/rd/articles/CBMihwFodHRwczovL3d3dy5zY21wLmNvbS9uZXdzL2NoaW5hL3BvbGl0aWNzL2FydGljbGUvMzE5Njk1OS9jaGluYXMtbGktcWlhbmctc2hha2VzLXNoYW5naGFpLWNvdmlkLWNoYW9zLWVudGVyLWNvbW11bmlzdC1wYXJ0eS1pbm5lci1jaXJjbGXSAQA?oc=5"
+  ],
+  [
     1666528799000,
     "https://news.google.com/__i/rss/rd/articles/CBMiswFodHRwczovL3d3dy53c2ouY29tL2xpdmVjb3ZlcmFnZS9jaGluYS14aS1qaW5waW5nLWNvbW11bmlzdC1wYXJ0eS1jb25ncmVzcy9jYXJkL2NoaW5hLXMtdmFjY2luYXRpb24tZHJpdmUtc3RhbGxzLW9uLWxhc3QtbWlsZS10aHJlYXRlbmluZy1leGl0LWZyb20temVyby1jb3ZpZC1idFFFbERERTdIR3Rnd2VsNjJLNdIBAA?oc=5"
   ],
@@ -6086,6 +6026,10 @@
   [
     1666536784000,
     "https://news.google.com/__i/rss/rd/articles/CBMiNWh0dHBzOi8vd3d3LmJiYy5jb20vbmV3cy9hdi93b3JsZC1hc2lhLWNoaW5hLTYzMzY2OTMx0gEA?oc=5"
+  ],
+  [
+    1666538520000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiNGh0dHBzOi8vd3d3Lmdsb2JhbHRpbWVzLmNuL3BhZ2UvMjAyMjEwLzEyNzc3ODEuc2h0bWzSAQA?oc=5"
   ],
   [
     1666539540000,
@@ -6112,7 +6056,55 @@
     "https://news.google.com/__i/rss/rd/articles/CBMimwFodHRwczovL3d3dy53c2ouY29tL2xpdmVjb3ZlcmFnZS9jaGluYS14aS1qaW5waW5nLWNvbW11bmlzdC1wYXJ0eS1jb25ncmVzcy9jYXJkLy13ZS1kb24tdC13YW50LXdlLXdhbnQtaXMtbm93LWEtbG9hZGVkLXBocmFzZS1pbi1jaGluYS0yQTAzazhRY3dvcVJxOTdESkFKZ9IBAA?oc=5"
   ],
   [
+    1666555452000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiYGh0dHBzOi8vd3d3LmFsamF6ZWVyYS5jb20vcHJvZ3JhbS9pbnNpZGUtc3RvcnkvMjAyMi8xMC8yMy93aGF0cy10aGUtdmlzaW9uLW9mLWNoaW5hcy1uZXctbGVhZGVyc9IBZGh0dHBzOi8vd3d3LmFsamF6ZWVyYS5jb20vYW1wL3Byb2dyYW0vaW5zaWRlLXN0b3J5LzIwMjIvMTAvMjMvd2hhdHMtdGhlLXZpc2lvbi1vZi1jaGluYXMtbmV3LWxlYWRlcnM?oc=5"
+  ],
+  [
     1666558800000,
     "https://news.google.com/__i/rss/rd/articles/CBMicmh0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9hcnRpY2xlcy8yMDIyLTEwLTIzL3RhaXdhbi1uZWVkcy10by1kaXZlcnNpZnktdHJhZGUtYW1pZC11cy1jaGluYS1yb3ctZmluYW5jZS1jaGllZtIBAA?oc=5"
+  ],
+  [
+    1666559213000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiRWh0dHBzOi8vd3d3Lm5wci5vcmcvMjAyMi8xMC8yMy8xMTMwODQzMTQzL3RoZS03LW1lbi13aG8tY29udHJvbC1jaGluYdIBAA?oc=5"
+  ],
+  [
+    1666562414000,
+    "https://news.google.com/__i/rss/rd/articles/CBMifGh0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9mZWF0dXJlcy8yMDIyLTEwLTIzL2NoaW5hLXMtc2hhbmdoYWktbWlncmFudC13b3JrZXItdmlsbGFnZXMtYmxhbWVkLWZvci1jb3ZpZC1mYWNlLWRlbW9saXRpb27SAQA?oc=5"
+  ],
+  [
+    1666569600000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiS2h0dHBzOi8vd3d3Lm5hc2RhcS5jb20vYXJ0aWNsZXMvY2hpbmEtYm91cnNlLXRpcHBlZC10by1leHRlbmQtZnJpZGF5cy1nYWluc9IBT2h0dHBzOi8vd3d3Lm5hc2RhcS5jb20vYXJ0aWNsZXMvY2hpbmEtYm91cnNlLXRpcHBlZC10by1leHRlbmQtZnJpZGF5cy1nYWlucz9hbXA?oc=5"
+  ],
+  [
+    1666570534000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiP2h0dHBzOi8vd3d3LmZ0LmNvbS9jb250ZW50Lzk3MTQ3MTAyLWEwMmMtNDhkZi1iM2EwLTI4Yzc3YzRjMjk4ZtIBAA?oc=5"
+  ],
+  [
+    1666571400000,
+    "https://news.google.com/__i/rss/rd/articles/CBMicGh0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9hcnRpY2xlcy8yMDIyLTEwLTI0L2NoaW5hLXMtYmlsbGlvbi1kb2xsYXItY2FzaC1mb3ItY29wcGVyLXRyYWRlLWdyaW5kcy10by1hLWhhbHTSAQA?oc=5"
+  ],
+  [
+    1666573020000,
+    "https://news.google.com/__i/rss/rd/articles/CBMicWh0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9hcnRpY2xlcy8yMDIyLTEwLTI0L2NoaW5hLW1hcmtldHMtc2V0LWZvci1jYXV0aW91cy1zdGFydC1hZnRlci1sZWFkZXJzaGlwLW92ZXJoYXVs0gEA?oc=5"
+  ],
+  [
+    1666573440000,
+    "https://news.google.com/__i/rss/rd/articles/CBMicmh0dHBzOi8vd3d3LnJldXRlcnMuY29tL2J1c2luZXNzL2F1dG9zLXRyYW5zcG9ydGF0aW9uL3Rlc2xhLWN1dHMtc3RhcnRpbmctcHJpY2VzLW1vZGVsLTMtbW9kZWwteS1jaGluYS0yMDIyLTEwLTI0L9IBAA?oc=5"
+  ],
+  [
+    1666575900000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiPGh0dHBzOi8vd3d3LmNuYmMuY29tLzIwMjIvMTAvMjQvY2hpbmEtdGhpcmQtcXVhcnRlci1nZHAuaHRtbNIBAA?oc=5"
+  ],
+  [
+    1666576020000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiZ2h0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9hcnRpY2xlcy8yMDIyLTEwLTI0L2NoaW5hLXMtZXhwb3J0LWdyb3d0aC1zbG93cy1hcy1nbG9iYWwtZGVtYW5kLXdlYWtlbnPSAQA?oc=5"
+  ],
+  [
+    1666577580000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiTmh0dHBzOi8vd3d3LnJldXRlcnMuY29tL21hcmtldHMvZXVyb3BlL2dsb2JhbC1tYXJrZXRzLXdyYXB1cC0xLXBpeC0yMDIyLTEwLTI0L9IBAA?oc=5"
+  ],
+  [
+    1666578290000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiRmh0dHBzOi8vZmluYW5jZS55YWhvby5jb20vbmV3cy9jaGluYS1ob21lLXByaWNlcy1mYWxsLTAtMDIxMTMyOTk1Lmh0bWzSAU5odHRwczovL2ZpbmFuY2UueWFob28uY29tL2FtcGh0bWwvbmV3cy9jaGluYS1ob21lLXByaWNlcy1mYWxsLTAtMDIxMTMyOTk1Lmh0bWw?oc=5"
   ]
 ]
