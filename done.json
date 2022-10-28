@@ -1,9 +1,5 @@
 [
   [
-    1665732901000,
-    "https://www.bloomberg.com/news/articles/2022-10-14/china-censors-beijing-after-rare-xi-protest-before-congress"
-  ],
-  [
     1665734695000,
     "https://www.bbc.com/news/world-asia-china-63252559"
   ],
@@ -6028,6 +6024,10 @@
     "https://news.google.com/__i/rss/rd/articles/CBMiTmh0dHBzOi8vd3d3LnZvYW5ld3MuY29tL2EvYW5hbHlzdHMtZGlzY3Vzcy1jaGluYS1jb3VwLXRoYXQtd2Fzbi10LzY4MDg2MzguaHRtbNIBAA?oc=5"
   ],
   [
+    1666909514000,
+    "https://news.google.com/__i/rss/rd/articles/CBMicGh0dHBzOi8vd3d3LmxhdGltZXMuY29tL3dvcmxkLW5hdGlvbi9zdG9yeS8yMDIyLTEwLTI3L2NoaW5hLWFjY3VzZWQtb2YtdXNpbmctb3ZlcnNlYXMtYmFzZXMtdG8tdGFyZ2V0LWRpc3NpZGVudHPSAXpodHRwczovL3d3dy5sYXRpbWVzLmNvbS93b3JsZC1uYXRpb24vc3RvcnkvMjAyMi0xMC0yNy9jaGluYS1hY2N1c2VkLW9mLXVzaW5nLW92ZXJzZWFzLWJhc2VzLXRvLXRhcmdldC1kaXNzaWRlbnRzP19hbXA9dHJ1ZQ?oc=5"
+  ],
+  [
     1666911180000,
     "https://news.google.com/__i/rss/rd/articles/CBMiVmh0dHBzOi8vd3d3Lndzai5jb20vYXJ0aWNsZXMvaHVhd2VpLWNoaW5hLW1lbmcta292cmlnLXNwYXZvci1wcmlzb25lci1zd2FwLTExNjY2ODc3Nzc50gEA?oc=5"
   ],
@@ -6166,5 +6166,9 @@
   [
     1666939860000,
     "https://news.google.com/__i/rss/rd/articles/CBMidGh0dHBzOi8vd3d3Lndzai5jb20vYXJ0aWNsZXMvamFwYW4tY29uc2lkZXJzLWJ1eWluZy11LXMtdG9tYWhhd2stbWlzc2lsZXMtdG8tZGV0ZXItbm9ydGgta29yZWEtYW5kLWNoaW5hLTExNjY2OTM5OTA10gEA?oc=5"
+  ],
+  [
+    1666942080000,
+    "https://news.google.com/__i/rss/rd/articles/CBMibGh0dHBzOi8vd3d3LnJldXRlcnMuY29tL21hcmtldHMvZXVyb3BlL2Z0c2UtMTAwLWZhbGxzLWNoaW5hcy1jb3ZpZC0xOS1jdXJicy1oaXQtY29tbW9kaXR5LXN0b2Nrcy0yMDIyLTEwLTI4L9IBAA?oc=5"
   ]
 ]
