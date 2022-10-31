@@ -1,17 +1,5 @@
 [
   [
-    1666017000000,
-    "https://www.wsj.com/articles/china-economy-xi-jinping-ideology-11666016306"
-  ],
-  [
-    1666017260000,
-    "https://www.bloomberg.com/news/articles/2022-10-17/china-s-byd-sees-quarterly-profit-surge-as-ev-sales-hit-record"
-  ],
-  [
-    1666017641000,
-    "https://www.forbes.com/sites/arthurherman/2022/10/17/the-chip-war-with-china-is-just-getting-started/"
-  ],
-  [
     1666020464000,
     "https://finance.yahoo.com/news/gm-ceo-mary-barra-details-the-tremendous-opportunity-in-china-152744257.html"
   ],
@@ -6112,6 +6100,10 @@
     "https://news.google.com/__i/rss/rd/articles/CBMigAFodHRwczovL3d3dy5ibG9vbWJlcmcuY29tL29waW5pb24vYXJ0aWNsZXMvMjAyMi0xMC0zMS9jaGluYS1zLWV2cy1hcmUtY29taW5nLWFmdGVyLWZpYXQtYW5kLXZvbGtzd2FnZW4tYXJlLWJtdy1hbmQtbWVyY2VkZXMtbmV4dNIBAA?oc=5"
   ],
   [
+    1667193420000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiT2h0dHBzOi8vd3d3Lm5iY25ld3MuY29tL25ld3Mvd29ybGQvY2hpbmEtY292aWQtZm94Y29ubi1pcGhvbmUtZmFjdG9yeS1yY25hNTQ3NTfSASpodHRwczovL3d3dy5uYmNuZXdzLmNvbS9uZXdzL2FtcC9yY25hNTQ3NTc?oc=5"
+  ],
+  [
     1667194200000,
     "https://news.google.com/__i/rss/rd/articles/CBMicmh0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9hcnRpY2xlcy8yMDIyLTEwLTMxL2plZmZlcmllcy1zYXlzLWNvbnN1bWVyLWlzLWtleS1jaGluYS1lcXVpdHktYmV0LW92ZXItZml2ZS15ZWFyc9IBAA?oc=5"
   ],
@@ -6260,12 +6252,20 @@
     "https://news.google.com/__i/rss/rd/articles/CBMiQmh0dHBzOi8vc3BhY2VuZXdzLmNvbS9jaGluYS10ZXN0cy1lbmdpbmVzLWZvci1tb29uLW1pc3Npb24tcm9ja2V0L9IBAA?oc=5"
   ],
   [
+    1667214000000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiaWh0dHBzOi8vd3d3LmZyZWlnaHR3YXZlcy5jb20vbmV3cy9yZXBvcnRlZC1mZWRlcmFsLXByb2Jlcy1yZWlnbml0ZS1jb25jZXJucy1vdmVyLXR1c2ltcGxlcy1jaGluYS1kZWFsaW5nc9IBbWh0dHBzOi8vd3d3LmZyZWlnaHR3YXZlcy5jb20vbmV3cy9yZXBvcnRlZC1mZWRlcmFsLXByb2Jlcy1yZWlnbml0ZS1jb25jZXJucy1vdmVyLXR1c2ltcGxlcy1jaGluYS1kZWFsaW5ncy9hbXA?oc=5"
+  ],
+  [
     1667214300000,
     "https://news.google.com/__i/rss/rd/articles/CBMijwFodHRwczovL3d3dy5yZXV0ZXJzLmNvbS9idXNpbmVzcy9oZWFsdGhjYXJlLXBoYXJtYWNldXRpY2Fscy9jaGluYS1ibG9ja3MtZ3NrLXBhcnRpY2lwYXRpbmctbmF0aW9uYWwtYnVsay1idXktcGhhcm1hY2V1dGljYWwtcHJvZ3JhbS0yMDIyLTEwLTMxL9IBAA?oc=5"
   ],
   [
     1667214905000,
     "https://news.google.com/__i/rss/rd/articles/CBMib2h0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9hcnRpY2xlcy8yMDIyLTEwLTMxL2NoaW5hLXMtZWxlY3RyaWMtY2FyLXVwc3RhcnRzLWZhY2UtYS1jcnVjaWFsLWVhcm5pbmdzLXNlYXNvbtIBAA?oc=5"
+  ],
+  [
+    1667216813000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiXmh0dHBzOi8vYWJjbmV3cy5nby5jb20vVVMvd2lyZVN0b3J5L2NoaW5hLXNsYW1zLXJlcG9ydGVkLXBsYW4tdXMtNTItYm9tYmVycy1hdXN0cmFsaWEtOTI0MTc3MTXSAWJodHRwczovL2FiY25ld3MuZ28uY29tL2FtcC9VUy93aXJlU3RvcnkvY2hpbmEtc2xhbXMtcmVwb3J0ZWQtcGxhbi11cy01Mi1ib21iZXJzLWF1c3RyYWxpYS05MjQxNzcxNQ?oc=5"
   ],
   [
     1667219880000,
@@ -6282,6 +6282,10 @@
   [
     1667223963000,
     "https://news.google.com/__i/rss/rd/articles/CBMif2h0dHBzOi8vd3d3LmxpdmVtaW50LmNvbS9lY29ub215L2NoaW5hcy1mYWN0b3J5LXNsb3dkb3duLXdvcnNlLXRoYW4tZXhwZWN0ZWQtdW5kZXItd2VpZ2h0LW9mLWNvdmlkLXBvbGljaWVzLTExNjY3MjIzNzE3MDM5Lmh0bWzSAYMBaHR0cHM6Ly93d3cubGl2ZW1pbnQuY29tL2Vjb25vbXkvY2hpbmFzLWZhY3Rvcnktc2xvd2Rvd24td29yc2UtdGhhbi1leHBlY3RlZC11bmRlci13ZWlnaHQtb2YtY292aWQtcG9saWNpZXMvYW1wLTExNjY3MjIzNzE3MDM5Lmh0bWw?oc=5"
+  ],
+  [
+    1667225160000,
+    "https://news.google.com/__i/rss/rd/articles/CBMidmh0dHBzOi8vd3d3LnVzbmV3cy5jb20vbmV3cy93b3JsZC9hcnRpY2xlcy8yMDIyLTEwLTMxL2NoaW5hcy14aS1ncmVldHMtdmlldG1hbmVzZS1hbGx5LXdpdGgtY2VyZW1vbnktY2FsbC1mb3ItZGVmaWFuY2XSAQA?oc=5"
   ],
   [
     1667225400000,
