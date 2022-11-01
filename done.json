@@ -1,21 +1,5 @@
 [
   [
-    1666113000000,
-    "https://www.globaltimes.cn/page/202210/1277437.shtml"
-  ],
-  [
-    1666113480000,
-    "https://news.google.com/__i/rss/rd/articles/CBMiUGh0dHBzOi8vd3d3Lndhc2hpbmd0b25wb3N0LmNvbS93b3JsZC8yMDIyLzEwLzE4L2NoaW5hLXNlaXplLXRhaXdhbi1wbGFuLWJsaW5rZW4v0gEA?oc=5"
-  ],
-  [
-    1666114020000,
-    "https://seekingalpha.com/article/4547252-qualcomm-overplayed-china-fears"
-  ],
-  [
-    1666115008000,
-    "https://www.bloomberg.com/news/articles/2022-10-18/elon-musk-s-reliance-on-china-a-concern-democrat-warner-says"
-  ],
-  [
     1666115659000,
     "https://markets.businessinsider.com/news/currencies/dollar-vs-yuan-china-investor-exodus-outflow-balance-of-payments-2022-10"
   ],
@@ -6268,6 +6252,10 @@
     "https://news.google.com/__i/rss/rd/articles/CBMiSGh0dHBzOi8vZmluYW5jZS55YWhvby5jb20vbmV3cy9jaGluYXMteXVhbi1ib3VuY2VzLTE1LWxvdy0wOTE1MzkyNzYuaHRtbNIBUGh0dHBzOi8vZmluYW5jZS55YWhvby5jb20vYW1waHRtbC9uZXdzL2NoaW5hcy15dWFuLWJvdW5jZXMtMTUtbG93LTA5MTUzOTI3Ni5odG1s?oc=5"
   ],
   [
+    1667295313000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiO2h0dHBzOi8vd3d3LnByb3RvY29sLmNvbS9lbnRlcnByaXNlL2NoaW5hLXVzLWFpLW9wZW4tc291cmNl0gEA?oc=5"
+  ],
+  [
     1667295780000,
     "https://news.google.com/__i/rss/rd/articles/CBMidmh0dHBzOi8vd3d3LnJldXRlcnMuY29tL3dvcmxkL2luZGlhL2NoaW5hcy14aS1zZW5kcy1jb25kb2xlbmNlcy1pbmRpYW4tcG0tbW9kaS1vdmVyLWRlYWRseS1icmlkZ2UtY29sbGFwc2UtMjAyMi0xMS0wMS_SAQA?oc=5"
   ],
@@ -6290,6 +6278,10 @@
   [
     1667301056000,
     "https://news.google.com/__i/rss/rd/articles/CBMiVWh0dHBzOi8vZm9yZWlnbnBvbGljeS5jb20vMjAyMi8xMS8wMS94aXMtY2hpbmEtaXMtZ29vZC1hbmQtYmFkLWZvci10aGUtdW5pdGVkLXN0YXRlcy_SAQA?oc=5"
+  ],
+  [
+    1667301102000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiT2h0dHBzOi8vYXNpYXRpbWVzLmNvbS8yMDIyLzExL21hcmNvcy1qci1sb29rcy10by1jaGluYS1mb3ItbW9uZXktdXMtZm9yLW11c2NsZS_SAQA?oc=5"
   ],
   [
     1667302224000,
@@ -6382,5 +6374,13 @@
   [
     1667320421000,
     "https://news.google.com/__i/rss/rd/articles/CBMiVWh0dHBzOi8vZm9yZWlnbnBvbGljeS5jb20vMjAyMi8xMS8wMS96ZXJvLWNvdmlkLWNoaW5hLWVjb25vbWljLXByb2JsZW1zLWRlbW9ncmFwaGljcy_SAQA?oc=5"
+  ],
+  [
+    1667322616000,
+    "https://news.google.com/__i/rss/rd/articles/CBMib2h0dHBzOi8vd3d3LmM0aXNybmV0LmNvbS9pdC1uZXR3b3Jrcy8yMDIyLzExLzAxL3VzLXRlY2gtY29tcGFuaWVzLWluLWNoaW5hLW1heS1zb29uLWJlLWZvcmNlZC10by1jaG9vc2UtYS1mbGFnL9IBAA?oc=5"
+  ],
+  [
+    1667323281000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiiAFodHRwczovL3d3dy5saXZlbWludC5jb20vbmV3cy93b3JsZC9zaGFuZ2hhaS1kaXNuZXktdmlzaXRvcnMtZ2V0LXRyYXBwZWQtaW5zaWRlLWFzLWNoaW5hLXNodXRzLXBhcmstdG8tY29udGFpbi1jb3ZpZC0xMTY2NzMyMjk3MTQ5Ny5odG1s0gEA?oc=5"
   ]
 ]
