@@ -1,21 +1,5 @@
 [
   [
-    1666279800000,
-    "https://news.google.com/__i/rss/rd/articles/CBMieGh0dHBzOi8vdGhlaGlsbC5jb20vb3Bpbmlvbi9pbnRlcm5hdGlvbmFsLzM2OTcwNzctY2hpbmFzLXJldGFsaWF0aW9uLXBsYXlib29rLWNhbnQtbWVldC10aGUtdXMtZXhwb3J0LWNvbnRyb2wtY2hhbGxlbmdlL9IBAA?oc=5"
-  ],
-  [
-    1666280244000,
-    "https://news.google.com/__i/rss/rd/articles/CBMidGh0dHBzOi8vc3BhY2VuZXdzLmNvbS9jaGluYS1sb29rZWQtYXQtcHV0dGluZy1hLW1vbml0b3Jpbmctc2F0ZWxsaXRlLWluLXJldHJvZ3JhZGUtZ2Vvc3RhdGlvbmFyeS1vcmJpdC12aWEtdGhlLW1vb24v0gEA?oc=5"
-  ],
-  [
-    1666280880000,
-    "https://news.google.com/__i/rss/rd/articles/CBMifWh0dHBzOi8vd3d3LnJldXRlcnMuY29tL3dvcmxkL2FzaWEtcGFjaWZpYy91cy1kaXBsb21hdC1zaGVybWFuLWRpc2N1c3MtbmtvcmVhLW1pc3NpbGUtbGF1bmNoZXMtd2l0aC1qYXBhbi1za29yZWFuLTIwMjItMTAtMjAv0gEA?oc=5"
-  ],
-  [
-    1666281600000,
-    "https://news.google.com/__i/rss/rd/articles/CBMiRWh0dHBzOi8vd3d3LnRhaXBlaXRpbWVzLmNvbS9OZXdzL2Zyb250L2FyY2hpdmVzLzIwMjIvMTAvMjEvMjAwMzc4NzQ0ONIBAA?oc=5"
-  ],
-  [
     1666282260000,
     "https://news.google.com/__i/rss/rd/articles/CBMidGh0dHBzOi8vd3d3LnJldXRlcnMuY29tL2J1c2luZXNzL3JldGFpbC1jb25zdW1lci9sb3JlYWwtcG9zdHMtYnJpc2stc2FsZXMtcmlzZS1kZXNwaXRlLWRpc3J1cHRpb25zLWNoaW5hLTIwMjItMTAtMjAv0gEA?oc=5"
   ],
@@ -6502,5 +6486,9 @@
   [
     1667486097000,
     "https://news.google.com/__i/rss/rd/articles/CBMiYmh0dHBzOi8vd3d3LmJvd2RvaW4uZWR1L25ld3MvMjAyMi8xMS9nb2x6LWxlY3R1cmUtYWRkcmVzc2VzLWVuZC1vZi1jb2xkLXdhci1hbmQtcmlzZS1vZi1jaGluYS5odG1s0gEA?oc=5"
+  ],
+  [
+    1667488656000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiaGh0dHBzOi8vdGhlZGlwbG9tYXQuY29tLzIwMjIvMTEvY2hpbmFzLW5hdnktc2V0cy1yZWNvcmQtcGFjZS1mb3ItaW50cnVzaW9ucy1pbnRvLWphcGFucy10ZXJyaXRvcmlhbC1zZWEv0gEA?oc=5"
   ]
 ]
