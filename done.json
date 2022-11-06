@@ -1,21 +1,5 @@
 [
   [
-    1666522800000,
-    "https://news.google.com/__i/rss/rd/articles/CBMiSGh0dHBzOi8vd3d3LnBvbGl0aWNvLmNvbS9uZXdzLzIwMjIvMTAvMjMvY2hpbmEtZGlwbG9tYWN5LXBhbmFtYS0wMDA2MjgyONIBAA?oc=5"
-  ],
-  [
-    1666522920000,
-    "https://news.google.com/__i/rss/rd/articles/CBMie2h0dHBzOi8vd3d3LnRoZWd1YXJkaWFuLmNvbS93b3JsZC8yMDIyL29jdC8yMy9zaGFycC1mYWxsLWluLWNoaW5hcy1nbG9iYWwtc3RhbmRpbmctYXMtcG9sbC1zaG93cy1iYWNraW5nLWZvci10YWl3YW4tZGVmZW5jZdIBAA?oc=5"
-  ],
-  [
-    1666523280000,
-    "https://news.google.com/__i/rss/rd/articles/CBMiNGh0dHBzOi8vd3d3Lmdsb2JhbHRpbWVzLmNuL3BhZ2UvMjAyMjEwLzEyNzc3NDUuc2h0bWzSAQA?oc=5"
-  ],
-  [
-    1666524349000,
-    "https://news.google.com/__i/rss/rd/articles/CBMigwFodHRwczovL3d3dy53c2ouY29tL2xpdmVjb3ZlcmFnZS9jaGluYS14aS1qaW5waW5nLWNvbW11bmlzdC1wYXJ0eS1jb25ncmVzcy9jYXJkL25ldy13YXlzLXRvLXRlbGwtY2hpbmEtcy1zdG9yeS1KWHQ5WEZubmVncEI3eXptaEZOVNIBAA?oc=5"
-  ],
-  [
     1666526416000,
     "https://news.google.com/__i/rss/rd/articles/CBMid2h0dHBzOi8vd3d3LmJsb29tYmVyZy5jb20vbmV3cy9mZWF0dXJlcy8yMDIyLTEwLTIzL2NoaW5hLXMtd29ybWhvbGUtbGlicmFyeS1pcy1hLWZhci1vdXQtZXhlcmNpc2UtaW4tYWxnb3JpdGhtaWMtZGVzaWdu0gEA?oc=5"
   ],
@@ -5864,6 +5848,10 @@
     "https://news.google.com/__i/rss/rd/articles/CBMiP2h0dHBzOi8vbmV3cy55YWhvby5jb20vY2hpbmEtY292aWQtY2FzZXMtc3VyZ2UtNi0wMTI5MDY2OTMuaHRtbNIBR2h0dHBzOi8vbmV3cy55YWhvby5jb20vYW1waHRtbC9jaGluYS1jb3ZpZC1jYXNlcy1zdXJnZS02LTAxMjkwNjY5My5odG1s?oc=5"
   ],
   [
+    1667550334000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiZWh0dHBzOi8vd3d3LmNuYmMuY29tLzIwMjIvMTEvMDQvaGVyZXMtd2hhdC13ZS1rbm93LWFib3V0LXRoZS1yZWJvdW5kLWluLWNoaW5lc2Utc3RvY2tzLXRoaXMtd2Vlay5odG1s0gEA?oc=5"
+  ],
+  [
     1667550738000,
     "https://news.google.com/__i/rss/rd/articles/CBMiR2h0dHBzOi8vd3d3LmJhcnJvbnMuY29tL2FydGljbGVzL2FsaWJhYmEtY2hpbmEtc3RvY2tzLXJhbGx5LTUxNjY3NTUwMjkx0gEA?oc=5"
   ],
@@ -6502,5 +6490,9 @@
   [
     1667725600000,
     "https://news.google.com/__i/rss/rd/articles/CBMiXmh0dHBzOi8vd3d3LnN0YXJ0cmlidW5lLmNvbS9iZWlqaW5nLW1hcmF0aG9uLXJldHVybnMtYnV0LWNoaW5hLXN0aWNrcy10by16ZXJvLWNvdmlkLzYwMDIyMjUzMy_SAQA?oc=5"
+  ],
+  [
+    1667732458000,
+    "https://news.google.com/__i/rss/rd/articles/CBMiWWh0dHBzOi8vd3d3LmVhc3Rhc2lhZm9ydW0ub3JnLzIwMjIvMTEvMDYvcmVjb25zdHJ1Y3RpbmctY2hpbmFzLXJvbGUtaW4tcmVnaW9uYWwtc2VjdXJpdHkv0gEA?oc=5"
   ]
 ]
