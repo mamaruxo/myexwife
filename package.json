@@ -20,19 +20,19 @@
   "author": "mm <https://github.com/mamaruxo>",
   "license": "AGPL-3.0",
   "dependencies": {
-    "@cliqz/adblocker-puppeteer": "^1.23.2",
+    "@ghostery/adblocker-puppeteer": "^2.1.1",
     "@sentry/integrations": "^7.114.0",
     "@sentry/node": "^8.40.0",
     "feedparser": "^2.2.10",
-    "puppeteer": "^13.0.1",
-    "puppeteer-extra": "^3.2.3",
-    "puppeteer-extra-plugin-stealth": "^2.9.0",
+    "puppeteer": "^23.9.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "twoot": "0.4.0",
     "znv": "^0.4.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/feedparser": "^2.2.5",
+    "@types/feedparser": "^2.2.8",
     "@types/node": "^20.17.7",
     "dotenv": "^16.4.5",
     "eslint": "^8.57.1",
@@ -42,6 +42,11 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2",
     "vitest": "^2.1.5"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "feedparser": "patches/feedparser.patch"
+    }
   },
   "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247"
 }

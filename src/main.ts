@@ -12,7 +12,7 @@ import { twoot } from "twoot";
 import puppeteerOrig from "puppeteer";
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
-import { PuppeteerBlocker, fullLists } from "@cliqz/adblocker-puppeteer";
+import { PuppeteerBlocker, fullLists } from "@ghostery/adblocker-puppeteer";
 
 import { replace } from "./replace";
 import { kickoffReplaceAndWatch } from "./userscript";
@@ -114,7 +114,7 @@ if (argv.includes("list")) {
 
   void fetchAndParse().then((items) => {
     for (const { title, date, link } of items) {
-      console.log(`${title}\n(${replace(title)})\n${date}\n${link}\n`);
+      console.log(`${title}\n(${replace(title)})\n${date.toISOString()}\n${link}\n`);
     }
 
     console.log("done.");
@@ -156,7 +156,9 @@ if (argv.includes("list")) {
     ? async ({ page, title, link, date }) => {
         const path = join(localPath, `${i}.png`);
         await page.screenshot({ path });
-        console.log(`${title}\n(${replace(title)})\n${date}\n${link}\nfile://${path}\n`);
+        console.log(
+          `${title}\n(${replace(title)})\n${date.toISOString()}\n${link}\nfile://${path}\n`,
+        );
 
         done.push([date.valueOf(), link]);
         i++;

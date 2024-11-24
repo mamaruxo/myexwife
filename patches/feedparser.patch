@@ -1,0 +1,16 @@
+diff --git a/History.md b/History.md
+deleted file mode 100644
+index 3035952feb0e8b2b85adc44090d2921c052c9cfb..0000000000000000000000000000000000000000
+diff --git a/lib/feedparser/index.js b/lib/feedparser/index.js
+index 916356f02b927fb4dd2d4e144817dd4b4dfd03a4..71344d37f6c2f798450939775d10e81138094c21 100644
+--- a/lib/feedparser/index.js
++++ b/lib/feedparser/index.js
+@@ -13,7 +13,7 @@ var sax = require('sax')
+   , addressparser = require('addressparser')
+   , indexOfObject = require('array-indexofobject')
+   , util = require('util')
+-  , TransformStream = require('readable-stream').Transform
++  , TransformStream = require('stream').Transform
+   , _ = require('../utils');
+ 
+ /**
