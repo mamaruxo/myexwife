@@ -9,7 +9,7 @@ import Feedparser from "feedparser";
 import { close as flushSentry } from "@sentry/node";
 import { twoot } from "twoot";
 
-import puppeteerOrig from "puppeteer";
+import { TimeoutError } from "puppeteer";
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import { PuppeteerBlocker, fullLists } from "@ghostery/adblocker-puppeteer";
@@ -85,7 +85,7 @@ async function main(
   for (const { title, link, date } of items) {
     console.log("visiting", link);
 
-    const context = await browser.createIncognitoBrowserContext();
+    const context = await browser.createBrowserContext();
     try {
       const page = await context.newPage();
       await blocker.enableBlockingInPage(page);
@@ -94,7 +94,7 @@ async function main(
       await setTimeout(10);
       await onPageReady({ page, title, link, date });
     } catch (e) {
-      if (e instanceof puppeteerOrig.errors.TimeoutError) {
+      if (e instanceof TimeoutError) {
         console.error(`Timeout exceeded for page ${link} :\n`, e, "\n");
       } else {
         throw e;
