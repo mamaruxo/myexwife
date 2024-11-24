@@ -28,7 +28,7 @@ const MAX_NEWS_ITEMS_PER_RUN = 3;
  * percentage of difference required for item to not be filtered as duplicate.
  * (0 = identical, 1+ = completely different)
  */
-const DIFFERENCE_THRESHOLD = 0.6;
+const DIFFERENCE_THRESHOLD = 0.45;
 
 const TWO_WEEKS = 1000 * 60 * 60 * 24 * 14;
 const defaultOldestAllowableDate = Date.now() - TWO_WEEKS;
@@ -252,7 +252,7 @@ if (argv.includes("list")) {
 
     if (!isSufficientlyDifferent) {
       console.log(
-        `discarding:\n${item.title}\nclosest existing title is:\n${closest}\n${((dist / item.title.length) * 100).toFixed(0)}% similar (distance: ${dist}).\n`,
+        `discarding:\n${item.title}\nclosest existing title is:\n${closest}\n${((dist / item.title.length) * 100).toFixed(0)}% different (distance: ${dist}).\n`,
       );
     }
 
