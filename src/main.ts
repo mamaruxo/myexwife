@@ -81,9 +81,17 @@ async function main(
   }
 
   const [browser, blocker] = await Promise.all([
-    // not sure how puppeteer-extra duplicated the typings but messed them up
-    puppeteer.launch({ defaultViewport: { width: 1000, height: 800 } } as any),
-    PuppeteerBlocker.fromLists(fetch, fullLists, { enableCompression: true }),
+    puppeteer.launch({ defaultViewport: { width: 1000, height: 800 } }),
+    PuppeteerBlocker.fromLists(
+      fetch,
+      [
+        ...fullLists,
+        "https://easylist.to/easylist/easylist.txt",
+        "https://easylist.to/easylist/easyprivacy.txt",
+        "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
+      ],
+      { enableCompression: true },
+    ),
   ]);
 
   for (const { title, link, date } of items) {
