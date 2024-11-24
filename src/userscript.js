@@ -1,5 +1,19 @@
-/* eslint-disable unicorn/consistent-function-scoping */
+// this file needs `lib: ["dom"]` to be set in the tsconfig to typecheck correctly
+// -- but that conflicts with node's built-in `fetch`, which we use in
+// `main.ts`. there's no real way around this other than setting up something
+// cumbersome like multiple typescript project references or standing up a
+// monorepo. but to avoid that, we can just use js for this file and enable
+// typechecking as needed. uncommenting the triple-slash reference in this file
+// will cause type errors in `main.ts`, so just re-comment it when you're done.
 
+// uncomment the below lines to enable typechecking!
+
+/*
+// @ts-check
+/// <reference lib="dom" />
+*/
+
+/* eslint-disable unicorn/consistent-function-scoping -- the entire function is evaluated by puppeteer */
 export function kickoffReplaceAndWatch() {
   //////////////////////////////////////////////////////////
   // kludgily included from replace.ts, update if changed //
@@ -16,12 +30,20 @@ export function kickoffReplaceAndWatch() {
     "among", "about"
   ]);
 
-  function isTitleCaseWord(w: string): boolean {
+  /**
+   * @param {string} w
+   * @returns {boolean}
+   */
+  function isTitleCaseWord(w) {
     // eslint-disable-next-line @typescript-eslint/prefer-string-starts-ends-with
     return w[0] === w[0].toUpperCase();
   }
 
-  function replace(original: string) {
+  /**
+   * @param {string} original
+   * @returns {string}
+   */
+  function replace(original) {
     const title = original
       .trim()
       // no 'south my ex-wife morning post'
@@ -35,7 +57,7 @@ export function kickoffReplaceAndWatch() {
       .split(/\s+/)
       .every((w) => prepositionsAndArticles.has(w) || isTitleCaseWord(w));
 
-    let replaced: string;
+    let replaced;
 
     if (isTitleCase) {
       replaced = title
@@ -79,7 +101,7 @@ export function kickoffReplaceAndWatch() {
         .replaceAll("The Chinese", "My ex-wife's");
 
       const split = replaced.split(/\s+/);
-      const parts: string[] = [];
+      const parts = [];
 
       // we could probably use lookbehind to test for capitalization instead of
       // doing this iteratively.
@@ -118,16 +140,22 @@ export function kickoffReplaceAndWatch() {
 
   const matcher = /\b(?:china|chinese|beijing|xi jinping)\b/i;
 
-  function replaceNode(node: Node) {
-    if (matcher.test(node.textContent!)) {
+  /**
+   * @param {Node} node
+   * @returns {void}
+   */
+  function replaceNode(node) {
+    if (matcher.test(/** @type {string} */ (node.textContent))) {
       const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, {
         acceptNode: (n) =>
-          matcher.test(n.textContent!) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT,
+          matcher.test(/** @type {string} */ (n.textContent))
+            ? NodeFilter.FILTER_ACCEPT
+            : NodeFilter.FILTER_REJECT,
       });
 
       let childNode;
       while ((childNode = walker.nextNode())) {
-        childNode.textContent = replace(childNode.textContent!);
+        childNode.textContent = replace(/** @type {string} */ (childNode.textContent));
       }
     }
   }
