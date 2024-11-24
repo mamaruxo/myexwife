@@ -8,6 +8,7 @@ import { Readable } from "stream";
 import Feedparser from "feedparser";
 import { close as flushSentry } from "@sentry/node";
 import { twoot } from "twoot";
+import { distance as levDistance, closest as levClosest } from "fastest-levenshtein";
 
 import { TimeoutError } from "puppeteer";
 import puppeteer from "puppeteer-extra";
@@ -132,17 +133,17 @@ if (argv.includes("list")) {
     console.log("[running in production mode]");
   }
 
-  const done: [date: number, url: string][] = JSON.parse(
+  const done: [date: number, title: string][] = JSON.parse(
     readFileSync(join(DATA_DIR, "done.json"), "utf8"),
   );
   assert(Array.isArray(done), "expected done.json to be an array");
-  const doneSet = new Set<string>();
-  for (const [date, url] of done) {
+  const doneTitles: string[] = [];
+  for (const [date, title] of done) {
     assert(
-      typeof date === "number" && typeof url === "string",
-      `expected done.json to contain [date: number, url: string] tuples, received [${date}, ${url}]`,
+      typeof date === "number" && typeof title === "string",
+      `expected done.json to contain [date: number, url: string] tuples, received [${date}, ${title}]`,
     );
-    doneSet.add(url);
+    doneTitles.push(title);
   }
 
   const manualDateLimit = JSON.parse(readFileSync("data/no-older-than", "utf8"));
@@ -163,7 +164,7 @@ if (argv.includes("list")) {
           `${title}\n(${replace(title)})\n${date.toISOString()}\n${link}\nfile://${path}\n`,
         );
 
-        done.push([date.valueOf(), link]);
+        done.push([date.valueOf(), title]);
         i++;
       }
     : async ({ page, title, date, link }) => {
@@ -211,15 +212,31 @@ if (argv.includes("list")) {
           }
         }
 
-        done.push([date.valueOf(), link]);
+        done.push([date.valueOf(), title]);
         i++;
       };
 
-  const itemFilter = (item: NewsItem): boolean =>
+  const itemFilter = (item: NewsItem): boolean => {
     // is a relevant term actually in the title of the article?
-    /china|chinese|xi|beijing/gi.test(item.title) &&
-    item.date.valueOf() > oldestAllowableDate &&
-    !doneSet.has(item.link);
+    if (!/china|chinese|xi|beijing/gi.test(item.title)) {
+      return false;
+    }
+    if (item.date.valueOf() <= oldestAllowableDate) {
+      return false;
+    }
+
+    // HACK: bad defs, returns undefined on empty array
+    const closest = levClosest(item.title, doneTitles) as string | undefined;
+    if (!closest) return true;
+
+    const dist = levDistance(item.title, closest);
+
+    console.log(
+      `${item.title}\nclosest existing title is:\n${closest}\ndistance: ${dist} (difference = ${dist / item.title.length})`,
+    );
+
+    return dist / item.title.length > 0.6;
+  };
 
   void main(itemFilter, onPageReady)
     .then(() => {

@@ -23,6 +23,7 @@
     "@ghostery/adblocker-puppeteer": "^2.1.1",
     "@sentry/integrations": "^7.114.0",
     "@sentry/node": "^8.40.0",
+    "fastest-levenshtein": "^1.0.16",
     "feedparser": "^2.2.10",
     "puppeteer": "^23.9.0",
     "puppeteer-extra": "^3.3.6",
