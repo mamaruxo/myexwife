@@ -22,6 +22,14 @@ import { BSKY_PASSWORD, BSKY_USERNAME, DATA_DIR, MASTODON_SERVER, MASTODON_TOKEN
 
 import type { Page } from "puppeteer";
 
+const MAX_NEWS_ITEMS_PER_RUN = 3;
+
+/**
+ * percentage of difference required for item to not be filtered as duplicate.
+ * (0 = identical, 1+ = completely different)
+ */
+const DIFFERENCE_THRESHOLD = 0.6;
+
 const TWO_WEEKS = 1000 * 60 * 60 * 24 * 14;
 const defaultOldestAllowableDate = Date.now() - TWO_WEEKS;
 
@@ -37,10 +45,8 @@ interface NewsItem {
 
 async function fetchAndParse({
   filterItem = () => true,
-  transformItems = sortOldestToNewest,
 }: {
   filterItem?: (item: NewsItem) => boolean;
-  transformItems?: (items: NewsItem[]) => NewsItem[];
 } = {}) {
   const res = await fetch("https://news.google.com/rss/search?q=china");
 
@@ -61,10 +67,13 @@ async function fetchAndParse({
       items.push(item);
     }
   }
+  console.log(
+    `fetched ${i} items. after filtering: ${items.length}. limit is ${MAX_NEWS_ITEMS_PER_RUN}`,
+  );
 
-  console.log(`fetched ${i} items. after filtering: ${items.length}`);
+  sortOldestToNewest(items);
 
-  return transformItems(items);
+  return items.slice(0, MAX_NEWS_ITEMS_PER_RUN);
 }
 
 async function main(
@@ -175,7 +184,7 @@ if (argv.includes("list")) {
         done.push([date.valueOf(), title]);
         i++;
       }
-    : async ({ page, title, date, link }) => {
+    : async ({ page, title, date }) => {
         const screenshot = (await page.screenshot()) as Buffer;
         const status = replace(title);
 
@@ -239,16 +248,24 @@ if (argv.includes("list")) {
 
     const dist = levDistance(item.title, closest);
 
-    console.log(
-      `${item.title}\nclosest existing title is:\n${closest}\ndistance: ${dist} (difference = ${dist / item.title.length})`,
-    );
+    const isSufficientlyDifferent = dist / item.title.length > DIFFERENCE_THRESHOLD;
 
-    return dist / item.title.length > 0.6;
+    if (!isSufficientlyDifferent) {
+      console.log(
+        `discarding:\n${item.title}\nclosest existing title is:\n${closest}\n${((dist / item.title.length) * 100).toFixed(0)}% similar (distance: ${dist}).\n`,
+      );
+    }
+
+    return isSufficientlyDifferent;
   };
 
   void main(itemFilter, onPageReady)
     .then(() => {
       console.log(`processed ${i} item${i === 1 ? "" : "s"}.`);
+
+      if (i === 0) {
+        throw new Error("Wasn't able to process any items!");
+      }
 
       done.sort((a, b) => a[0] - b[0]);
       while (done.length > 0 && done[0][0] < oldestAllowableDate) {
