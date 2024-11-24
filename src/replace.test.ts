@@ -1,3 +1,5 @@
+import { describe, it, expect } from "vitest";
+
 import { replace } from "./replace";
 
 const fixtures: [string, string][] = [

@@ -1,24 +1,23 @@
-require("source-map-support").install(); // eslint-disable-line import/no-commonjs
 import { tmpdir } from "os";
 import { mkdirSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 import { strict as assert } from "assert";
 import { setTimeout } from "timers/promises";
+import { Readable } from "stream";
 
-import fetch from "node-fetch";
 import Feedparser from "feedparser";
 import { close as flushSentry } from "@sentry/node";
+import { twoot } from "twoot";
 
 import puppeteerOrig from "puppeteer";
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import { PuppeteerBlocker, fullLists } from "@cliqz/adblocker-puppeteer";
 
-import { doTwoot } from "./twoot";
 import { replace } from "./replace";
 import { kickoffReplaceAndWatch } from "./userscript";
 
-import { DATA_DIR } from "./env";
+import { BSKY_PASSWORD, BSKY_USERNAME, DATA_DIR, MASTODON_SERVER, MASTODON_TOKEN } from "./env";
 
 import type { Page } from "puppeteer";
 
@@ -49,7 +48,7 @@ async function fetchAndParse({
   }
 
   const parser = new Feedparser({ addmeta: false });
-  res.body.pipe(parser);
+  Readable.fromWeb(res.body!).pipe(parser);
 
   const items: NewsItem[] = [];
 
@@ -69,7 +68,7 @@ async function fetchAndParse({
 
 async function main(
   filterItem: (item: NewsItem) => boolean,
-  onPageReady: (params: { page: Page; title: string; link: string; date: Date }) => Promise<void>
+  onPageReady: (params: { page: Page; title: string; link: string; date: Date }) => Promise<void>,
 ) {
   puppeteer.use(StealthPlugin());
 
@@ -131,14 +130,14 @@ if (argv.includes("list")) {
   }
 
   const done: [date: number, url: string][] = JSON.parse(
-    readFileSync(join(DATA_DIR, "done.json"), "utf8")
+    readFileSync(join(DATA_DIR, "done.json"), "utf8"),
   );
   assert(Array.isArray(done), "expected done.json to be an array");
   const doneSet = new Set<string>();
   for (const [date, url] of done) {
     assert(
       typeof date === "number" && typeof url === "string",
-      `expected done.json to contain [date: number, url: string] tuples, received [${date}, ${url}]`
+      `expected done.json to contain [date: number, url: string] tuples, received [${date}, ${url}]`,
     );
     doneSet.add(url);
   }
@@ -146,7 +145,7 @@ if (argv.includes("list")) {
   const manualDateLimit = JSON.parse(readFileSync("data/no-older-than", "utf8"));
   assert(
     typeof manualDateLimit === "number" && !Number.isNaN(manualDateLimit),
-    "expected no-older-than file to be a number"
+    "expected no-older-than file to be a number",
   );
 
   const oldestAllowableDate = Math.max(manualDateLimit, defaultOldestAllowableDate);
@@ -166,14 +165,46 @@ if (argv.includes("list")) {
         const screenshot = (await page.screenshot()) as Buffer;
         const status = replace(title);
 
-        await doTwoot([
+        const results = await twoot(
           {
             status,
-            media: screenshot,
-            focus: "0,1",
-            caption: "screenshot of a news item about my ex-wife",
+            media: [
+              {
+                buffer: screenshot,
+                focus: "0,1",
+                caption: "screenshot of a news item about my ex-wife",
+              },
+            ],
           },
-        ]);
+          [
+            {
+              type: "mastodon",
+              server: MASTODON_SERVER,
+              token: MASTODON_TOKEN,
+            },
+            {
+              type: "bsky",
+              username: BSKY_USERNAME,
+              password: BSKY_PASSWORD,
+            },
+          ],
+        );
+
+        for (const res of results) {
+          switch (res.type) {
+            case "mastodon":
+              console.log(`tooted at ${res.status.url}`);
+              break;
+            case "bsky":
+              console.log(`skeeted at ${res.status.uri}`);
+              break;
+            case "error":
+              console.error(`error while tooting:\n${res.message}`);
+              break;
+            default:
+              console.error(`unexpected value:\n${JSON.stringify(res)}`);
+          }
+        }
 
         done.push([date.valueOf(), link]);
         i++;

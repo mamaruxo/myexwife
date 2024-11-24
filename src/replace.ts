@@ -34,42 +34,42 @@ export function replace(original: string) {
     replaced = title
       .replaceAll(
         /in\s+(?:(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi(?!'an)\b(?:\s+Jinping)?(?:['’]s\s+))?(?:China|Beijing)/g,
-        "at my Ex-Wife's Place"
+        "at my Ex-Wife's Place",
       )
       .replaceAll(
         /In\s+(?:(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi(?!'an)\b(?:\s+Jinping)?(?:['’]s\s+))?(?:China|Beijing)/g,
-        "At my Ex-Wife's Place"
+        "At my Ex-Wife's Place",
       )
       .replaceAll(
         /(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi(?!'an)\b(?:\s+Jinping)?(?:['’]s China)?/gi,
-        "My Ex-Wife"
+        "My Ex-Wife",
       )
-      .replaceAll(/the Chinese/g, "my Ex-Wife's")
-      .replaceAll(/The Chinese/g, "My Ex-Wife's")
+      .replaceAll("the Chinese", "my Ex-Wife's")
+      .replaceAll("The Chinese", "My Ex-Wife's")
       .replaceAll(/chinese/gi, "My Ex-Wife's")
       .replaceAll(/China|Beijing/gi, "My Ex-Wife");
   } else {
     replaced = title
       .replaceAll(
         /in\s+(?:(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi(?!'an)\b(?:\s+Jinping)?(?:['’]s\s+))?(?:China|Beijing)/g,
-        "at my ex-wife's place"
+        "at my ex-wife's place",
       )
       .replaceAll(
         /In\s+(?:(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi(?!'an)\b(?:\s+Jinping)?(?:['’]s\s+))?(?:China|Beijing)/g,
-        "At my ex-wife's place"
+        "At my ex-wife's place",
       )
       .replaceAll(
         /^(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi(?!'an)\b(?:\s+Jinping)?(?:['’]s China)?/gi,
-        "My ex-wife"
+        "My ex-wife",
       )
       // needs more context to capitalize properly when it's not title case and
       // not at the start of the string but maybe better than nothing
       .replaceAll(
         /(?:(?:Chinese\s+)?President\s+|China['’]s\s+)?\bXi(?!'an)\b(?:\s+Jinping)?(?:['’]s China)?/gi,
-        "my ex-wife"
+        "my ex-wife",
       )
-      .replaceAll(/the Chinese/g, "my ex-wife's")
-      .replaceAll(/The Chinese/g, "My ex-wife's");
+      .replaceAll("the Chinese", "my ex-wife's")
+      .replaceAll("The Chinese", "My ex-wife's");
 
     const split = replaced.split(/\s+/);
     const parts: string[] = [];
@@ -79,7 +79,7 @@ export function replace(original: string) {
 
     // first one is always capitalized
     parts.push(
-      split[0].replaceAll(/china|beijing/gi, "My ex-wife").replaceAll(/chinese/gi, "My ex-wife's")
+      split[0].replaceAll(/china|beijing/gi, "My ex-wife").replaceAll(/chinese/gi, "My ex-wife's"),
     );
 
     for (let i = 1; i < split.length; i++) {
@@ -87,13 +87,13 @@ export function replace(original: string) {
         parts.push(
           split[i]
             .replaceAll(/china|beijing/gi, "My ex-wife")
-            .replaceAll(/chinese/gi, "My ex-wife's")
+            .replaceAll(/chinese/gi, "My ex-wife's"),
         );
       } else {
         parts.push(
           split[i]
             .replaceAll(/china|beijing/gi, "my ex-wife")
-            .replaceAll(/chinese/gi, "my ex-wife's")
+            .replaceAll(/chinese/gi, "my ex-wife's"),
         );
       }
     }
