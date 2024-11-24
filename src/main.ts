@@ -101,7 +101,7 @@ async function main(
     try {
       const page = await context.newPage();
       await blocker.enableBlockingInPage(page);
-      await page.goto(link);
+      await page.goto(link, { waitUntil: ["domcontentloaded", "load", "networkidle0"] });
       await page.evaluate(kickoffReplaceAndWatch);
       await setTimeout(10);
       await onPageReady({ page, title, link, date });
