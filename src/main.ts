@@ -74,7 +74,10 @@ async function main(
 
   const items = await fetchAndParse({ filterItem });
 
-  if (items.length === 0) return;
+  if (items.length === 0) {
+    console.log("no feed items remain after filtering. not launching puppeteer.");
+    return;
+  }
 
   const [browser, blocker] = await Promise.all([
     // not sure how puppeteer-extra duplicated the typings but messed them up
