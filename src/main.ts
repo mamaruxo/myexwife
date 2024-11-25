@@ -81,9 +81,7 @@ async function fetchAndParse({
     `fetched ${i} items. after filtering: ${items.length}. limit is ${MAX_NEWS_ITEMS_PER_RUN}`,
   );
 
-  sortOldestToNewest(items);
-
-  return items.slice(0, MAX_NEWS_ITEMS_PER_RUN);
+  return sortOldestToNewest(items);
 }
 
 async function main(
@@ -112,6 +110,7 @@ async function main(
     ),
   ]);
 
+  let successes = 0;
   let timeouts = 0;
 
   for (const { title, link, date } of items) {
@@ -125,6 +124,8 @@ async function main(
       await page.evaluate(kickoffReplaceAndWatch);
       await setTimeout(10);
       await onPageReady({ page, title, link, date });
+      successes++;
+      if (successes > MAX_NEWS_ITEMS_PER_RUN) break;
     } catch (e) {
       if (e instanceof TimeoutError) {
         console.error(`Timeout exceeded for page ${link} :\n`, e, "\n");
