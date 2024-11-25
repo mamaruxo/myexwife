@@ -115,12 +115,16 @@ async function main(
 
   for (const { title, link, date } of items) {
     console.log("visiting", link);
-
     const context = await browser.createBrowserContext();
     try {
       const page = await context.newPage();
       await blocker.enableBlockingInPage(page);
-      await page.goto(link, { waitUntil: ["domcontentloaded", "load", "networkidle0"] });
+      try {
+        await page.goto(link, { waitUntil: ["domcontentloaded", "load", "networkidle0"] });
+      } catch (e) {
+        if (!(e instanceof TimeoutError)) throw e;
+        await page.goto(link, { waitUntil: ["domcontentloaded", "load", "networkidle2"] });
+      }
       await page.evaluate(kickoffReplaceAndWatch);
       await setTimeout(10);
       await onPageReady({ page, title, link, date });
