@@ -31,6 +31,7 @@ const MAX_NEWS_ITEMS_PER_RUN = 3;
 const DIFFERENCE_THRESHOLD = 0.45;
 
 const TWO_WEEKS = 1000 * 60 * 60 * 24 * 14;
+
 const defaultOldestAllowableDate = Date.now() - TWO_WEEKS;
 
 const sortOldestToNewest = (items: NewsItem[]) =>
@@ -42,6 +43,15 @@ interface NewsItem {
   date: Date;
   guid: string;
 }
+
+type MainResult =
+  | {
+      result: "no valid items";
+    }
+  | {
+      result: "ran browser";
+      timeouts: number;
+    };
 
 async function fetchAndParse({
   filterItem = () => true,
@@ -79,14 +89,13 @@ async function fetchAndParse({
 async function main(
   filterItem: (item: NewsItem) => boolean,
   onPageReady: (params: { page: Page; title: string; link: string; date: Date }) => Promise<void>,
-) {
+): Promise<MainResult> {
   puppeteer.use(StealthPlugin());
 
   const items = await fetchAndParse({ filterItem });
 
   if (items.length === 0) {
-    console.log("no feed items remain after filtering. not launching puppeteer.");
-    return;
+    return { result: "no valid items" };
   }
 
   const [browser, blocker] = await Promise.all([
@@ -103,6 +112,8 @@ async function main(
     ),
   ]);
 
+  let timeouts = 0;
+
   for (const { title, link, date } of items) {
     console.log("visiting", link);
 
@@ -117,6 +128,7 @@ async function main(
     } catch (e) {
       if (e instanceof TimeoutError) {
         console.error(`Timeout exceeded for page ${link} :\n`, e, "\n");
+        timeouts++;
       } else {
         throw e;
       }
@@ -126,6 +138,8 @@ async function main(
   }
 
   await browser.close();
+
+  return { result: "ran browser", timeouts };
 }
 
 const argv = process.argv.slice(2);
@@ -260,8 +274,16 @@ if (argv.includes("list")) {
   };
 
   void main(itemFilter, onPageReady)
-    .then(() => {
+    .then((res) => {
+      if (res.result === "no valid items") {
+        console.warn("no feed items remained after filtering; did not launch puppeteer.");
+        return;
+      }
+
       console.log(`processed ${i} item${i === 1 ? "" : "s"}.`);
+      if (res.timeouts > 0) {
+        console.warn(`encountered ${res.timeouts} timeouts.`);
+      }
 
       if (i === 0) {
         throw new Error("Wasn't able to process any items!");
