@@ -129,7 +129,7 @@ async function main(
       await setTimeout(10);
       await onPageReady({ page, title, link, date });
       successes++;
-      if (successes > MAX_NEWS_ITEMS_PER_RUN) break;
+      if (successes >= MAX_NEWS_ITEMS_PER_RUN) break;
     } catch (e) {
       if (e instanceof TimeoutError) {
         console.error(`Timeout exceeded for page ${link} :\n`, e, "\n");
