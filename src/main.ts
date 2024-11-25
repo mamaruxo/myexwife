@@ -279,32 +279,35 @@ if (argv.includes("list")) {
     return isSufficientlyDifferent;
   };
 
-  void main(itemFilter, onPageReady)
-    .then((res) => {
-      if (res.result === "no valid items") {
-        console.warn("no feed items remained after filtering; did not launch puppeteer.");
-        return;
-      }
+  (async () => {
+    const res = await main(itemFilter, onPageReady);
 
-      console.log(`processed ${i} item${i === 1 ? "" : "s"}.`);
-      if (res.timeouts > 0) {
-        console.warn(`encountered ${res.timeouts} timeouts.`);
-      }
+    if (res.result === "no valid items") {
+      console.warn("no feed items remained after filtering; did not launch puppeteer.");
+      return;
+    }
 
-      if (i === 0) {
-        throw new Error("Wasn't able to process any items!");
-      }
+    console.log(`processed ${i} item${i === 1 ? "" : "s"}.`);
+    if (res.timeouts > 0) {
+      console.warn(`encountered ${res.timeouts} timeouts.`);
+    }
 
-      done.sort((a, b) => a[0] - b[0]);
-      while (done.length > 0 && done[0][0] < oldestAllowableDate) {
-        done.shift();
-      }
+    if (i === 0) {
+      throw new Error("Wasn't able to process any items!");
+    }
 
-      writeFileSync(join(DATA_DIR, "done.json"), JSON.stringify(done, undefined, 2));
-    })
-    .then(() => flushSentry(2000))
-    .then(() => {
-      console.log("done.");
-      process.exit(0);
-    });
+    done.sort((a, b) => a[0] - b[0]);
+    while (done.length > 0 && done[0][0] < oldestAllowableDate) {
+      done.shift();
+    }
+
+    writeFileSync(join(DATA_DIR, "done.json"), JSON.stringify(done, undefined, 2));
+
+    await flushSentry(2000);
+
+    console.log("done.");
+    process.exit(0);
+  })().catch((e) => {
+    throw e;
+  });
 }
