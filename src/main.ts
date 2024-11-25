@@ -212,6 +212,7 @@ if (argv.includes("list")) {
                 caption: "screenshot of a news item about my ex-wife",
               },
             ],
+            visibility: "unlisted",
           },
           [
             {
