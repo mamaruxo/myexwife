@@ -22,7 +22,7 @@ import { BSKY_PASSWORD, BSKY_USERNAME, DATA_DIR, MASTODON_SERVER, MASTODON_TOKEN
 
 import type { Page } from "puppeteer";
 
-const MAX_NEWS_ITEMS_PER_RUN = 3;
+const MAX_NEWS_ITEMS_PER_RUN = 1;
 
 /**
  * percentage of difference required for item to not be filtered as duplicate.
