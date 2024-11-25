@@ -25,6 +25,8 @@ jobs:
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
+      # always grab latest chrome
+      - run: pnpm puppeteer browsers install chrome
       - run: pnpm start
         env:
           NODE_ENV: "production"
