@@ -2,25 +2,17 @@ import { tmpdir } from "os";
 import { mkdirSync, readFileSync, writeFileSync } from "fs";
 import { join } from "path";
 import { strict as assert } from "assert";
-import { setTimeout } from "timers/promises";
-import { Readable } from "stream";
+import { parseArgs } from "util";
 
-import Feedparser from "feedparser";
 import { close as flushSentry } from "@sentry/node";
-import { twoot } from "twoot";
 import { distance as levDistance, closest as levClosest } from "fastest-levenshtein";
 
-import { TimeoutError } from "puppeteer";
-import puppeteer from "puppeteer-extra";
-import StealthPlugin from "puppeteer-extra-plugin-stealth";
-import { PuppeteerBlocker, fullLists } from "@ghostery/adblocker-puppeteer";
-
 import { replace } from "./replace";
-import { kickoffReplaceAndWatch } from "./userscript";
 
-import { BSKY_PASSWORD, BSKY_USERNAME, DATA_DIR, MASTODON_SERVER, MASTODON_TOKEN } from "./env";
-
-import type { Page } from "puppeteer";
+import { DATA_DIR } from "./env";
+import { scrape, type OnPageReady } from "./scrape";
+import { fetchAndParse, type NewsItem } from "./fetch-and-parse";
+import { postStatus } from "./twoot";
 
 const MAX_NEWS_ITEMS_PER_RUN = 1;
 
@@ -34,136 +26,63 @@ const TWO_WEEKS = 1000 * 60 * 60 * 24 * 14;
 
 const defaultOldestAllowableDate = Date.now() - TWO_WEEKS;
 
-const sortOldestToNewest = (items: NewsItem[]) =>
-  items.sort((a, b) => a.date.valueOf() - b.date.valueOf());
+const localDir = () => {
+  const dir = join(tmpdir(), `bot-${Date.now()}`);
+  mkdirSync(dir);
+  return dir;
+};
 
-interface NewsItem {
-  title: string;
-  link: string;
-  date: Date;
-  guid: string;
-}
+const { values } = parseArgs({
+  options: {
+    // run locally, save images instead of posting to accounts
+    local: { type: "boolean" },
+    // run locally, only list parsed feeds
+    list: { type: "boolean" },
+    // don't parse feeds, scrape specific urls
+    url: { type: "string", multiple: true, short: "u" },
+  },
+});
 
-type MainResult =
-  | {
-      result: "no valid items";
-    }
-  | {
-      result: "ran browser";
-      timeouts: number;
-    };
-
-async function fetchAndParse({
-  filterItem = () => true,
-}: {
-  filterItem?: (item: NewsItem) => boolean;
-} = {}) {
-  const res = await fetch("https://news.google.com/rss/search?q=china");
-
-  if (!res.ok) {
-    throw new Error(`Error ${res.status}: ${res.statusText}`);
-  }
-
-  const parser = new Feedparser({ addmeta: false });
-  Readable.fromWeb(res.body!).pipe(parser);
-
-  const items: NewsItem[] = [];
-
-  let i = 0;
-  for await (const { title, link, date, guid } of parser) {
-    i++;
-    const item = { title, link, date, guid };
-    if (filterItem(item)) {
-      items.push(item);
-    }
-  }
-  console.log(
-    `fetched ${i} items. after filtering: ${items.length}. limit is ${MAX_NEWS_ITEMS_PER_RUN}`,
-  );
-
-  return sortOldestToNewest(items);
-}
-
-async function main(
-  filterItem: (item: NewsItem) => boolean,
-  onPageReady: (params: { page: Page; title: string; link: string; date: Date }) => Promise<void>,
-): Promise<MainResult> {
-  puppeteer.use(StealthPlugin());
-
-  const items = await fetchAndParse({ filterItem });
-
-  if (items.length === 0) {
-    return { result: "no valid items" };
-  }
-
-  const [browser, blocker] = await Promise.all([
-    puppeteer.launch({ defaultViewport: { width: 1000, height: 800 } }),
-    PuppeteerBlocker.fromLists(
-      fetch,
-      [
-        ...fullLists,
-        "https://easylist.to/easylist/easylist.txt",
-        "https://easylist.to/easylist/easyprivacy.txt",
-        "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
-      ],
-      { enableCompression: true },
-    ),
-  ]);
-
-  let successes = 0;
-  let timeouts = 0;
-
-  for (const { title, link, date } of items) {
-    console.log("visiting", link);
-    const context = await browser.createBrowserContext();
-    try {
-      const page = await context.newPage();
-      await blocker.enableBlockingInPage(page);
-      try {
-        await page.goto(link, { waitUntil: ["domcontentloaded", "load", "networkidle0"] });
-      } catch (e) {
-        if (!(e instanceof TimeoutError)) throw e;
-        await page.goto(link, { waitUntil: ["domcontentloaded", "load", "networkidle2"] });
-      }
-      await page.evaluate(kickoffReplaceAndWatch);
-      await setTimeout(10);
-      await onPageReady({ page, title, link, date });
-      successes++;
-      if (successes >= MAX_NEWS_ITEMS_PER_RUN) break;
-    } catch (e) {
-      if (e instanceof TimeoutError) {
-        console.error(`Timeout exceeded for page ${link} :\n`, e, "\n");
-        timeouts++;
-      } else {
-        throw e;
-      }
-    } finally {
-      await context.close();
-    }
-  }
-
-  await browser.close();
-
-  return { result: "ran browser", timeouts };
-}
-
-const argv = process.argv.slice(2);
-
-if (argv.includes("list")) {
+if (values.list) {
   console.log("[running local list-only mode]");
 
-  void fetchAndParse().then((items) => {
-    for (const { title, date, link } of items) {
-      console.log(`${title}\n(${replace(title)})\n${date.toISOString()}\n${link}\n`);
-    }
+  fetchAndParse()
+    .then((items) => {
+      for (const { title, date, link } of items) {
+        console.log(`${title}\n(${replace(title)})\n${date.toISOString()}\n${link}\n`);
+      }
 
-    console.log("done.");
-    process.exit(0);
+      console.log("done.");
+      process.exit(0);
+    })
+    .catch((e) => {
+      throw e;
+    });
+} else if (values.url?.length) {
+  console.log("[running in local screenshot mode (specific urls)]");
+
+  const items: NewsItem[] = values.url.map((u, i) => ({
+    title: "unknown",
+    link: u,
+    date: new Date(),
+    guid: String(i),
+  }));
+
+  (async () => {
+    const res = await scrape(items, async ({ page, title, link, date, guid }) => {
+      const path = join(localDir(), `${guid}.png`);
+      await page.screenshot({ path });
+      console.log(
+        `${title}\n(${replace(title)})\n${date.toISOString()}\n${link}\nfile://${path}\n`,
+      );
+    });
+    console.log(`done. timeouts: ${res.timeouts}`);
+  })().catch((e) => {
+    throw e;
   });
 } else {
-  const localPath = argv.includes("local") ? join(tmpdir(), `bot-${Date.now()}`) : null;
+  const localPath = values.local ? localDir() : null;
   if (localPath) {
-    mkdirSync(localPath);
     console.log("[running in local screenshot mode]");
   } else {
     console.log("[running in production mode]");
@@ -192,7 +111,7 @@ if (argv.includes("list")) {
 
   let i = 0;
 
-  const onPageReady: Parameters<typeof main>[1] = localPath
+  const onPageReady: OnPageReady = localPath
     ? async ({ page, title, link, date }) => {
         const path = join(localPath, `${i}.png`);
         await page.screenshot({ path });
@@ -202,92 +121,56 @@ if (argv.includes("list")) {
 
         done.push([date.valueOf(), title]);
         i++;
+        if (i >= MAX_NEWS_ITEMS_PER_RUN) return true;
       }
     : async ({ page, title, date }) => {
         const screenshot = (await page.screenshot()) as Buffer;
         const status = replace(title);
-
-        const results = await twoot(
-          {
-            status,
-            media: [
-              {
-                buffer: screenshot,
-                focus: "0,1",
-                caption: "screenshot of a news item about my ex-wife",
-              },
-            ],
-            visibility: "unlisted",
-          },
-          [
-            {
-              type: "mastodon",
-              server: MASTODON_SERVER,
-              token: MASTODON_TOKEN,
-            },
-            {
-              type: "bsky",
-              username: BSKY_USERNAME,
-              password: BSKY_PASSWORD,
-            },
-          ],
-        );
-
-        for (const res of results) {
-          switch (res.type) {
-            case "mastodon":
-              console.log(`tooted at ${res.status.url}`);
-              break;
-            case "bsky":
-              console.log(`skeeted at ${res.status.uri}`);
-              break;
-            case "error":
-              console.error(`error while tooting:\n${res.message}`);
-              break;
-            default:
-              console.error(`unexpected value:\n${JSON.stringify(res)}`);
-          }
-        }
-
+        await postStatus({ status, screenshot });
         done.push([date.valueOf(), title]);
         i++;
+        if (i >= MAX_NEWS_ITEMS_PER_RUN) return true;
       };
 
-  const itemFilter = (item: NewsItem): boolean => {
-    // is a relevant term actually in the title of the article?
-    if (!/china|chinese|xi|beijing/gi.test(item.title)) {
-      return false;
-    }
-    if (item.date.valueOf() <= oldestAllowableDate) {
-      return false;
-    }
-
-    // HACK: bad defs, returns undefined on empty array
-    const closest = levClosest(item.title, doneTitles) as string | undefined;
-    if (!closest) return true;
-
-    const dist = levDistance(item.title, closest);
-
-    const isSufficientlyDifferent = dist / item.title.length > DIFFERENCE_THRESHOLD;
-
-    if (!isSufficientlyDifferent) {
-      console.log(
-        `discarding:\n${item.title}\nclosest existing title is:\n${closest}\n${((dist / item.title.length) * 100).toFixed(0)}% different (distance: ${dist}).\n`,
-      );
-    }
-
-    return isSufficientlyDifferent;
-  };
-
   (async () => {
-    const res = await main(itemFilter, onPageReady);
+    const items = await fetchAndParse({
+      filterItem: (item) => {
+        // is a relevant term actually in the title of the article?
+        if (!/china|chinese|xi|beijing/gi.test(item.title)) {
+          return false;
+        }
+        if (item.date.valueOf() <= oldestAllowableDate) {
+          return false;
+        }
 
-    if (res.result === "no valid items") {
-      console.warn("no feed items remained after filtering; did not launch puppeteer.");
-      return;
+        // HACK: bad defs, returns undefined on empty array
+        const closest = levClosest(item.title, doneTitles) as string | undefined;
+        if (!closest) return true;
+
+        const dist = levDistance(item.title, closest);
+
+        const isSufficientlyDifferent = dist / item.title.length > DIFFERENCE_THRESHOLD;
+
+        if (!isSufficientlyDifferent) {
+          console.log(
+            `discarding:\n${item.title}\nclosest existing title is:\n${closest}\n${((dist / item.title.length) * 100).toFixed(0)}% different (distance: ${dist}).\n`,
+          );
+        }
+
+        return isSufficientlyDifferent;
+      },
+    });
+
+    if (items.length === 0) {
+      console.warn("no feed items remained after filtering. did not launch puppeteer.");
+      await flushSentry(2000);
+      process.exit(0);
     }
+
+    const res = await scrape(items, onPageReady);
 
     console.log(`processed ${i} item${i === 1 ? "" : "s"}.`);
+
     if (res.timeouts > 0) {
       console.warn(`encountered ${res.timeouts} timeouts.`);
     }
