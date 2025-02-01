@@ -35,7 +35,6 @@ export function kickoffReplaceAndWatch() {
    * @returns {boolean}
    */
   function isTitleCaseWord(w) {
-    // eslint-disable-next-line @typescript-eslint/prefer-string-starts-ends-with
     return w[0] === w[0].toUpperCase();
   }
 

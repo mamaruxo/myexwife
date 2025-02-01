@@ -20,12 +20,12 @@
   "author": "mm <https://github.com/mamaruxo>",
   "license": "AGPL-3.0",
   "dependencies": {
-    "@ghostery/adblocker-puppeteer": "^2.1.1",
+    "@ghostery/adblocker-puppeteer": "^2.5.0",
     "@sentry/integrations": "^7.114.0",
-    "@sentry/node": "^8.40.0",
+    "@sentry/node": "^8.53.0",
     "fastest-levenshtein": "^1.0.16",
     "feedparser": "^2.2.10",
-    "puppeteer": "^23.9.0",
+    "puppeteer": "^24.1.1",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "twoot": "0.4.0",
@@ -34,15 +34,15 @@
   },
   "devDependencies": {
     "@types/feedparser": "^2.2.8",
-    "@types/node": "^20.17.7",
-    "dotenv": "^16.4.5",
-    "eslint": "^8.57.1",
-    "eslint-config-lostfictions": "^6.1.0",
+    "@types/node": "^22.13.0",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.19.0",
+    "eslint-config-lostfictions": "7.0.0-beta.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.5"
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.4"
   },
   "pnpm": {
     "patchedDependencies": {

@@ -55,7 +55,7 @@ if (values.list) {
       console.log("done.");
       process.exit(0);
     })
-    .catch((e) => {
+    .catch((e: unknown) => {
       throw e;
     });
 } else if (values.url?.length) {
@@ -77,7 +77,7 @@ if (values.list) {
       );
     });
     console.log(`done. timeouts: ${res.timeouts}`);
-  })().catch((e) => {
+  })().catch((e: unknown) => {
     throw e;
   });
 } else {
@@ -190,7 +190,7 @@ if (values.list) {
 
     console.log("done.");
     process.exit(0);
-  })().catch((e) => {
+  })().catch((e: unknown) => {
     throw e;
   });
 }
