@@ -42,7 +42,6 @@ export async function decodeGoogleNewsUrl(url: string) {
   }
   const text2 = await res2.text();
   const arrayString = JSON.parse(text2.replace(")]}'", ""))[0][2];
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   const articleUrl = JSON.parse(arrayString)[1];
 
   if (typeof articleUrl !== "string") {

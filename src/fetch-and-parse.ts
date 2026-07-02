@@ -1,9 +1,9 @@
-import { Readable } from "stream";
+import { Readable } from "node:stream";
 
 import Feedparser from "feedparser";
 
 const sortOldestToNewest = (items: NewsItem[]) =>
-  items.sort((a, b) => a.date.valueOf() - b.date.valueOf());
+  items.toSorted((a, b) => a.date.valueOf() - b.date.valueOf());
 
 export interface NewsItem {
   title: string;

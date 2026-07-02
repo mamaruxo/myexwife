@@ -79,6 +79,7 @@ export function replace(original: string) {
     // doing this iteratively.
 
     // first one is always capitalized
+    // eslint-disable-next-line unicorn/no-immediate-mutation
     parts.push(
       split[0].replaceAll(/china|beijing/gi, "My ex-wife").replaceAll(/chinese/gi, "My ex-wife's"),
     );

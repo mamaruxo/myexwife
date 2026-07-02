@@ -1,7 +1,7 @@
-import { readFileSync, writeFileSync } from "fs";
-import { join } from "path";
-import { strict as assert } from "assert";
-import { parseArgs } from "util";
+import { readFileSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { strict as assert } from "node:assert";
+import { parseArgs } from "node:util";
 
 import { close as flushSentry } from "@sentry/node";
 import { distance as levDistance, closest as levClosest } from "fastest-levenshtein";
