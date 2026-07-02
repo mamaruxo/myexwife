@@ -6,3 +6,10 @@ strictDepBuilds: true
 
 trustPolicy: no-downgrade
 trustPolicyIgnoreAfter: 10080
+
+patchedDependencies:
+  feedparser: patches/feedparser.patch
+
+onlyBuiltDependencies:
+  - sharp
+  - unrs-resolver
