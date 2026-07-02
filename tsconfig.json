@@ -1,21 +1,20 @@
 {
   "compilerOptions": {
     // https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping
-    "lib": ["ES2023"],
-    "target": "ES2022",
-    "module": "commonjs",
-    "outDir": "dist",
+    "lib": ["ES2024"],
+    "types": ["node"],
+    "module": "nodenext",
+    "noEmit": true,
     "strict": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "allowJs": true,
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "rootDir": "./src"
+    "allowUnreachableCode": false,
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
   },
   "include": [
-    "src"
+    "src",
+    "scripts",
+    "*.config.ts"
   ]
 }

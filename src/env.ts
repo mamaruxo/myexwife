@@ -4,10 +4,6 @@ import { parseEnv, z } from "znv";
 
 const isDev = process.env["NODE_ENV"] !== "production";
 
-if (isDev) {
-  require("dotenv").config();
-}
-
 export const { DATA_DIR, MASTODON_TOKEN, BSKY_USERNAME, BSKY_PASSWORD, SENTRY_DSN } = parseEnv(
   process.env,
   {

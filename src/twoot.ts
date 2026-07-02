@@ -1,18 +1,11 @@
 import { twoot } from "twoot";
 
-import { MASTODON_SERVER, MASTODON_TOKEN, BSKY_USERNAME, BSKY_PASSWORD } from "./env";
+import { MASTODON_SERVER, MASTODON_TOKEN, BSKY_USERNAME, BSKY_PASSWORD } from "./env.ts";
 
-export async function postStatus({ status, screenshot }: { status: string; screenshot: Buffer }) {
+export async function postStatus({ status }: { status: string }) {
   const results = await twoot(
     {
       status,
-      media: [
-        {
-          buffer: screenshot,
-          focus: "0,1",
-          caption: "screenshot of a news item about my ex-wife",
-        },
-      ],
       visibility: "unlisted",
     },
     [

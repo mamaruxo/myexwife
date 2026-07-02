@@ -20,6 +20,7 @@ export function replace(original: string) {
     // no 'south my ex-wife morning post'
     .replaceAll("South China Morning Post", "My Ex-Wife News Service")
     .replaceAll("SCMP", "MENS")
+    .replaceAll("- China Daily", "- Ex-Wife Daily")
     .replaceAll("South China Sea", "Sea of my Ex-Wife")
     .replaceAll("Xi Jinping Thought", "Ex-Wife Thought");
 

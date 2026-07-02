@@ -3,12 +3,11 @@
   "version": "0.0.1",
   "description": "my ex-wife in the news",
   "private": true,
+  "type": "module",
   "main": "dist/main.js",
   "scripts": {
-    "start": "node --enable-source-maps dist/main.js",
-    "dev": "NODE_ENV=development ts-node -T src/main.ts --local",
-    "dev-list": "NODE_ENV=development ts-node -T src/main.ts --list",
-    "build": "rm -rf dist/ && tsc",
+    "start": "node --enable-source-maps --env-file-if-exists=.env src/main.ts",
+    "dev": "NODE_ENV=development node --enable-source-maps --env-file-if-exists=.env src/main.ts --list",
     "test": "run-p -cl test:*",
     "test:ts": "tsc --noEmit",
     "test:eslint": "eslint --color 'src/**/*' --max-warnings=0",
@@ -20,27 +19,22 @@
   "author": "mm <https://github.com/mamaruxo>",
   "license": "AGPL-3.0",
   "dependencies": {
-    "@ghostery/adblocker-puppeteer": "^2.5.0",
     "@sentry/integrations": "^7.114.0",
     "@sentry/node": "^8.53.0",
+    "cheerio": "^1.2.0",
     "fastest-levenshtein": "^1.0.16",
     "feedparser": "^2.2.10",
-    "puppeteer": "^24.1.1",
-    "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "twoot": "0.4.0",
     "znv": "^0.4.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/feedparser": "^2.2.8",
-    "@types/node": "^22.13.0",
-    "dotenv": "^16.4.7",
+    "@types/node": "^24.13.2",
     "eslint": "^9.19.0",
     "eslint-config-lostfictions": "7.0.0-beta.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.4.2",
-    "ts-node": "^10.9.2",
     "typescript": "^5.7.3",
     "vitest": "^3.0.4"
   },
@@ -49,5 +43,5 @@
       "feedparser": "patches/feedparser.patch"
     }
   },
-  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247"
+  "packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be"
 }
